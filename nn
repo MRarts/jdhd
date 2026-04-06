@@ -26,7 +26,6 @@ fn.Name = "fn"
 fn.Parent = game.CoreGui
 fn.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 fn.ResetOnSpawn = false
-fn.draggable = true
 
 top.Name = "top"
 top.Parent = fn
