@@ -1,0 +1,198 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local fn = Instance.new("ScreenGui")
+local top = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local close = Instance.new("ImageButton")
+local max = Instance.new("ImageButton")
+local min = Instance.new("ImageButton")
+local Gui = Instance.new("Frame")
+local drag = Instance.new("Frame")
+local clear = Instance.new("TextButton")
+local execute = Instance.new("TextButton")
+local CodeInput = Instance.new("TextBox")
+local yea = Instance.new("TextLabel")
+local yea_2 = Instance.new("TextLabel")
+local yea_3 = Instance.new("TextLabel")
+local ex = Instance.new("TextButton")
+
+--Properties:
+
+fn.Name = "fn"
+fn.Parent = game.CoreGui
+fn.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+fn.ResetOnSpawn = false
+fn.draggable = true
+
+top.Name = "top"
+top.Parent = fn
+top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+top.BorderColor3 = Color3.fromRGB(213, 213, 213)
+top.Position = UDim2.new(0.126362324, 0, 0.0368528478, 0)
+top.Size = UDim2.new(0, 644, 0, 28)
+
+ImageLabel.Parent = top
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.00931677036, 0, 0.0552019402, 0)
+ImageLabel.Size = UDim2.new(0, 25, 0, 23)
+ImageLabel.Image = "rbxassetid://86102463824382"
+
+TextLabel.Parent = top
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.125776395, 0, 0.107142858, 0)
+TextLabel.Size = UDim2.new(0, 114, 0, 22)
+TextLabel.Font = Enum.Font.Arial
+TextLabel.Text = "dominate backdoor mod (mod by pgn"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+close.Name = "close"
+close.Parent = top
+close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+close.BackgroundTransparency = 1.000
+close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.953130424, 0, 0.247714311, 0)
+close.Size = UDim2.new(0, 12, 0, 12)
+close.Image = "rbxassetid://274958830"
+close.ImageColor3 = Color3.fromRGB(112, 112, 112)
+
+max.Name = "max"
+max.Parent = top
+max.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+max.BackgroundTransparency = 1.000
+max.BorderColor3 = Color3.fromRGB(0, 0, 0)
+max.BorderSizePixel = 0
+max.Position = UDim2.new(0.886683285, 0, 0.247714311, 0)
+max.Size = UDim2.new(0, 12, 0, 12)
+max.Image = "rbxassetid://14953690282"
+max.ImageColor3 = Color3.fromRGB(112, 112, 112)
+max.ImageTransparency = 0.600
+
+min.Name = "min"
+min.Parent = top
+min.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+min.BackgroundTransparency = 1.000
+min.BorderColor3 = Color3.fromRGB(0, 0, 0)
+min.BorderSizePixel = 0
+min.Position = UDim2.new(0.824130416, 0, 0.283653796, 0)
+min.Size = UDim2.new(0, 12, 0, 12)
+min.Image = "rbxassetid://14953689987"
+min.ImageColor3 = Color3.fromRGB(112, 112, 112)
+
+Gui.Name = "Gui"
+Gui.Parent = top
+Gui.BackgroundColor3 = Color3.fromRGB(245, 245, 245)
+Gui.BorderColor3 = Color3.fromRGB(213, 213, 213)
+Gui.Position = UDim2.new(0, 0, 0.973999321, 0)
+Gui.Size = UDim2.new(0, 644, 0, 372)
+
+drag.Name = "drag"
+drag.Parent = Gui
+drag.BackgroundColor3 = Color3.fromRGB(245, 245, 245)
+drag.BorderColor3 = Color3.fromRGB(213, 213, 213)
+drag.Position = UDim2.new(0, 0, -0.00100000005, 0)
+drag.Size = UDim2.new(0, 644, 0, 372)
+
+clear.Name = "clear"
+clear.Parent = drag
+clear.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+clear.BorderColor3 = Color3.fromRGB(194, 194, 194)
+clear.Position = UDim2.new(0.00927829184, 0, 0.904187918, 0)
+clear.Size = UDim2.new(0, 114, 0, 30)
+clear.Font = Enum.Font.Arial
+clear.Text = "Clear"
+clear.TextColor3 = Color3.fromRGB(0, 0, 0)
+clear.TextSize = 14.000
+
+execute.Name = "execute"
+execute.Parent = drag
+execute.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+execute.BorderColor3 = Color3.fromRGB(194, 194, 194)
+execute.Position = UDim2.new(0.00927829184, 0, 0.690040231, 0)
+execute.Size = UDim2.new(0, 114, 0, 69)
+execute.Font = Enum.Font.Arial
+execute.Text = "Execute"
+execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+execute.TextSize = 14.000
+
+CodeInput.Name = "CodeInput"
+CodeInput.Parent = drag
+CodeInput.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CodeInput.BorderColor3 = Color3.fromRGB(194, 194, 194)
+CodeInput.Position = UDim2.new(0.00799991749, 0, 0.0589999929, 0)
+CodeInput.Size = UDim2.new(0, 632, 0, 227)
+CodeInput.ClearTextOnFocus = false
+CodeInput.Font = Enum.Font.SourceSans
+CodeInput.Text = "print(\"dihminant\")"
+CodeInput.TextColor3 = Color3.fromRGB(0, 0, 0)
+CodeInput.TextSize = 14.000
+CodeInput.TextWrapped = true
+CodeInput.TextXAlignment = Enum.TextXAlignment.Left
+CodeInput.TextYAlignment = Enum.TextYAlignment.Top
+
+yea.Name = "yea"
+yea.Parent = drag
+yea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+yea.BorderColor3 = Color3.fromRGB(194, 194, 194)
+yea.Position = UDim2.new(0.209314376, 0, 0.690312624, 0)
+yea.Size = UDim2.new(0, 502, 0, 110)
+yea.Font = Enum.Font.SourceSans
+yea.Text = "[IDE] : nice day isnt it? -pgn"
+yea.TextColor3 = Color3.fromRGB(0, 0, 0)
+yea.TextSize = 14.000
+yea.TextXAlignment = Enum.TextXAlignment.Left
+yea.TextYAlignment = Enum.TextYAlignment.Top
+
+yea_2.Name = "yea"
+yea_2.Parent = drag
+yea_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+yea_2.BackgroundTransparency = 1.000
+yea_2.BorderColor3 = Color3.fromRGB(194, 194, 194)
+yea_2.Position = UDim2.new(0.209314376, 0, 0.722570658, 0)
+yea_2.Size = UDim2.new(0, 502, 0, 17)
+yea_2.Font = Enum.Font.SourceSans
+yea_2.Text = "[IDE] : mod made by pgn"
+yea_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+yea_2.TextSize = 14.000
+yea_2.TextXAlignment = Enum.TextXAlignment.Left
+yea_2.TextYAlignment = Enum.TextYAlignment.Top
+
+yea_3.Name = "yea"
+yea_3.Parent = drag
+yea_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+yea_3.BackgroundTransparency = 1.000
+yea_3.BorderColor3 = Color3.fromRGB(194, 194, 194)
+yea_3.Position = UDim2.new(0.209314376, 0, 0.940312624, 0)
+yea_3.Size = UDim2.new(0, 502, 0, 17)
+yea_3.Font = Enum.Font.SourceSans
+yea_3.Text = "credits to the owners of dominate"
+yea_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+yea_3.TextSize = 14.000
+yea_3.TextXAlignment = Enum.TextXAlignment.Left
+yea_3.TextYAlignment = Enum.TextYAlignment.Top
+
+ex.Name = "ex"
+ex.Parent = Gui
+ex.BackgroundColor3 = Color3.fromRGB(248, 248, 248)
+ex.BorderColor3 = Color3.fromRGB(213, 213, 213)
+ex.Position = UDim2.new(0.00800000038, 0, 0, 2)
+ex.Size = UDim2.new(0, 63, 0, 17)
+ex.Font = Enum.Font.Arial
+ex.Text = "Executor"
+ex.TextColor3 = Color3.fromRGB(0, 0, 0)
+ex.TextSize = 14.000
+
+execute.MouseButton1Click:connect(function()
+	game.ReplicatedStorage.RemoteEvent:FireServer(CodeInput.Text)
+end)
