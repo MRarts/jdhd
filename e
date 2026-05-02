@@ -10,1426 +10,1420 @@
 -- Instances: 641 | Scripts: 296 | Modules: 4 | Tags: 0
 local G2L = {};
 
--- StarterGui.AIDS
+-- StarterGui.ScreenGui
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["Name"] = [[AIDS]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-G2L["1"]["ResetOnSpawn"] = false;
 
 
--- StarterGui.AIDS.topbar
+-- StarterGui.ScreenGui.outline
 G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["ZIndex"] = 0;
+G2L["2"]["Visible"] = false;
 G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(244, 244, 244);
-G2L["2"]["Size"] = UDim2.new(0, 703, 0, 29);
-G2L["2"]["Position"] = UDim2.new(0.13681, 0, 0.21977, 0);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["Size"] = UDim2.new(0, 703, 0, 479);
+G2L["2"]["Position"] = UDim2.new(0.3693, 0, 0.19605, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Name"] = [[topbar]];
+G2L["2"]["Name"] = [[outline]];
+G2L["2"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.AIDS.topbar.LocalScript
+-- StarterGui.ScreenGui.outline.LocalScript
 G2L["3"] = Instance.new("LocalScript", G2L["2"]);
 
 
 
--- StarterGui.AIDS.topbar.back
-G2L["4"] = Instance.new("Frame", G2L["2"]);
-G2L["4"]["BorderSizePixel"] = 0;
-G2L["4"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["4"]["Size"] = UDim2.new(0, 703, 0, 450);
-G2L["4"]["Position"] = UDim2.new(0, 0, 1, 0);
-G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Name"] = [[back]];
+-- StarterGui.ScreenGui.outline.UIStroke
+G2L["4"] = Instance.new("UIStroke", G2L["2"]);
+G2L["4"]["Thickness"] = 3;
 
 
--- StarterGui.AIDS.topbar.back.UICorner
-G2L["5"] = Instance.new("UICorner", G2L["4"]);
+-- StarterGui.ScreenGui.topbar
+G2L["5"] = Instance.new("Frame", G2L["1"]);
+G2L["5"]["ZIndex"] = 0;
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(244, 244, 244);
+G2L["5"]["Size"] = UDim2.new(0, 703, 0, 29);
+G2L["5"]["Position"] = UDim2.new(0.06069, 0, 0.13923, 0);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Name"] = [[topbar]];
+
+
+-- StarterGui.ScreenGui.topbar.LocalScript
+G2L["6"] = Instance.new("LocalScript", G2L["5"]);
 
 
 
--- StarterGui.AIDS.topbar.back.back2
-G2L["6"] = Instance.new("Frame", G2L["4"]);
-G2L["6"]["BorderSizePixel"] = 0;
-G2L["6"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["6"]["Size"] = UDim2.new(0, 703, 0, 24);
-G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6"]["Name"] = [[back2]];
+-- StarterGui.ScreenGui.topbar.back
+G2L["7"] = Instance.new("Frame", G2L["5"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
+G2L["7"]["Size"] = UDim2.new(0, 703, 0, 450);
+G2L["7"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Name"] = [[back]];
 
 
--- StarterGui.AIDS.topbar.back.executor
-G2L["7"] = Instance.new("Frame", G2L["4"]);
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
-G2L["7"]["Size"] = UDim2.new(0, 674, 0, 399);
-G2L["7"]["Position"] = UDim2.new(0.039, 0, 0.09923, 0);
-G2L["7"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["7"]["Name"] = [[executor]];
+-- StarterGui.ScreenGui.topbar.back.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
 
 
--- StarterGui.AIDS.topbar.back.executor.exe
-G2L["8"] = Instance.new("TextButton", G2L["7"]);
-G2L["8"]["TextSize"] = 14;
-G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
-G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8"]["Size"] = UDim2.new(0, 70, 0, 21);
-G2L["8"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["8"]["Text"] = [[Executor]];
-G2L["8"]["Name"] = [[exe]];
-G2L["8"]["Position"] = UDim2.new(0, 0, -0.05344, 0);
 
-
--- StarterGui.AIDS.topbar.back.executor.admin
-G2L["9"] = Instance.new("TextButton", G2L["7"]);
-G2L["9"]["TextSize"] = 14;
-G2L["9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+-- StarterGui.ScreenGui.topbar.back.back2
+G2L["9"] = Instance.new("Frame", G2L["7"]);
+G2L["9"]["BorderSizePixel"] = 0;
 G2L["9"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["9"]["Size"] = UDim2.new(0, 68, 0, 18);
-G2L["9"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["9"]["Text"] = [[Admin Panel]];
-G2L["9"]["Name"] = [[admin]];
-G2L["9"]["Position"] = UDim2.new(0.10379, 0, -0.04831, 0);
+G2L["9"]["Size"] = UDim2.new(0, 703, 0, 24);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Name"] = [[back2]];
 
 
--- StarterGui.AIDS.topbar.back.executor.admin.LocalScript
-G2L["a"] = Instance.new("LocalScript", G2L["9"]);
+-- StarterGui.ScreenGui.topbar.back.executor
+G2L["a"] = Instance.new("Frame", G2L["7"]);
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
+G2L["a"]["Size"] = UDim2.new(0, 674, 0, 399);
+G2L["a"]["Position"] = UDim2.new(0.039, 0, 0.09923, 0);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["a"]["Name"] = [[executor]];
 
 
-
--- StarterGui.AIDS.topbar.back.executor..
-G2L["b"] = Instance.new("Frame", G2L["7"]);
-G2L["b"]["BorderSizePixel"] = 0;
+-- StarterGui.ScreenGui.topbar.back.executor.exe
+G2L["b"] = Instance.new("TextButton", G2L["a"]);
+G2L["b"]["TextSize"] = 14;
+G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
-G2L["b"]["Size"] = UDim2.new(0, 70, 0, -11);
-G2L["b"]["Position"] = UDim2.new(0, 0, 0.02469, 0);
-G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Name"] = [[.]];
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b"]["Size"] = UDim2.new(0, 70, 0, 21);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["b"]["Text"] = [[Executor]];
+G2L["b"]["Name"] = [[exe]];
+G2L["b"]["Position"] = UDim2.new(0, 0, -0.05344, 0);
 
 
--- StarterGui.AIDS.topbar.back.executor.settings
-G2L["c"] = Instance.new("TextButton", G2L["7"]);
+-- StarterGui.ScreenGui.topbar.back.executor.admin
+G2L["c"] = Instance.new("TextButton", G2L["a"]);
 G2L["c"]["TextSize"] = 14;
 G2L["c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
 G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["c"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["c"]["Size"] = UDim2.new(0, 47, 0, 18);
+G2L["c"]["Size"] = UDim2.new(0, 68, 0, 18);
 G2L["c"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["c"]["Text"] = [[Settings]];
-G2L["c"]["Name"] = [[settings]];
-G2L["c"]["Position"] = UDim2.new(0.20604, 0, -0.04831, 0);
+G2L["c"]["Text"] = [[Admin Panel]];
+G2L["c"]["Name"] = [[admin]];
+G2L["c"]["Position"] = UDim2.new(0.10379, 0, -0.04831, 0);
 
 
--- StarterGui.AIDS.topbar.back.executor.bar
-G2L["d"] = Instance.new("Frame", G2L["7"]);
-G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d"]["Size"] = UDim2.new(0, 433, 0, 0);
-G2L["d"]["Position"] = UDim2.new(0.10237, 0, 0.06266, 0);
-G2L["d"]["BorderColor3"] = Color3.fromRGB(239, 239, 239);
-G2L["d"]["Name"] = [[bar]];
+-- StarterGui.ScreenGui.topbar.back.executor.admin.LocalScript
+G2L["d"] = Instance.new("LocalScript", G2L["c"]);
 
 
--- StarterGui.AIDS.topbar.back.executor.scrollbarback
-G2L["e"] = Instance.new("Frame", G2L["7"]);
+
+-- StarterGui.ScreenGui.topbar.back.executor..
+G2L["e"] = Instance.new("Frame", G2L["a"]);
+G2L["e"]["BorderSizePixel"] = 0;
 G2L["e"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
-G2L["e"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["e"]["Size"] = UDim2.new(0, 15, 0, 225);
-G2L["e"]["Position"] = UDim2.new(0.72255, 0, 0.06266, 0);
-G2L["e"]["BorderColor3"] = Color3.fromRGB(239, 239, 239);
-G2L["e"]["Name"] = [[scrollbarback]];
+G2L["e"]["Size"] = UDim2.new(0, 70, 0, -11);
+G2L["e"]["Position"] = UDim2.new(0, 0, 0.02469, 0);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Name"] = [[.]];
 
 
--- StarterGui.AIDS.topbar.back.executor.linenumber
-G2L["f"] = Instance.new("TextLabel", G2L["7"]);
-G2L["f"]["BorderSizePixel"] = 0;
-G2L["f"]["TextSize"] = 16;
-G2L["f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f"]["TextColor3"] = Color3.fromRGB(0, 128, 128);
-G2L["f"]["BackgroundTransparency"] = 1;
-G2L["f"]["Size"] = UDim2.new(0, 60, 0, 225);
-G2L["f"]["ClipsDescendants"] = true;
-G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f"]["Text"] = [[]];
-G2L["f"]["Name"] = [[linenumber]];
-G2L["f"]["Position"] = UDim2.new(0.01187, 0, 0.06266, 0);
+-- StarterGui.ScreenGui.topbar.back.executor.settings
+G2L["f"] = Instance.new("TextButton", G2L["a"]);
+G2L["f"]["TextSize"] = 14;
+G2L["f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["f"]["Size"] = UDim2.new(0, 47, 0, 18);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["f"]["Text"] = [[Settings]];
+G2L["f"]["Name"] = [[settings]];
+G2L["f"]["Position"] = UDim2.new(0.20604, 0, -0.04831, 0);
 
 
--- StarterGui.AIDS.topbar.back.executor.linenumber.LocalScript
-G2L["10"] = Instance.new("LocalScript", G2L["f"]);
+-- StarterGui.ScreenGui.topbar.back.executor.bar
+G2L["10"] = Instance.new("Frame", G2L["a"]);
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["Size"] = UDim2.new(0, 433, 0, 0);
+G2L["10"]["Position"] = UDim2.new(0.10237, 0, 0.06266, 0);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(239, 239, 239);
+G2L["10"]["Name"] = [[bar]];
 
 
-
--- StarterGui.AIDS.topbar.back.executor.buttonsback
-G2L["11"] = Instance.new("Frame", G2L["7"]);
-G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["11"]["Size"] = UDim2.new(0, 240, 0, 31);
-G2L["11"]["Position"] = UDim2.new(0.01187, 0, 0.66416, 0);
-G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11"]["Name"] = [[buttonsback]];
-G2L["11"]["BackgroundTransparency"] = 1;
+-- StarterGui.ScreenGui.topbar.back.executor.scrollbarback
+G2L["11"] = Instance.new("Frame", G2L["a"]);
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
+G2L["11"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["11"]["Size"] = UDim2.new(0, 15, 0, 225);
+G2L["11"]["Position"] = UDim2.new(0.72255, 0, 0.06266, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(239, 239, 239);
+G2L["11"]["Name"] = [[scrollbarback]];
 
 
--- StarterGui.AIDS.topbar.back.executor.buttonsback.execute
-G2L["12"] = Instance.new("TextButton", G2L["11"]);
-G2L["12"]["TextSize"] = 18;
-G2L["12"]["AutoButtonColor"] = false;
-G2L["12"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["BackgroundColor3"] = Color3.fromRGB(228, 230, 229);
-G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["12"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["12"]["BorderColor3"] = Color3.fromRGB(197, 195, 195);
-G2L["12"]["Text"] = [[Execute]];
-G2L["12"]["Name"] = [[execute]];
+-- StarterGui.ScreenGui.topbar.back.executor.linenumber
+G2L["12"] = Instance.new("TextLabel", G2L["a"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 16;
+G2L["12"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["TextColor3"] = Color3.fromRGB(0, 128, 128);
+G2L["12"]["BackgroundTransparency"] = 1;
+G2L["12"]["Size"] = UDim2.new(0, 60, 0, 225);
+G2L["12"]["ClipsDescendants"] = true;
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[]];
+G2L["12"]["Name"] = [[linenumber]];
+G2L["12"]["Position"] = UDim2.new(0.01187, 0, 0.06266, 0);
 
 
--- StarterGui.AIDS.topbar.back.executor.buttonsback.execute.Script
-G2L["13"] = Instance.new("Script", G2L["12"]);
-
-
-
--- StarterGui.AIDS.topbar.back.executor.buttonsback.execute.Script.Loadstring
-G2L["14"] = Instance.new("ModuleScript", G2L["13"]);
-G2L["14"]["Name"] = [[Loadstring]];
-
-
--- StarterGui.AIDS.topbar.back.executor.buttonsback.execute.Script.Loadstring.FiOne
-G2L["15"] = Instance.new("ModuleScript", G2L["14"]);
-G2L["15"]["Name"] = [[FiOne]];
-
-
--- StarterGui.AIDS.topbar.back.executor.buttonsback.execute.Script.Loadstring.Yueliang
-G2L["16"] = Instance.new("ModuleScript", G2L["14"]);
-G2L["16"]["Name"] = [[Yueliang]];
-
-
--- StarterGui.AIDS.topbar.back.executor.buttonsback.execute.LocalScript
-G2L["17"] = Instance.new("LocalScript", G2L["12"]);
+-- StarterGui.ScreenGui.topbar.back.executor.linenumber.LocalScript
+G2L["13"] = Instance.new("LocalScript", G2L["12"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.buttonsback.execute.LocalScript
-G2L["18"] = Instance.new("LocalScript", G2L["12"]);
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback
+G2L["14"] = Instance.new("Frame", G2L["a"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["Size"] = UDim2.new(0, 240, 0, 31);
+G2L["14"]["Position"] = UDim2.new(0.01187, 0, 0.66416, 0);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Name"] = [[buttonsback]];
+G2L["14"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.execute
+G2L["15"] = Instance.new("TextButton", G2L["14"]);
+G2L["15"]["TextSize"] = 18;
+G2L["15"]["AutoButtonColor"] = false;
+G2L["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(228, 230, 229);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["15"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(197, 195, 195);
+G2L["15"]["Text"] = [[Execute]];
+G2L["15"]["Name"] = [[execute]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.execute.Script
+G2L["16"] = Instance.new("Script", G2L["15"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.buttonsback.execute.RemoteEvent
-G2L["19"] = Instance.new("RemoteEvent", G2L["12"]);
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.execute.Script.Loadstring
+G2L["17"] = Instance.new("ModuleScript", G2L["16"]);
+G2L["17"]["Name"] = [[Loadstring]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.execute.Script.Loadstring.FiOne
+G2L["18"] = Instance.new("ModuleScript", G2L["17"]);
+G2L["18"]["Name"] = [[FiOne]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.execute.Script.Loadstring.Yueliang
+G2L["19"] = Instance.new("ModuleScript", G2L["17"]);
+G2L["19"]["Name"] = [[Yueliang]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.execute.LocalScript
+G2L["1a"] = Instance.new("LocalScript", G2L["15"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.buttonsback.UIGridLayout
-G2L["1a"] = Instance.new("UIGridLayout", G2L["11"]);
-G2L["1a"]["CellSize"] = UDim2.new(0, 80, 0, 31);
-G2L["1a"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-G2L["1a"]["CellPadding"] = UDim2.new(0, 0, 0, 5);
-
-
--- StarterGui.AIDS.topbar.back.executor.buttonsback.clear
-G2L["1b"] = Instance.new("TextButton", G2L["11"]);
-G2L["1b"]["TextSize"] = 18;
-G2L["1b"]["AutoButtonColor"] = false;
-G2L["1b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(228, 230, 229);
-G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["1b"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1b"]["BorderColor3"] = Color3.fromRGB(197, 195, 195);
-G2L["1b"]["Text"] = [[Clear]];
-G2L["1b"]["Name"] = [[clear]];
-
-
--- StarterGui.AIDS.topbar.back.executor.buttonsback.clear.LocalScript
-G2L["1c"] = Instance.new("LocalScript", G2L["1b"]);
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.execute.LocalScript
+G2L["1b"] = Instance.new("LocalScript", G2L["15"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.buttonsback.clear.LocalScript
-G2L["1d"] = Instance.new("LocalScript", G2L["1b"]);
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.execute.RemoteEvent
+G2L["1c"] = Instance.new("RemoteEvent", G2L["15"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.inject
-G2L["1e"] = Instance.new("TextButton", G2L["7"]);
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.UIGridLayout
+G2L["1d"] = Instance.new("UIGridLayout", G2L["14"]);
+G2L["1d"]["CellSize"] = UDim2.new(0, 80, 0, 31);
+G2L["1d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["1d"]["CellPadding"] = UDim2.new(0, 0, 0, 5);
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.clear
+G2L["1e"] = Instance.new("TextButton", G2L["14"]);
 G2L["1e"]["TextSize"] = 18;
 G2L["1e"]["AutoButtonColor"] = false;
 G2L["1e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(228, 230, 229);
 G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["1e"]["Size"] = UDim2.new(0, 66, 0, 31);
+G2L["1e"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["1e"]["BorderColor3"] = Color3.fromRGB(197, 195, 195);
-G2L["1e"]["Text"] = [[Inject]];
-G2L["1e"]["Name"] = [[inject]];
-G2L["1e"]["Position"] = UDim2.new(0.64688, 0, 0.66416, 0);
+G2L["1e"]["Text"] = [[Clear]];
+G2L["1e"]["Name"] = [[clear]];
 
 
--- StarterGui.AIDS.topbar.back.executor.inject.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.clear.LocalScript
 G2L["1f"] = Instance.new("LocalScript", G2L["1e"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.inject.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.clear.LocalScript
 G2L["20"] = Instance.new("LocalScript", G2L["1e"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.R6
-G2L["21"] = Instance.new("TextButton", G2L["7"]);
+-- StarterGui.ScreenGui.topbar.back.executor.inject
+G2L["21"] = Instance.new("TextButton", G2L["a"]);
 G2L["21"]["TextSize"] = 18;
 G2L["21"]["AutoButtonColor"] = false;
 G2L["21"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["21"]["BackgroundColor3"] = Color3.fromRGB(228, 230, 229);
 G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["21"]["Size"] = UDim2.new(0, 39, 0, 31);
+G2L["21"]["Size"] = UDim2.new(0, 66, 0, 31);
 G2L["21"]["BorderColor3"] = Color3.fromRGB(197, 195, 195);
-G2L["21"]["Text"] = [[R6]];
-G2L["21"]["Name"] = [[R6]];
-G2L["21"]["Position"] = UDim2.new(0.58012, 0, 0.66416, 0);
+G2L["21"]["Text"] = [[Inject]];
+G2L["21"]["Name"] = [[inject]];
+G2L["21"]["Position"] = UDim2.new(0.64688, 0, 0.66416, 0);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.inject.LocalScript
 G2L["22"] = Instance.new("LocalScript", G2L["21"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.LocalScript.Script
-G2L["23"] = Instance.new("Script", G2L["22"]);
+-- StarterGui.ScreenGui.topbar.back.executor.inject.LocalScript
+G2L["23"] = Instance.new("LocalScript", G2L["21"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.LocalScript.RemoteEvent
-G2L["24"] = Instance.new("RemoteEvent", G2L["22"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6
+G2L["24"] = Instance.new("TextButton", G2L["a"]);
+G2L["24"]["TextSize"] = 18;
+G2L["24"]["AutoButtonColor"] = false;
+G2L["24"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(228, 230, 229);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["24"]["Size"] = UDim2.new(0, 39, 0, 31);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(197, 195, 195);
+G2L["24"]["Text"] = [[R6]];
+G2L["24"]["Name"] = [[R6]];
+G2L["24"]["Position"] = UDim2.new(0.58012, 0, 0.66416, 0);
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.LocalScript
+G2L["25"] = Instance.new("LocalScript", G2L["24"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6
-G2L["25"] = Instance.new("ModuleScript", G2L["21"]);
-G2L["25"]["Name"] = [[R6]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.LocalScript.Script
+G2L["26"] = Instance.new("Script", G2L["25"]);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6.
-G2L["26"] = Instance.new("Model", G2L["25"]);
-G2L["26"]["WorldPivot"] = CFrame.new(Vector3.new(991.86682, 1841.07458, -3979.19824), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["26"]["Name"] = [[]];
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.LocalScript.RemoteEvent
+G2L["27"] = Instance.new("RemoteEvent", G2L["25"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6
+G2L["28"] = Instance.new("ModuleScript", G2L["24"]);
+G2L["28"]["Name"] = [[R6]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6.
+G2L["29"] = Instance.new("Model", G2L["28"]);
+G2L["29"]["WorldPivot"] = CFrame.new(Vector3.new(991.86682, 1841.07458, -3979.19824), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["29"]["Name"] = [[]];
 -- [ERROR] cannot convert PrimaryPart, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate
-G2L["27"] = Instance.new("LocalScript", G2L["26"]);
-G2L["27"]["Name"] = [[Animate]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate
+G2L["2a"] = Instance.new("LocalScript", G2L["29"]);
+G2L["2a"]["Name"] = [[Animate]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.ScaleDampeningPercent
-G2L["28"] = Instance.new("NumberValue", G2L["27"]);
-G2L["28"]["Name"] = [[ScaleDampeningPercent]];
-G2L["28"]["Value"] = 0.4;
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.ScaleDampeningPercent
+G2L["2b"] = Instance.new("NumberValue", G2L["2a"]);
+G2L["2b"]["Name"] = [[ScaleDampeningPercent]];
+G2L["2b"]["Value"] = 0.4;
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.sit
-G2L["29"] = Instance.new("StringValue", G2L["27"]);
-G2L["29"]["Name"] = [[sit]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.sit
+G2L["2c"] = Instance.new("StringValue", G2L["2a"]);
+G2L["2c"]["Name"] = [[sit]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.sit.SitAnim
-G2L["2a"] = Instance.new("Animation", G2L["29"]);
-G2L["2a"]["Name"] = [[SitAnim]];
-G2L["2a"]["AnimationId"] = [[http://www.roblox.com/asset/?id=178130996]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.sit.SitAnim
+G2L["2d"] = Instance.new("Animation", G2L["2c"]);
+G2L["2d"]["Name"] = [[SitAnim]];
+G2L["2d"]["AnimationId"] = [[http://www.roblox.com/asset/?id=178130996]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.fall
-G2L["2b"] = Instance.new("StringValue", G2L["27"]);
-G2L["2b"]["Name"] = [[fall]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.fall
+G2L["2e"] = Instance.new("StringValue", G2L["2a"]);
+G2L["2e"]["Name"] = [[fall]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.fall.FallAnim
-G2L["2c"] = Instance.new("Animation", G2L["2b"]);
-G2L["2c"]["Name"] = [[FallAnim]];
-G2L["2c"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180436148]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.fall.FallAnim
+G2L["2f"] = Instance.new("Animation", G2L["2e"]);
+G2L["2f"]["Name"] = [[FallAnim]];
+G2L["2f"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180436148]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.toolnone
-G2L["2d"] = Instance.new("StringValue", G2L["27"]);
-G2L["2d"]["Name"] = [[toolnone]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.toolnone
+G2L["30"] = Instance.new("StringValue", G2L["2a"]);
+G2L["30"]["Name"] = [[toolnone]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.toolnone.ToolNoneAnim
-G2L["2e"] = Instance.new("Animation", G2L["2d"]);
-G2L["2e"]["Name"] = [[ToolNoneAnim]];
-G2L["2e"]["AnimationId"] = [[http://www.roblox.com/asset/?id=182393478]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.toolnone.ToolNoneAnim
+G2L["31"] = Instance.new("Animation", G2L["30"]);
+G2L["31"]["Name"] = [[ToolNoneAnim]];
+G2L["31"]["AnimationId"] = [[http://www.roblox.com/asset/?id=182393478]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.climb
-G2L["2f"] = Instance.new("StringValue", G2L["27"]);
-G2L["2f"]["Name"] = [[climb]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.climb
+G2L["32"] = Instance.new("StringValue", G2L["2a"]);
+G2L["32"]["Name"] = [[climb]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.climb.ClimbAnim
-G2L["30"] = Instance.new("Animation", G2L["2f"]);
-G2L["30"]["Name"] = [[ClimbAnim]];
-G2L["30"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180436334]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.climb.ClimbAnim
+G2L["33"] = Instance.new("Animation", G2L["32"]);
+G2L["33"]["Name"] = [[ClimbAnim]];
+G2L["33"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180436334]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.jump
-G2L["31"] = Instance.new("StringValue", G2L["27"]);
-G2L["31"]["Name"] = [[jump]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.jump
+G2L["34"] = Instance.new("StringValue", G2L["2a"]);
+G2L["34"]["Name"] = [[jump]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.jump.JumpAnim
-G2L["32"] = Instance.new("Animation", G2L["31"]);
-G2L["32"]["Name"] = [[JumpAnim]];
-G2L["32"]["AnimationId"] = [[http://www.roblox.com/asset/?id=125750702]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.jump.JumpAnim
+G2L["35"] = Instance.new("Animation", G2L["34"]);
+G2L["35"]["Name"] = [[JumpAnim]];
+G2L["35"]["AnimationId"] = [[http://www.roblox.com/asset/?id=125750702]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.run
-G2L["33"] = Instance.new("StringValue", G2L["27"]);
-G2L["33"]["Name"] = [[run]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.run
+G2L["36"] = Instance.new("StringValue", G2L["2a"]);
+G2L["36"]["Name"] = [[run]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.run.RunAnim
-G2L["34"] = Instance.new("Animation", G2L["33"]);
-G2L["34"]["Name"] = [[RunAnim]];
-G2L["34"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180426354]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.run.RunAnim
+G2L["37"] = Instance.new("Animation", G2L["36"]);
+G2L["37"]["Name"] = [[RunAnim]];
+G2L["37"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180426354]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.walk
-G2L["35"] = Instance.new("StringValue", G2L["27"]);
-G2L["35"]["Name"] = [[walk]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.walk
+G2L["38"] = Instance.new("StringValue", G2L["2a"]);
+G2L["38"]["Name"] = [[walk]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.walk.WalkAnim
-G2L["36"] = Instance.new("Animation", G2L["35"]);
-G2L["36"]["Name"] = [[WalkAnim]];
-G2L["36"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180426354]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.walk.WalkAnim
+G2L["39"] = Instance.new("Animation", G2L["38"]);
+G2L["39"]["Name"] = [[WalkAnim]];
+G2L["39"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180426354]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.idle
-G2L["37"] = Instance.new("StringValue", G2L["27"]);
-G2L["37"]["Name"] = [[idle]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.idle
+G2L["3a"] = Instance.new("StringValue", G2L["2a"]);
+G2L["3a"]["Name"] = [[idle]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.idle.Animation2
-G2L["38"] = Instance.new("Animation", G2L["37"]);
-G2L["38"]["Name"] = [[Animation2]];
-G2L["38"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180435792]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.idle.Animation2
+G2L["3b"] = Instance.new("Animation", G2L["3a"]);
+G2L["3b"]["Name"] = [[Animation2]];
+G2L["3b"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180435792]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.idle.Animation2.Weight
-G2L["39"] = Instance.new("NumberValue", G2L["38"]);
-G2L["39"]["Name"] = [[Weight]];
-G2L["39"]["Value"] = 1;
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.idle.Animation2.Weight
+G2L["3c"] = Instance.new("NumberValue", G2L["3b"]);
+G2L["3c"]["Name"] = [[Weight]];
+G2L["3c"]["Value"] = 1;
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.idle.Animation1
-G2L["3a"] = Instance.new("Animation", G2L["37"]);
-G2L["3a"]["Name"] = [[Animation1]];
-G2L["3a"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180435571]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.idle.Animation1
+G2L["3d"] = Instance.new("Animation", G2L["3a"]);
+G2L["3d"]["Name"] = [[Animation1]];
+G2L["3d"]["AnimationId"] = [[http://www.roblox.com/asset/?id=180435571]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate.idle.Animation1.Weight
-G2L["3b"] = Instance.new("NumberValue", G2L["3a"]);
-G2L["3b"]["Name"] = [[Weight]];
-G2L["3b"]["Value"] = 9;
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate.idle.Animation1.Weight
+G2L["3e"] = Instance.new("NumberValue", G2L["3d"]);
+G2L["3e"]["Name"] = [[Weight]];
+G2L["3e"]["Value"] = 9;
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Health
-G2L["3c"] = Instance.new("Script", G2L["26"]);
-G2L["3c"]["Name"] = [[Health]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Health
+G2L["3f"] = Instance.new("Script", G2L["29"]);
+G2L["3f"]["Name"] = [[Health]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Sound
-G2L["3d"] = Instance.new("Script", G2L["26"]);
-G2L["3d"]["Name"] = [[Sound]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Sound
+G2L["40"] = Instance.new("Script", G2L["29"]);
+G2L["40"]["Name"] = [[Sound]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Sound.LocalSound
-G2L["3e"] = Instance.new("LocalScript", G2L["3d"]);
-G2L["3e"]["Name"] = [[LocalSound]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Sound.LocalSound
+G2L["41"] = Instance.new("LocalScript", G2L["40"]);
+G2L["41"]["Name"] = [[LocalSound]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Humanoid
-G2L["3f"] = Instance.new("Humanoid", G2L["26"]);
-
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Humanoid.Jump
-G2L["40"] = Instance.new("LocalScript", G2L["3f"]);
-G2L["40"]["Name"] = [[Jump]];
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Humanoid.Respawn
-G2L["41"] = Instance.new("Script", G2L["3f"]);
-G2L["41"]["Name"] = [[Respawn]];
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Humanoid.Animator
-G2L["42"] = Instance.new("Animator", G2L["3f"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Humanoid
+G2L["42"] = Instance.new("Humanoid", G2L["29"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..HumanoidRootPart
-G2L["43"] = Instance.new("Part", G2L["26"]);
-G2L["43"]["BottomSurface"] = Enum.SurfaceType.Smooth;
-G2L["43"]["CanCollide"] = false;
-G2L["43"]["Transparency"] = 1;
-G2L["43"]["TopSurface"] = Enum.SurfaceType.Smooth;
-G2L["43"]["CFrame"] = CFrame.new(Vector3.new(991.98853, 1839.59253, -3979.39575), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["43"]["Locked"] = true;
-G2L["43"]["Size"] = Vector3.new(2, 2, 1);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Humanoid.Jump
+G2L["43"] = Instance.new("LocalScript", G2L["42"]);
+G2L["43"]["Name"] = [[Jump]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Humanoid.Respawn
+G2L["44"] = Instance.new("Script", G2L["42"]);
+G2L["44"]["Name"] = [[Respawn]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Humanoid.Animator
+G2L["45"] = Instance.new("Animator", G2L["42"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..HumanoidRootPart
+G2L["46"] = Instance.new("Part", G2L["29"]);
+G2L["46"]["BottomSurface"] = Enum.SurfaceType.Smooth;
+G2L["46"]["CanCollide"] = false;
+G2L["46"]["Transparency"] = 1;
+G2L["46"]["TopSurface"] = Enum.SurfaceType.Smooth;
+G2L["46"]["CFrame"] = CFrame.new(Vector3.new(991.98853, 1839.59253, -3979.39575), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["46"]["Locked"] = true;
+G2L["46"]["Size"] = Vector3.new(2, 2, 1);
 -- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["43"]["Color"] = Color3.fromRGB(174, 174, 174);
-G2L["43"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
-G2L["43"]["Name"] = [[HumanoidRootPart]];
+G2L["46"]["Color"] = Color3.fromRGB(174, 174, 174);
+G2L["46"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
+G2L["46"]["Name"] = [[HumanoidRootPart]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..HumanoidRootPart.RootJoint
-G2L["44"] = Instance.new("Motor6D", G2L["43"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..HumanoidRootPart.RootJoint
+G2L["47"] = Instance.new("Motor6D", G2L["46"]);
 -- [ERROR] cannot convert Part1, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["44"]["MaxVelocity"] = 0.1;
-G2L["44"]["C1"] = CFrame.new(Vector3.new(0, 0, 0), Vector3.new(0, -1, 0));
-G2L["44"]["C0"] = CFrame.new(Vector3.new(0, 0, 0), Vector3.new(0, -1, 0));
-G2L["44"]["Name"] = [[RootJoint]];
+G2L["47"]["MaxVelocity"] = 0.1;
+G2L["47"]["C1"] = CFrame.new(Vector3.new(0, 0, 0), Vector3.new(0, -1, 0));
+G2L["47"]["C0"] = CFrame.new(Vector3.new(0, 0, 0), Vector3.new(0, -1, 0));
+G2L["47"]["Name"] = [[RootJoint]];
 -- [ERROR] cannot convert Part0, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..HumanoidRootPart.RootAttachment
-G2L["45"] = Instance.new("Attachment", G2L["43"]);
-G2L["45"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["45"]["WorldCFrame"] = CFrame.new(Vector3.new(991.98853, 1839.59253, -3979.39575), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["45"]["Name"] = [[RootAttachment]];
-G2L["45"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..HumanoidRootPart.CharacterSoundEvent
-G2L["46"] = Instance.new("RemoteEvent", G2L["43"]);
-G2L["46"]["Name"] = [[CharacterSoundEvent]];
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Right Leg
-G2L["47"] = Instance.new("Part", G2L["26"]);
-G2L["47"]["BottomSurface"] = Enum.SurfaceType.Smooth;
-G2L["47"]["CanCollide"] = false;
-G2L["47"]["CFrame"] = CFrame.new(Vector3.new(991.68152, 1837.55652, -3979.49731), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["47"]["Locked"] = true;
-G2L["47"]["Size"] = Vector3.new(1, 2, 1);
--- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["47"]["Color"] = Color3.fromRGB(174, 174, 174);
-G2L["47"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
-G2L["47"]["Name"] = [[Right Leg]];
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Right Leg.RightFootAttachment
-G2L["48"] = Instance.new("Attachment", G2L["47"]);
-G2L["48"]["CFrame"] = CFrame.new(Vector3.new(0, -1, 0), Vector3.new(0, 0, -1));
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..HumanoidRootPart.RootAttachment
+G2L["48"] = Instance.new("Attachment", G2L["46"]);
 G2L["48"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["48"]["WorldCFrame"] = CFrame.new(Vector3.new(991.76263, 1836.5686, -3979.62891), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["48"]["Name"] = [[RightFootAttachment]];
+G2L["48"]["WorldCFrame"] = CFrame.new(Vector3.new(991.98853, 1839.59253, -3979.39575), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["48"]["Name"] = [[RootAttachment]];
 G2L["48"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Right Leg.CharacterSoundEvent
-G2L["49"] = Instance.new("RemoteEvent", G2L["47"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..HumanoidRootPart.CharacterSoundEvent
+G2L["49"] = Instance.new("RemoteEvent", G2L["46"]);
 G2L["49"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Left Leg
-G2L["4a"] = Instance.new("Part", G2L["26"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Right Leg
+G2L["4a"] = Instance.new("Part", G2L["29"]);
 G2L["4a"]["BottomSurface"] = Enum.SurfaceType.Smooth;
 G2L["4a"]["CanCollide"] = false;
-G2L["4a"]["CFrame"] = CFrame.new(Vector3.new(992.62006, 1837.67664, -3979.8208), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["4a"]["CFrame"] = CFrame.new(Vector3.new(991.68152, 1837.55652, -3979.49731), Vector3.new(0.3355, -0.0973, 0.937));
 G2L["4a"]["Locked"] = true;
 G2L["4a"]["Size"] = Vector3.new(1, 2, 1);
 -- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["4a"]["Color"] = Color3.fromRGB(174, 174, 174);
 G2L["4a"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
-G2L["4a"]["Name"] = [[Left Leg]];
+G2L["4a"]["Name"] = [[Right Leg]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Left Leg.LeftFootAttachment
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Right Leg.RightFootAttachment
 G2L["4b"] = Instance.new("Attachment", G2L["4a"]);
 G2L["4b"]["CFrame"] = CFrame.new(Vector3.new(0, -1, 0), Vector3.new(0, 0, -1));
 G2L["4b"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["4b"]["WorldCFrame"] = CFrame.new(Vector3.new(992.70117, 1836.68872, -3979.95239), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["4b"]["Name"] = [[LeftFootAttachment]];
+G2L["4b"]["WorldCFrame"] = CFrame.new(Vector3.new(991.76263, 1836.5686, -3979.62891), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["4b"]["Name"] = [[RightFootAttachment]];
 G2L["4b"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Left Leg.CharacterSoundEvent
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Right Leg.CharacterSoundEvent
 G2L["4c"] = Instance.new("RemoteEvent", G2L["4a"]);
 G2L["4c"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Right Arm
-G2L["4d"] = Instance.new("Part", G2L["26"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Left Leg
+G2L["4d"] = Instance.new("Part", G2L["29"]);
+G2L["4d"]["BottomSurface"] = Enum.SurfaceType.Smooth;
 G2L["4d"]["CanCollide"] = false;
-G2L["4d"]["CFrame"] = CFrame.new(Vector3.new(990.58069, 1839.41223, -3978.9104), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["4d"]["CFrame"] = CFrame.new(Vector3.new(992.62006, 1837.67664, -3979.8208), Vector3.new(0.3355, -0.0973, 0.937));
 G2L["4d"]["Locked"] = true;
 G2L["4d"]["Size"] = Vector3.new(1, 2, 1);
 -- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["4d"]["Color"] = Color3.fromRGB(174, 174, 174);
 G2L["4d"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
-G2L["4d"]["Name"] = [[Right Arm]];
+G2L["4d"]["Name"] = [[Left Leg]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Right Arm.RightGripAttachment
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Left Leg.LeftFootAttachment
 G2L["4e"] = Instance.new("Attachment", G2L["4d"]);
 G2L["4e"]["CFrame"] = CFrame.new(Vector3.new(0, -1, 0), Vector3.new(0, 0, -1));
 G2L["4e"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["4e"]["WorldCFrame"] = CFrame.new(Vector3.new(990.6618, 1838.42432, -3979.04199), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["4e"]["Name"] = [[RightGripAttachment]];
+G2L["4e"]["WorldCFrame"] = CFrame.new(Vector3.new(992.70117, 1836.68872, -3979.95239), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["4e"]["Name"] = [[LeftFootAttachment]];
 G2L["4e"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Right Arm.RightShoulderAttachment
-G2L["4f"] = Instance.new("Attachment", G2L["4d"]);
-G2L["4f"]["CFrame"] = CFrame.new(Vector3.new(0, 1, 0), Vector3.new(0, 0, -1));
-G2L["4f"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["4f"]["WorldCFrame"] = CFrame.new(Vector3.new(990.49957, 1840.40015, -3978.77881), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["4f"]["Name"] = [[RightShoulderAttachment]];
-G2L["4f"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Left Leg.CharacterSoundEvent
+G2L["4f"] = Instance.new("RemoteEvent", G2L["4d"]);
+G2L["4f"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Right Arm.CharacterSoundEvent
-G2L["50"] = Instance.new("RemoteEvent", G2L["4d"]);
-G2L["50"]["Name"] = [[CharacterSoundEvent]];
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Left Arm
-G2L["51"] = Instance.new("Part", G2L["26"]);
-G2L["51"]["CanCollide"] = false;
-G2L["51"]["CFrame"] = CFrame.new(Vector3.new(993.39636, 1839.77283, -3979.8811), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["51"]["Locked"] = true;
-G2L["51"]["Size"] = Vector3.new(1, 2, 1);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Right Arm
+G2L["50"] = Instance.new("Part", G2L["29"]);
+G2L["50"]["CanCollide"] = false;
+G2L["50"]["CFrame"] = CFrame.new(Vector3.new(990.58069, 1839.41223, -3978.9104), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["50"]["Locked"] = true;
+G2L["50"]["Size"] = Vector3.new(1, 2, 1);
 -- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["51"]["Color"] = Color3.fromRGB(174, 174, 174);
-G2L["51"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
-G2L["51"]["Name"] = [[Left Arm]];
+G2L["50"]["Color"] = Color3.fromRGB(174, 174, 174);
+G2L["50"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
+G2L["50"]["Name"] = [[Right Arm]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Left Arm.LeftGripAttachment
-G2L["52"] = Instance.new("Attachment", G2L["51"]);
-G2L["52"]["CFrame"] = CFrame.new(Vector3.new(0, -1, 0), Vector3.new(0, 0, -1));
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Right Arm.RightGripAttachment
+G2L["51"] = Instance.new("Attachment", G2L["50"]);
+G2L["51"]["CFrame"] = CFrame.new(Vector3.new(0, -1, 0), Vector3.new(0, 0, -1));
+G2L["51"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
+G2L["51"]["WorldCFrame"] = CFrame.new(Vector3.new(990.6618, 1838.42432, -3979.04199), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["51"]["Name"] = [[RightGripAttachment]];
+G2L["51"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Right Arm.RightShoulderAttachment
+G2L["52"] = Instance.new("Attachment", G2L["50"]);
+G2L["52"]["CFrame"] = CFrame.new(Vector3.new(0, 1, 0), Vector3.new(0, 0, -1));
 G2L["52"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["52"]["WorldCFrame"] = CFrame.new(Vector3.new(993.47748, 1838.78491, -3980.0127), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["52"]["Name"] = [[LeftGripAttachment]];
+G2L["52"]["WorldCFrame"] = CFrame.new(Vector3.new(990.49957, 1840.40015, -3978.77881), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["52"]["Name"] = [[RightShoulderAttachment]];
 G2L["52"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Left Arm.LeftShoulderAttachment
-G2L["53"] = Instance.new("Attachment", G2L["51"]);
-G2L["53"]["CFrame"] = CFrame.new(Vector3.new(0, 1, 0), Vector3.new(0, 0, -1));
-G2L["53"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["53"]["WorldCFrame"] = CFrame.new(Vector3.new(993.31525, 1840.76074, -3979.74951), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["53"]["Name"] = [[LeftShoulderAttachment]];
-G2L["53"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Right Arm.CharacterSoundEvent
+G2L["53"] = Instance.new("RemoteEvent", G2L["50"]);
+G2L["53"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Left Arm.CharacterSoundEvent
-G2L["54"] = Instance.new("RemoteEvent", G2L["51"]);
-G2L["54"]["Name"] = [[CharacterSoundEvent]];
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso
-G2L["55"] = Instance.new("Part", G2L["26"]);
-G2L["55"]["RightSurface"] = Enum.SurfaceType.Weld;
-G2L["55"]["CFrame"] = CFrame.new(Vector3.new(991.98853, 1839.59253, -3979.39575), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["55"]["Locked"] = true;
-G2L["55"]["Size"] = Vector3.new(2, 2, 1);
-G2L["55"]["LeftSurface"] = Enum.SurfaceType.Weld;
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Left Arm
+G2L["54"] = Instance.new("Part", G2L["29"]);
+G2L["54"]["CanCollide"] = false;
+G2L["54"]["CFrame"] = CFrame.new(Vector3.new(993.39636, 1839.77283, -3979.8811), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["54"]["Locked"] = true;
+G2L["54"]["Size"] = Vector3.new(1, 2, 1);
 -- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["55"]["Color"] = Color3.fromRGB(174, 174, 174);
-G2L["55"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
-G2L["55"]["Name"] = [[Torso]];
+G2L["54"]["Color"] = Color3.fromRGB(174, 174, 174);
+G2L["54"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
+G2L["54"]["Name"] = [[Left Arm]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.Neck
-G2L["56"] = Instance.new("Motor6D", G2L["55"]);
--- [ERROR] cannot convert Part1, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["56"]["MaxVelocity"] = 0.1;
-G2L["56"]["C1"] = CFrame.new(Vector3.new(0, -0.5, 0), Vector3.new(0, -1, 0));
-G2L["56"]["C0"] = CFrame.new(Vector3.new(0, 1, 0), Vector3.new(0, -1, 0));
-G2L["56"]["Name"] = [[Neck]];
--- [ERROR] cannot convert Part0, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Left Arm.LeftGripAttachment
+G2L["55"] = Instance.new("Attachment", G2L["54"]);
+G2L["55"]["CFrame"] = CFrame.new(Vector3.new(0, -1, 0), Vector3.new(0, 0, -1));
+G2L["55"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
+G2L["55"]["WorldCFrame"] = CFrame.new(Vector3.new(993.47748, 1838.78491, -3980.0127), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["55"]["Name"] = [[LeftGripAttachment]];
+G2L["55"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.Left Hip
-G2L["57"] = Instance.new("Motor6D", G2L["55"]);
--- [ERROR] cannot convert Part1, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["57"]["MaxVelocity"] = 0.1;
-G2L["57"]["C1"] = CFrame.new(Vector3.new(-0.5, 1, 0), Vector3.new(1, 0, 0));
-G2L["57"]["C0"] = CFrame.new(Vector3.new(-1, -1, 0), Vector3.new(1, 0, 0));
-G2L["57"]["Name"] = [[Left Hip]];
--- [ERROR] cannot convert Part0, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Left Arm.LeftShoulderAttachment
+G2L["56"] = Instance.new("Attachment", G2L["54"]);
+G2L["56"]["CFrame"] = CFrame.new(Vector3.new(0, 1, 0), Vector3.new(0, 0, -1));
+G2L["56"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
+G2L["56"]["WorldCFrame"] = CFrame.new(Vector3.new(993.31525, 1840.76074, -3979.74951), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["56"]["Name"] = [[LeftShoulderAttachment]];
+G2L["56"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.Right Hip
-G2L["58"] = Instance.new("Motor6D", G2L["55"]);
--- [ERROR] cannot convert Part1, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["58"]["MaxVelocity"] = 0.1;
-G2L["58"]["C1"] = CFrame.new(Vector3.new(0.5, 1, 0), Vector3.new(-1, 0, 0));
-G2L["58"]["C0"] = CFrame.new(Vector3.new(1, -1, 0), Vector3.new(-1, 0, 0));
-G2L["58"]["Name"] = [[Right Hip]];
--- [ERROR] cannot convert Part0, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Left Arm.CharacterSoundEvent
+G2L["57"] = Instance.new("RemoteEvent", G2L["54"]);
+G2L["57"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.Left Shoulder
-G2L["59"] = Instance.new("Motor6D", G2L["55"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso
+G2L["58"] = Instance.new("Part", G2L["29"]);
+G2L["58"]["RightSurface"] = Enum.SurfaceType.Weld;
+G2L["58"]["CFrame"] = CFrame.new(Vector3.new(991.98853, 1839.59253, -3979.39575), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["58"]["Locked"] = true;
+G2L["58"]["Size"] = Vector3.new(2, 2, 1);
+G2L["58"]["LeftSurface"] = Enum.SurfaceType.Weld;
+-- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["58"]["Color"] = Color3.fromRGB(174, 174, 174);
+G2L["58"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
+G2L["58"]["Name"] = [[Torso]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.Neck
+G2L["59"] = Instance.new("Motor6D", G2L["58"]);
 -- [ERROR] cannot convert Part1, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["59"]["MaxVelocity"] = 0.1;
-G2L["59"]["C1"] = CFrame.new(Vector3.new(0.5, 0.5, 0), Vector3.new(1, 0, 0));
-G2L["59"]["C0"] = CFrame.new(Vector3.new(-1, 0.5, 0), Vector3.new(1, 0, 0));
-G2L["59"]["Name"] = [[Left Shoulder]];
+G2L["59"]["C1"] = CFrame.new(Vector3.new(0, -0.5, 0), Vector3.new(0, -1, 0));
+G2L["59"]["C0"] = CFrame.new(Vector3.new(0, 1, 0), Vector3.new(0, -1, 0));
+G2L["59"]["Name"] = [[Neck]];
 -- [ERROR] cannot convert Part0, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.Right Shoulder
-G2L["5a"] = Instance.new("Motor6D", G2L["55"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.Left Hip
+G2L["5a"] = Instance.new("Motor6D", G2L["58"]);
 -- [ERROR] cannot convert Part1, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 G2L["5a"]["MaxVelocity"] = 0.1;
-G2L["5a"]["C1"] = CFrame.new(Vector3.new(-0.5, 0.5, 0), Vector3.new(-1, 0, 0));
-G2L["5a"]["C0"] = CFrame.new(Vector3.new(1, 0.5, 0), Vector3.new(-1, 0, 0));
-G2L["5a"]["Name"] = [[Right Shoulder]];
+G2L["5a"]["C1"] = CFrame.new(Vector3.new(-0.5, 1, 0), Vector3.new(1, 0, 0));
+G2L["5a"]["C0"] = CFrame.new(Vector3.new(-1, -1, 0), Vector3.new(1, 0, 0));
+G2L["5a"]["Name"] = [[Left Hip]];
 -- [ERROR] cannot convert Part0, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.WaistBackAttachment
-G2L["5b"] = Instance.new("Attachment", G2L["55"]);
-G2L["5b"]["CFrame"] = CFrame.new(Vector3.new(0, -1, 0.5), Vector3.new(0, 0, -1));
-G2L["5b"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["5b"]["WorldCFrame"] = CFrame.new(Vector3.new(991.90192, 1838.6532, -3979.99585), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["5b"]["Name"] = [[WaistBackAttachment]];
-G2L["5b"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.Right Hip
+G2L["5b"] = Instance.new("Motor6D", G2L["58"]);
+-- [ERROR] cannot convert Part1, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["5b"]["MaxVelocity"] = 0.1;
+G2L["5b"]["C1"] = CFrame.new(Vector3.new(0.5, 1, 0), Vector3.new(-1, 0, 0));
+G2L["5b"]["C0"] = CFrame.new(Vector3.new(1, -1, 0), Vector3.new(-1, 0, 0));
+G2L["5b"]["Name"] = [[Right Hip]];
+-- [ERROR] cannot convert Part0, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.WaistCenterAttachment
-G2L["5c"] = Instance.new("Attachment", G2L["55"]);
-G2L["5c"]["CFrame"] = CFrame.new(Vector3.new(0, -1, 0), Vector3.new(0, 0, -1));
-G2L["5c"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["5c"]["WorldCFrame"] = CFrame.new(Vector3.new(992.06964, 1838.60461, -3979.52734), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["5c"]["Name"] = [[WaistCenterAttachment]];
-G2L["5c"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.Left Shoulder
+G2L["5c"] = Instance.new("Motor6D", G2L["58"]);
+-- [ERROR] cannot convert Part1, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["5c"]["MaxVelocity"] = 0.1;
+G2L["5c"]["C1"] = CFrame.new(Vector3.new(0.5, 0.5, 0), Vector3.new(1, 0, 0));
+G2L["5c"]["C0"] = CFrame.new(Vector3.new(-1, 0.5, 0), Vector3.new(1, 0, 0));
+G2L["5c"]["Name"] = [[Left Shoulder]];
+-- [ERROR] cannot convert Part0, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.WaistFrontAttachment
-G2L["5d"] = Instance.new("Attachment", G2L["55"]);
-G2L["5d"]["CFrame"] = CFrame.new(Vector3.new(0, -1, -0.5), Vector3.new(0, 0, -1));
-G2L["5d"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["5d"]["WorldCFrame"] = CFrame.new(Vector3.new(992.23743, 1838.55591, -3979.05884), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["5d"]["Name"] = [[WaistFrontAttachment]];
-G2L["5d"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.Right Shoulder
+G2L["5d"] = Instance.new("Motor6D", G2L["58"]);
+-- [ERROR] cannot convert Part1, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["5d"]["MaxVelocity"] = 0.1;
+G2L["5d"]["C1"] = CFrame.new(Vector3.new(-0.5, 0.5, 0), Vector3.new(-1, 0, 0));
+G2L["5d"]["C0"] = CFrame.new(Vector3.new(1, 0.5, 0), Vector3.new(-1, 0, 0));
+G2L["5d"]["Name"] = [[Right Shoulder]];
+-- [ERROR] cannot convert Part0, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.RightCollarAttachment
-G2L["5e"] = Instance.new("Attachment", G2L["55"]);
-G2L["5e"]["CFrame"] = CFrame.new(Vector3.new(1, 1, 0), Vector3.new(0, 0, -1));
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.WaistBackAttachment
+G2L["5e"] = Instance.new("Attachment", G2L["58"]);
+G2L["5e"]["CFrame"] = CFrame.new(Vector3.new(0, -1, 0.5), Vector3.new(0, 0, -1));
 G2L["5e"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["5e"]["WorldCFrame"] = CFrame.new(Vector3.new(990.96887, 1840.46033, -3978.94043), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["5e"]["Name"] = [[RightCollarAttachment]];
+G2L["5e"]["WorldCFrame"] = CFrame.new(Vector3.new(991.90192, 1838.6532, -3979.99585), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["5e"]["Name"] = [[WaistBackAttachment]];
 G2L["5e"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.LeftCollarAttachment
-G2L["5f"] = Instance.new("Attachment", G2L["55"]);
-G2L["5f"]["CFrame"] = CFrame.new(Vector3.new(-1, 1, 0), Vector3.new(0, 0, -1));
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.WaistCenterAttachment
+G2L["5f"] = Instance.new("Attachment", G2L["58"]);
+G2L["5f"]["CFrame"] = CFrame.new(Vector3.new(0, -1, 0), Vector3.new(0, 0, -1));
 G2L["5f"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["5f"]["WorldCFrame"] = CFrame.new(Vector3.new(992.84595, 1840.70068, -3979.58765), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["5f"]["Name"] = [[LeftCollarAttachment]];
+G2L["5f"]["WorldCFrame"] = CFrame.new(Vector3.new(992.06964, 1838.60461, -3979.52734), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["5f"]["Name"] = [[WaistCenterAttachment]];
 G2L["5f"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.BodyBackAttachment
-G2L["60"] = Instance.new("Attachment", G2L["55"]);
-G2L["60"]["CFrame"] = CFrame.new(Vector3.new(0, 0, 0.5), Vector3.new(0, 0, -1));
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.WaistFrontAttachment
+G2L["60"] = Instance.new("Attachment", G2L["58"]);
+G2L["60"]["CFrame"] = CFrame.new(Vector3.new(0, -1, -0.5), Vector3.new(0, 0, -1));
 G2L["60"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["60"]["WorldCFrame"] = CFrame.new(Vector3.new(991.8208, 1839.64124, -3979.86426), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["60"]["Name"] = [[BodyBackAttachment]];
+G2L["60"]["WorldCFrame"] = CFrame.new(Vector3.new(992.23743, 1838.55591, -3979.05884), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["60"]["Name"] = [[WaistFrontAttachment]];
 G2L["60"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.BodyFrontAttachment
-G2L["61"] = Instance.new("Attachment", G2L["55"]);
-G2L["61"]["CFrame"] = CFrame.new(Vector3.new(0, 0, -0.5), Vector3.new(0, 0, -1));
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.RightCollarAttachment
+G2L["61"] = Instance.new("Attachment", G2L["58"]);
+G2L["61"]["CFrame"] = CFrame.new(Vector3.new(1, 1, 0), Vector3.new(0, 0, -1));
 G2L["61"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["61"]["WorldCFrame"] = CFrame.new(Vector3.new(992.15625, 1839.54382, -3978.92725), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["61"]["Name"] = [[BodyFrontAttachment]];
+G2L["61"]["WorldCFrame"] = CFrame.new(Vector3.new(990.96887, 1840.46033, -3978.94043), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["61"]["Name"] = [[RightCollarAttachment]];
 G2L["61"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.NeckAttachment
-G2L["62"] = Instance.new("Attachment", G2L["55"]);
-G2L["62"]["CFrame"] = CFrame.new(Vector3.new(0, 1, 0), Vector3.new(0, 0, -1));
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.LeftCollarAttachment
+G2L["62"] = Instance.new("Attachment", G2L["58"]);
+G2L["62"]["CFrame"] = CFrame.new(Vector3.new(-1, 1, 0), Vector3.new(0, 0, -1));
 G2L["62"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["62"]["WorldCFrame"] = CFrame.new(Vector3.new(991.90741, 1840.58044, -3979.26416), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["62"]["Name"] = [[NeckAttachment]];
+G2L["62"]["WorldCFrame"] = CFrame.new(Vector3.new(992.84595, 1840.70068, -3979.58765), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["62"]["Name"] = [[LeftCollarAttachment]];
 G2L["62"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.roblox
-G2L["63"] = Instance.new("Decal", G2L["55"]);
-G2L["63"]["Name"] = [[roblox]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.BodyBackAttachment
+G2L["63"] = Instance.new("Attachment", G2L["58"]);
+G2L["63"]["CFrame"] = CFrame.new(Vector3.new(0, 0, 0.5), Vector3.new(0, 0, -1));
+G2L["63"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
+G2L["63"]["WorldCFrame"] = CFrame.new(Vector3.new(991.8208, 1839.64124, -3979.86426), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["63"]["Name"] = [[BodyBackAttachment]];
+G2L["63"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Torso.CharacterSoundEvent
-G2L["64"] = Instance.new("RemoteEvent", G2L["55"]);
-G2L["64"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.BodyFrontAttachment
+G2L["64"] = Instance.new("Attachment", G2L["58"]);
+G2L["64"]["CFrame"] = CFrame.new(Vector3.new(0, 0, -0.5), Vector3.new(0, 0, -1));
+G2L["64"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
+G2L["64"]["WorldCFrame"] = CFrame.new(Vector3.new(992.15625, 1839.54382, -3978.92725), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["64"]["Name"] = [[BodyFrontAttachment]];
+G2L["64"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head
-G2L["65"] = Instance.new("Part", G2L["26"]);
-G2L["65"]["TopSurface"] = Enum.SurfaceType.Smooth;
-G2L["65"]["CFrame"] = CFrame.new(Vector3.new(991.86682, 1841.07446, -3979.19824), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["65"]["Locked"] = true;
-G2L["65"]["Size"] = Vector3.new(2, 1, 1);
--- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["65"]["Color"] = Color3.fromRGB(174, 174, 174);
-G2L["65"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
-G2L["65"]["Name"] = [[Head]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.NeckAttachment
+G2L["65"] = Instance.new("Attachment", G2L["58"]);
+G2L["65"]["CFrame"] = CFrame.new(Vector3.new(0, 1, 0), Vector3.new(0, 0, -1));
+G2L["65"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
+G2L["65"]["WorldCFrame"] = CFrame.new(Vector3.new(991.90741, 1840.58044, -3979.26416), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["65"]["Name"] = [[NeckAttachment]];
+G2L["65"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Climbing
-G2L["66"] = Instance.new("Sound", G2L["65"]);
-G2L["66"]["RollOffMaxDistance"] = 150;
-G2L["66"]["Volume"] = 0.65;
-G2L["66"]["Looped"] = true;
-G2L["66"]["RollOffMinDistance"] = 5;
-G2L["66"]["Name"] = [[Climbing]];
--- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["66"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.roblox
+G2L["66"] = Instance.new("Decal", G2L["58"]);
+G2L["66"]["Name"] = [[roblox]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Climbing.CharacterSoundEvent
-G2L["67"] = Instance.new("RemoteEvent", G2L["66"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Torso.CharacterSoundEvent
+G2L["67"] = Instance.new("RemoteEvent", G2L["58"]);
 G2L["67"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Swimming
-G2L["68"] = Instance.new("Sound", G2L["65"]);
-G2L["68"]["PlaybackSpeed"] = 1.6;
-G2L["68"]["RollOffMaxDistance"] = 150;
-G2L["68"]["Volume"] = 0.65;
-G2L["68"]["Looped"] = true;
-G2L["68"]["RollOffMinDistance"] = 5;
-G2L["68"]["Name"] = [[Swimming]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head
+G2L["68"] = Instance.new("Part", G2L["29"]);
+G2L["68"]["TopSurface"] = Enum.SurfaceType.Smooth;
+G2L["68"]["CFrame"] = CFrame.new(Vector3.new(991.86682, 1841.07446, -3979.19824), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["68"]["Locked"] = true;
+G2L["68"]["Size"] = Vector3.new(2, 1, 1);
+-- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["68"]["Color"] = Color3.fromRGB(174, 174, 174);
+G2L["68"]["Rotation"] = Vector3.new(-174.07201, -19.603, 175.05901);
+G2L["68"]["Name"] = [[Head]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Climbing
+G2L["69"] = Instance.new("Sound", G2L["68"]);
+G2L["69"]["RollOffMaxDistance"] = 150;
+G2L["69"]["Volume"] = 0.65;
+G2L["69"]["Looped"] = true;
+G2L["69"]["RollOffMinDistance"] = 5;
+G2L["69"]["Name"] = [[Climbing]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["68"]["SoundId"] = [[rbxasset://sounds/action_swim.mp3]];
+G2L["69"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Swimming.CharacterSoundEvent
-G2L["69"] = Instance.new("RemoteEvent", G2L["68"]);
-G2L["69"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Climbing.CharacterSoundEvent
+G2L["6a"] = Instance.new("RemoteEvent", G2L["69"]);
+G2L["6a"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Running
-G2L["6a"] = Instance.new("Sound", G2L["65"]);
-G2L["6a"]["TimePosition"] = 0.83446;
-G2L["6a"]["PlaybackSpeed"] = 1.85;
-G2L["6a"]["RollOffMaxDistance"] = 150;
-G2L["6a"]["Volume"] = 0.65;
-G2L["6a"]["Looped"] = true;
-G2L["6a"]["RollOffMinDistance"] = 5;
-G2L["6a"]["Name"] = [[Running]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Swimming
+G2L["6b"] = Instance.new("Sound", G2L["68"]);
+G2L["6b"]["PlaybackSpeed"] = 1.6;
+G2L["6b"]["RollOffMaxDistance"] = 150;
+G2L["6b"]["Volume"] = 0.65;
+G2L["6b"]["Looped"] = true;
+G2L["6b"]["RollOffMinDistance"] = 5;
+G2L["6b"]["Name"] = [[Swimming]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["6a"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
+G2L["6b"]["SoundId"] = [[rbxasset://sounds/action_swim.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Running.CharacterSoundEvent
-G2L["6b"] = Instance.new("RemoteEvent", G2L["6a"]);
-G2L["6b"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Swimming.CharacterSoundEvent
+G2L["6c"] = Instance.new("RemoteEvent", G2L["6b"]);
+G2L["6c"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Splash
-G2L["6c"] = Instance.new("Sound", G2L["65"]);
-G2L["6c"]["RollOffMaxDistance"] = 150;
-G2L["6c"]["Volume"] = 0.65;
-G2L["6c"]["RollOffMinDistance"] = 5;
-G2L["6c"]["Name"] = [[Splash]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Running
+G2L["6d"] = Instance.new("Sound", G2L["68"]);
+G2L["6d"]["TimePosition"] = 0.83446;
+G2L["6d"]["PlaybackSpeed"] = 1.85;
+G2L["6d"]["RollOffMaxDistance"] = 150;
+G2L["6d"]["Volume"] = 0.65;
+G2L["6d"]["Looped"] = true;
+G2L["6d"]["RollOffMinDistance"] = 5;
+G2L["6d"]["Name"] = [[Running]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["6c"]["SoundId"] = [[rbxasset://sounds/impact_water.mp3]];
+G2L["6d"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Splash.CharacterSoundEvent
-G2L["6d"] = Instance.new("RemoteEvent", G2L["6c"]);
-G2L["6d"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Running.CharacterSoundEvent
+G2L["6e"] = Instance.new("RemoteEvent", G2L["6d"]);
+G2L["6e"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Landing
-G2L["6e"] = Instance.new("Sound", G2L["65"]);
-G2L["6e"]["RollOffMaxDistance"] = 150;
-G2L["6e"]["Volume"] = 0.65;
-G2L["6e"]["RollOffMinDistance"] = 5;
-G2L["6e"]["Name"] = [[Landing]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Splash
+G2L["6f"] = Instance.new("Sound", G2L["68"]);
+G2L["6f"]["RollOffMaxDistance"] = 150;
+G2L["6f"]["Volume"] = 0.65;
+G2L["6f"]["RollOffMinDistance"] = 5;
+G2L["6f"]["Name"] = [[Splash]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["6e"]["SoundId"] = [[rbxasset://sounds/action_jump_land.mp3]];
+G2L["6f"]["SoundId"] = [[rbxasset://sounds/impact_water.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Landing.CharacterSoundEvent
-G2L["6f"] = Instance.new("RemoteEvent", G2L["6e"]);
-G2L["6f"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Splash.CharacterSoundEvent
+G2L["70"] = Instance.new("RemoteEvent", G2L["6f"]);
+G2L["70"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Jumping
-G2L["70"] = Instance.new("Sound", G2L["65"]);
-G2L["70"]["RollOffMaxDistance"] = 150;
-G2L["70"]["Volume"] = 0.65;
-G2L["70"]["RollOffMinDistance"] = 5;
-G2L["70"]["Name"] = [[Jumping]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Landing
+G2L["71"] = Instance.new("Sound", G2L["68"]);
+G2L["71"]["RollOffMaxDistance"] = 150;
+G2L["71"]["Volume"] = 0.65;
+G2L["71"]["RollOffMinDistance"] = 5;
+G2L["71"]["Name"] = [[Landing]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["70"]["SoundId"] = [[rbxasset://sounds/action_jump.mp3]];
+G2L["71"]["SoundId"] = [[rbxasset://sounds/action_jump_land.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Jumping.CharacterSoundEvent
-G2L["71"] = Instance.new("RemoteEvent", G2L["70"]);
-G2L["71"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Landing.CharacterSoundEvent
+G2L["72"] = Instance.new("RemoteEvent", G2L["71"]);
+G2L["72"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.FreeFalling
-G2L["72"] = Instance.new("Sound", G2L["65"]);
-G2L["72"]["TimePosition"] = 0.11429;
-G2L["72"]["RollOffMaxDistance"] = 150;
-G2L["72"]["Volume"] = 0.65;
-G2L["72"]["Looped"] = true;
-G2L["72"]["RollOffMinDistance"] = 5;
-G2L["72"]["Name"] = [[FreeFalling]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Jumping
+G2L["73"] = Instance.new("Sound", G2L["68"]);
+G2L["73"]["RollOffMaxDistance"] = 150;
+G2L["73"]["Volume"] = 0.65;
+G2L["73"]["RollOffMinDistance"] = 5;
+G2L["73"]["Name"] = [[Jumping]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["72"]["SoundId"] = [[rbxasset://sounds/action_falling.mp3]];
+G2L["73"]["SoundId"] = [[rbxasset://sounds/action_jump.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.FreeFalling.CharacterSoundEvent
-G2L["73"] = Instance.new("RemoteEvent", G2L["72"]);
-G2L["73"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Jumping.CharacterSoundEvent
+G2L["74"] = Instance.new("RemoteEvent", G2L["73"]);
+G2L["74"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Died
-G2L["74"] = Instance.new("Sound", G2L["65"]);
-G2L["74"]["RollOffMaxDistance"] = 150;
-G2L["74"]["Volume"] = 0.65;
-G2L["74"]["RollOffMinDistance"] = 5;
-G2L["74"]["Name"] = [[Died]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.FreeFalling
+G2L["75"] = Instance.new("Sound", G2L["68"]);
+G2L["75"]["TimePosition"] = 0.11429;
+G2L["75"]["RollOffMaxDistance"] = 150;
+G2L["75"]["Volume"] = 0.65;
+G2L["75"]["Looped"] = true;
+G2L["75"]["RollOffMinDistance"] = 5;
+G2L["75"]["Name"] = [[FreeFalling]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["74"]["SoundId"] = [[rbxasset://sounds/uuhhh.mp3]];
+G2L["75"]["SoundId"] = [[rbxasset://sounds/action_falling.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Died.CharacterSoundEvent
-G2L["75"] = Instance.new("RemoteEvent", G2L["74"]);
-G2L["75"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.FreeFalling.CharacterSoundEvent
+G2L["76"] = Instance.new("RemoteEvent", G2L["75"]);
+G2L["76"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.GettingUp
-G2L["76"] = Instance.new("Sound", G2L["65"]);
-G2L["76"]["RollOffMaxDistance"] = 150;
-G2L["76"]["Volume"] = 0.65;
-G2L["76"]["RollOffMinDistance"] = 5;
-G2L["76"]["Name"] = [[GettingUp]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Died
+G2L["77"] = Instance.new("Sound", G2L["68"]);
+G2L["77"]["RollOffMaxDistance"] = 150;
+G2L["77"]["Volume"] = 0.65;
+G2L["77"]["RollOffMinDistance"] = 5;
+G2L["77"]["Name"] = [[Died]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["76"]["SoundId"] = [[rbxasset://sounds/action_get_up.mp3]];
+G2L["77"]["SoundId"] = [[rbxasset://sounds/uuhhh.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.GettingUp.CharacterSoundEvent
-G2L["77"] = Instance.new("RemoteEvent", G2L["76"]);
-G2L["77"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Died.CharacterSoundEvent
+G2L["78"] = Instance.new("RemoteEvent", G2L["77"]);
+G2L["78"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.GettingUp
-G2L["78"] = Instance.new("Sound", G2L["65"]);
-G2L["78"]["RollOffMaxDistance"] = 150;
-G2L["78"]["Volume"] = 0.65;
-G2L["78"]["RollOffMinDistance"] = 5;
-G2L["78"]["Name"] = [[GettingUp]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.GettingUp
+G2L["79"] = Instance.new("Sound", G2L["68"]);
+G2L["79"]["RollOffMaxDistance"] = 150;
+G2L["79"]["Volume"] = 0.65;
+G2L["79"]["RollOffMinDistance"] = 5;
+G2L["79"]["Name"] = [[GettingUp]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["78"]["SoundId"] = [[rbxasset://sounds/action_get_up.mp3]];
+G2L["79"]["SoundId"] = [[rbxasset://sounds/action_get_up.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.GettingUp.CharacterSoundEvent
-G2L["79"] = Instance.new("RemoteEvent", G2L["78"]);
-G2L["79"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.GettingUp.CharacterSoundEvent
+G2L["7a"] = Instance.new("RemoteEvent", G2L["79"]);
+G2L["7a"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Died
-G2L["7a"] = Instance.new("Sound", G2L["65"]);
-G2L["7a"]["RollOffMaxDistance"] = 150;
-G2L["7a"]["Volume"] = 0.65;
-G2L["7a"]["RollOffMinDistance"] = 5;
-G2L["7a"]["Name"] = [[Died]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.GettingUp
+G2L["7b"] = Instance.new("Sound", G2L["68"]);
+G2L["7b"]["RollOffMaxDistance"] = 150;
+G2L["7b"]["Volume"] = 0.65;
+G2L["7b"]["RollOffMinDistance"] = 5;
+G2L["7b"]["Name"] = [[GettingUp]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["7a"]["SoundId"] = [[rbxasset://sounds/uuhhh.mp3]];
+G2L["7b"]["SoundId"] = [[rbxasset://sounds/action_get_up.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Died.CharacterSoundEvent
-G2L["7b"] = Instance.new("RemoteEvent", G2L["7a"]);
-G2L["7b"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.GettingUp.CharacterSoundEvent
+G2L["7c"] = Instance.new("RemoteEvent", G2L["7b"]);
+G2L["7c"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.FreeFalling
-G2L["7c"] = Instance.new("Sound", G2L["65"]);
-G2L["7c"]["RollOffMaxDistance"] = 150;
-G2L["7c"]["Volume"] = 0.65;
-G2L["7c"]["Looped"] = true;
-G2L["7c"]["RollOffMinDistance"] = 5;
-G2L["7c"]["Name"] = [[FreeFalling]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Died
+G2L["7d"] = Instance.new("Sound", G2L["68"]);
+G2L["7d"]["RollOffMaxDistance"] = 150;
+G2L["7d"]["Volume"] = 0.65;
+G2L["7d"]["RollOffMinDistance"] = 5;
+G2L["7d"]["Name"] = [[Died]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["7c"]["SoundId"] = [[rbxasset://sounds/action_falling.mp3]];
+G2L["7d"]["SoundId"] = [[rbxasset://sounds/uuhhh.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.FreeFalling.CharacterSoundEvent
-G2L["7d"] = Instance.new("RemoteEvent", G2L["7c"]);
-G2L["7d"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Died.CharacterSoundEvent
+G2L["7e"] = Instance.new("RemoteEvent", G2L["7d"]);
+G2L["7e"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Jumping
-G2L["7e"] = Instance.new("Sound", G2L["65"]);
-G2L["7e"]["RollOffMaxDistance"] = 150;
-G2L["7e"]["Volume"] = 0.65;
-G2L["7e"]["RollOffMinDistance"] = 5;
-G2L["7e"]["Name"] = [[Jumping]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.FreeFalling
+G2L["7f"] = Instance.new("Sound", G2L["68"]);
+G2L["7f"]["RollOffMaxDistance"] = 150;
+G2L["7f"]["Volume"] = 0.65;
+G2L["7f"]["Looped"] = true;
+G2L["7f"]["RollOffMinDistance"] = 5;
+G2L["7f"]["Name"] = [[FreeFalling]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["7e"]["SoundId"] = [[rbxasset://sounds/action_jump.mp3]];
+G2L["7f"]["SoundId"] = [[rbxasset://sounds/action_falling.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Jumping.CharacterSoundEvent
-G2L["7f"] = Instance.new("RemoteEvent", G2L["7e"]);
-G2L["7f"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.FreeFalling.CharacterSoundEvent
+G2L["80"] = Instance.new("RemoteEvent", G2L["7f"]);
+G2L["80"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Landing
-G2L["80"] = Instance.new("Sound", G2L["65"]);
-G2L["80"]["RollOffMaxDistance"] = 150;
-G2L["80"]["Volume"] = 0.65;
-G2L["80"]["RollOffMinDistance"] = 5;
-G2L["80"]["Name"] = [[Landing]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Jumping
+G2L["81"] = Instance.new("Sound", G2L["68"]);
+G2L["81"]["RollOffMaxDistance"] = 150;
+G2L["81"]["Volume"] = 0.65;
+G2L["81"]["RollOffMinDistance"] = 5;
+G2L["81"]["Name"] = [[Jumping]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["80"]["SoundId"] = [[rbxasset://sounds/action_jump_land.mp3]];
+G2L["81"]["SoundId"] = [[rbxasset://sounds/action_jump.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Landing.CharacterSoundEvent
-G2L["81"] = Instance.new("RemoteEvent", G2L["80"]);
-G2L["81"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Jumping.CharacterSoundEvent
+G2L["82"] = Instance.new("RemoteEvent", G2L["81"]);
+G2L["82"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Splash
-G2L["82"] = Instance.new("Sound", G2L["65"]);
-G2L["82"]["RollOffMaxDistance"] = 150;
-G2L["82"]["Volume"] = 0.65;
-G2L["82"]["RollOffMinDistance"] = 5;
-G2L["82"]["Name"] = [[Splash]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Landing
+G2L["83"] = Instance.new("Sound", G2L["68"]);
+G2L["83"]["RollOffMaxDistance"] = 150;
+G2L["83"]["Volume"] = 0.65;
+G2L["83"]["RollOffMinDistance"] = 5;
+G2L["83"]["Name"] = [[Landing]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["82"]["SoundId"] = [[rbxasset://sounds/impact_water.mp3]];
+G2L["83"]["SoundId"] = [[rbxasset://sounds/action_jump_land.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Splash.CharacterSoundEvent
-G2L["83"] = Instance.new("RemoteEvent", G2L["82"]);
-G2L["83"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Landing.CharacterSoundEvent
+G2L["84"] = Instance.new("RemoteEvent", G2L["83"]);
+G2L["84"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Running
-G2L["84"] = Instance.new("Sound", G2L["65"]);
-G2L["84"]["PlaybackSpeed"] = 1.85;
-G2L["84"]["RollOffMaxDistance"] = 150;
-G2L["84"]["Volume"] = 0.65;
-G2L["84"]["Looped"] = true;
-G2L["84"]["RollOffMinDistance"] = 5;
-G2L["84"]["Name"] = [[Running]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Splash
+G2L["85"] = Instance.new("Sound", G2L["68"]);
+G2L["85"]["RollOffMaxDistance"] = 150;
+G2L["85"]["Volume"] = 0.65;
+G2L["85"]["RollOffMinDistance"] = 5;
+G2L["85"]["Name"] = [[Splash]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["84"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
+G2L["85"]["SoundId"] = [[rbxasset://sounds/impact_water.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Running.CharacterSoundEvent
-G2L["85"] = Instance.new("RemoteEvent", G2L["84"]);
-G2L["85"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Splash.CharacterSoundEvent
+G2L["86"] = Instance.new("RemoteEvent", G2L["85"]);
+G2L["86"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Swimming
-G2L["86"] = Instance.new("Sound", G2L["65"]);
-G2L["86"]["PlaybackSpeed"] = 1.6;
-G2L["86"]["RollOffMaxDistance"] = 150;
-G2L["86"]["Volume"] = 0.65;
-G2L["86"]["Looped"] = true;
-G2L["86"]["RollOffMinDistance"] = 5;
-G2L["86"]["Name"] = [[Swimming]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Running
+G2L["87"] = Instance.new("Sound", G2L["68"]);
+G2L["87"]["PlaybackSpeed"] = 1.85;
+G2L["87"]["RollOffMaxDistance"] = 150;
+G2L["87"]["Volume"] = 0.65;
+G2L["87"]["Looped"] = true;
+G2L["87"]["RollOffMinDistance"] = 5;
+G2L["87"]["Name"] = [[Running]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["86"]["SoundId"] = [[rbxasset://sounds/action_swim.mp3]];
+G2L["87"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Swimming.CharacterSoundEvent
-G2L["87"] = Instance.new("RemoteEvent", G2L["86"]);
-G2L["87"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Running.CharacterSoundEvent
+G2L["88"] = Instance.new("RemoteEvent", G2L["87"]);
+G2L["88"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Climbing
-G2L["88"] = Instance.new("Sound", G2L["65"]);
-G2L["88"]["RollOffMaxDistance"] = 150;
-G2L["88"]["Volume"] = 0.65;
-G2L["88"]["Looped"] = true;
-G2L["88"]["RollOffMinDistance"] = 5;
-G2L["88"]["Name"] = [[Climbing]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Swimming
+G2L["89"] = Instance.new("Sound", G2L["68"]);
+G2L["89"]["PlaybackSpeed"] = 1.6;
+G2L["89"]["RollOffMaxDistance"] = 150;
+G2L["89"]["Volume"] = 0.65;
+G2L["89"]["Looped"] = true;
+G2L["89"]["RollOffMinDistance"] = 5;
+G2L["89"]["Name"] = [[Swimming]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["88"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
+G2L["89"]["SoundId"] = [[rbxasset://sounds/action_swim.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Climbing.CharacterSoundEvent
-G2L["89"] = Instance.new("RemoteEvent", G2L["88"]);
-G2L["89"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Swimming.CharacterSoundEvent
+G2L["8a"] = Instance.new("RemoteEvent", G2L["89"]);
+G2L["8a"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.GettingUp
-G2L["8a"] = Instance.new("Sound", G2L["65"]);
-G2L["8a"]["RollOffMaxDistance"] = 150;
-G2L["8a"]["Volume"] = 0.65;
-G2L["8a"]["RollOffMinDistance"] = 5;
-G2L["8a"]["Name"] = [[GettingUp]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Climbing
+G2L["8b"] = Instance.new("Sound", G2L["68"]);
+G2L["8b"]["RollOffMaxDistance"] = 150;
+G2L["8b"]["Volume"] = 0.65;
+G2L["8b"]["Looped"] = true;
+G2L["8b"]["RollOffMinDistance"] = 5;
+G2L["8b"]["Name"] = [[Climbing]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["8a"]["SoundId"] = [[rbxasset://sounds/action_get_up.mp3]];
+G2L["8b"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.GettingUp.CharacterSoundEvent
-G2L["8b"] = Instance.new("RemoteEvent", G2L["8a"]);
-G2L["8b"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Climbing.CharacterSoundEvent
+G2L["8c"] = Instance.new("RemoteEvent", G2L["8b"]);
+G2L["8c"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Died
-G2L["8c"] = Instance.new("Sound", G2L["65"]);
-G2L["8c"]["RollOffMaxDistance"] = 150;
-G2L["8c"]["Volume"] = 0.65;
-G2L["8c"]["RollOffMinDistance"] = 5;
-G2L["8c"]["Name"] = [[Died]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.GettingUp
+G2L["8d"] = Instance.new("Sound", G2L["68"]);
+G2L["8d"]["RollOffMaxDistance"] = 150;
+G2L["8d"]["Volume"] = 0.65;
+G2L["8d"]["RollOffMinDistance"] = 5;
+G2L["8d"]["Name"] = [[GettingUp]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["8c"]["SoundId"] = [[rbxasset://sounds/uuhhh.mp3]];
+G2L["8d"]["SoundId"] = [[rbxasset://sounds/action_get_up.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Died.CharacterSoundEvent
-G2L["8d"] = Instance.new("RemoteEvent", G2L["8c"]);
-G2L["8d"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.GettingUp.CharacterSoundEvent
+G2L["8e"] = Instance.new("RemoteEvent", G2L["8d"]);
+G2L["8e"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.FreeFalling
-G2L["8e"] = Instance.new("Sound", G2L["65"]);
-G2L["8e"]["RollOffMaxDistance"] = 150;
-G2L["8e"]["Volume"] = 0.65;
-G2L["8e"]["Looped"] = true;
-G2L["8e"]["RollOffMinDistance"] = 5;
-G2L["8e"]["Name"] = [[FreeFalling]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Died
+G2L["8f"] = Instance.new("Sound", G2L["68"]);
+G2L["8f"]["RollOffMaxDistance"] = 150;
+G2L["8f"]["Volume"] = 0.65;
+G2L["8f"]["RollOffMinDistance"] = 5;
+G2L["8f"]["Name"] = [[Died]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["8e"]["SoundId"] = [[rbxasset://sounds/action_falling.mp3]];
+G2L["8f"]["SoundId"] = [[rbxasset://sounds/uuhhh.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.FreeFalling.CharacterSoundEvent
-G2L["8f"] = Instance.new("RemoteEvent", G2L["8e"]);
-G2L["8f"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Died.CharacterSoundEvent
+G2L["90"] = Instance.new("RemoteEvent", G2L["8f"]);
+G2L["90"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Jumping
-G2L["90"] = Instance.new("Sound", G2L["65"]);
-G2L["90"]["RollOffMaxDistance"] = 150;
-G2L["90"]["Volume"] = 0.65;
-G2L["90"]["RollOffMinDistance"] = 5;
-G2L["90"]["Name"] = [[Jumping]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.FreeFalling
+G2L["91"] = Instance.new("Sound", G2L["68"]);
+G2L["91"]["RollOffMaxDistance"] = 150;
+G2L["91"]["Volume"] = 0.65;
+G2L["91"]["Looped"] = true;
+G2L["91"]["RollOffMinDistance"] = 5;
+G2L["91"]["Name"] = [[FreeFalling]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["90"]["SoundId"] = [[rbxasset://sounds/action_jump.mp3]];
+G2L["91"]["SoundId"] = [[rbxasset://sounds/action_falling.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Jumping.CharacterSoundEvent
-G2L["91"] = Instance.new("RemoteEvent", G2L["90"]);
-G2L["91"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.FreeFalling.CharacterSoundEvent
+G2L["92"] = Instance.new("RemoteEvent", G2L["91"]);
+G2L["92"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Landing
-G2L["92"] = Instance.new("Sound", G2L["65"]);
-G2L["92"]["RollOffMaxDistance"] = 150;
-G2L["92"]["Volume"] = 0.65;
-G2L["92"]["RollOffMinDistance"] = 5;
-G2L["92"]["Name"] = [[Landing]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Jumping
+G2L["93"] = Instance.new("Sound", G2L["68"]);
+G2L["93"]["RollOffMaxDistance"] = 150;
+G2L["93"]["Volume"] = 0.65;
+G2L["93"]["RollOffMinDistance"] = 5;
+G2L["93"]["Name"] = [[Jumping]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["92"]["SoundId"] = [[rbxasset://sounds/action_jump_land.mp3]];
+G2L["93"]["SoundId"] = [[rbxasset://sounds/action_jump.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Landing.CharacterSoundEvent
-G2L["93"] = Instance.new("RemoteEvent", G2L["92"]);
-G2L["93"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Jumping.CharacterSoundEvent
+G2L["94"] = Instance.new("RemoteEvent", G2L["93"]);
+G2L["94"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Splash
-G2L["94"] = Instance.new("Sound", G2L["65"]);
-G2L["94"]["RollOffMaxDistance"] = 150;
-G2L["94"]["Volume"] = 0.65;
-G2L["94"]["RollOffMinDistance"] = 5;
-G2L["94"]["Name"] = [[Splash]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Landing
+G2L["95"] = Instance.new("Sound", G2L["68"]);
+G2L["95"]["RollOffMaxDistance"] = 150;
+G2L["95"]["Volume"] = 0.65;
+G2L["95"]["RollOffMinDistance"] = 5;
+G2L["95"]["Name"] = [[Landing]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["94"]["SoundId"] = [[rbxasset://sounds/impact_water.mp3]];
+G2L["95"]["SoundId"] = [[rbxasset://sounds/action_jump_land.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Splash.CharacterSoundEvent
-G2L["95"] = Instance.new("RemoteEvent", G2L["94"]);
-G2L["95"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Landing.CharacterSoundEvent
+G2L["96"] = Instance.new("RemoteEvent", G2L["95"]);
+G2L["96"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Running
-G2L["96"] = Instance.new("Sound", G2L["65"]);
-G2L["96"]["PlaybackSpeed"] = 1.85;
-G2L["96"]["RollOffMaxDistance"] = 150;
-G2L["96"]["Volume"] = 0.65;
-G2L["96"]["Looped"] = true;
-G2L["96"]["RollOffMinDistance"] = 5;
-G2L["96"]["Name"] = [[Running]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Splash
+G2L["97"] = Instance.new("Sound", G2L["68"]);
+G2L["97"]["RollOffMaxDistance"] = 150;
+G2L["97"]["Volume"] = 0.65;
+G2L["97"]["RollOffMinDistance"] = 5;
+G2L["97"]["Name"] = [[Splash]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["96"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
+G2L["97"]["SoundId"] = [[rbxasset://sounds/impact_water.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Running.CharacterSoundEvent
-G2L["97"] = Instance.new("RemoteEvent", G2L["96"]);
-G2L["97"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Splash.CharacterSoundEvent
+G2L["98"] = Instance.new("RemoteEvent", G2L["97"]);
+G2L["98"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Swimming
-G2L["98"] = Instance.new("Sound", G2L["65"]);
-G2L["98"]["PlaybackSpeed"] = 1.6;
-G2L["98"]["RollOffMaxDistance"] = 150;
-G2L["98"]["Volume"] = 0.65;
-G2L["98"]["Looped"] = true;
-G2L["98"]["RollOffMinDistance"] = 5;
-G2L["98"]["Name"] = [[Swimming]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Running
+G2L["99"] = Instance.new("Sound", G2L["68"]);
+G2L["99"]["PlaybackSpeed"] = 1.85;
+G2L["99"]["RollOffMaxDistance"] = 150;
+G2L["99"]["Volume"] = 0.65;
+G2L["99"]["Looped"] = true;
+G2L["99"]["RollOffMinDistance"] = 5;
+G2L["99"]["Name"] = [[Running]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["98"]["SoundId"] = [[rbxasset://sounds/action_swim.mp3]];
+G2L["99"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Swimming.CharacterSoundEvent
-G2L["99"] = Instance.new("RemoteEvent", G2L["98"]);
-G2L["99"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Running.CharacterSoundEvent
+G2L["9a"] = Instance.new("RemoteEvent", G2L["99"]);
+G2L["9a"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Climbing
-G2L["9a"] = Instance.new("Sound", G2L["65"]);
-G2L["9a"]["RollOffMaxDistance"] = 150;
-G2L["9a"]["Volume"] = 0.65;
-G2L["9a"]["Looped"] = true;
-G2L["9a"]["RollOffMinDistance"] = 5;
-G2L["9a"]["Name"] = [[Climbing]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Swimming
+G2L["9b"] = Instance.new("Sound", G2L["68"]);
+G2L["9b"]["PlaybackSpeed"] = 1.6;
+G2L["9b"]["RollOffMaxDistance"] = 150;
+G2L["9b"]["Volume"] = 0.65;
+G2L["9b"]["Looped"] = true;
+G2L["9b"]["RollOffMinDistance"] = 5;
+G2L["9b"]["Name"] = [[Swimming]];
 -- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["9a"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
+G2L["9b"]["SoundId"] = [[rbxasset://sounds/action_swim.mp3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Climbing.CharacterSoundEvent
-G2L["9b"] = Instance.new("RemoteEvent", G2L["9a"]);
-G2L["9b"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Swimming.CharacterSoundEvent
+G2L["9c"] = Instance.new("RemoteEvent", G2L["9b"]);
+G2L["9c"]["Name"] = [[CharacterSoundEvent]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.face
-G2L["9c"] = Instance.new("Decal", G2L["65"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Climbing
+G2L["9d"] = Instance.new("Sound", G2L["68"]);
+G2L["9d"]["RollOffMaxDistance"] = 150;
+G2L["9d"]["Volume"] = 0.65;
+G2L["9d"]["Looped"] = true;
+G2L["9d"]["RollOffMinDistance"] = 5;
+G2L["9d"]["Name"] = [[Climbing]];
+-- [ERROR] cannot convert AudioContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["9d"]["SoundId"] = [[rbxasset://sounds/action_footsteps_plastic.mp3]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Climbing.CharacterSoundEvent
+G2L["9e"] = Instance.new("RemoteEvent", G2L["9d"]);
+G2L["9e"]["Name"] = [[CharacterSoundEvent]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.face
+G2L["9f"] = Instance.new("Decal", G2L["68"]);
 -- [ERROR] cannot convert TextureContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["9c"]["Texture"] = [[rbxassetid://144080495]];
+G2L["9f"]["Texture"] = [[rbxassetid://144080495]];
 -- [ERROR] cannot convert ColorMapContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["9c"]["ColorMap"] = [[rbxassetid://144080495]];
-G2L["9c"]["Name"] = [[face]];
+G2L["9f"]["ColorMap"] = [[rbxassetid://144080495]];
+G2L["9f"]["Name"] = [[face]];
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.FaceCenterAttachment
-G2L["9d"] = Instance.new("Attachment", G2L["65"]);
-G2L["9d"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["9d"]["WorldCFrame"] = CFrame.new(Vector3.new(991.86682, 1841.07446, -3979.19824), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["9d"]["Name"] = [[FaceCenterAttachment]];
-G2L["9d"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.FaceFrontAttachment
-G2L["9e"] = Instance.new("Attachment", G2L["65"]);
-G2L["9e"]["CFrame"] = CFrame.new(Vector3.new(0, 0, -0.6), Vector3.new(0, 0, -1));
-G2L["9e"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["9e"]["WorldCFrame"] = CFrame.new(Vector3.new(992.06812, 1841.01611, -3978.63599), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["9e"]["Name"] = [[FaceFrontAttachment]];
-G2L["9e"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.HatAttachment
-G2L["9f"] = Instance.new("Attachment", G2L["65"]);
-G2L["9f"]["CFrame"] = CFrame.new(Vector3.new(0, 0.6, 0), Vector3.new(0, 0, -1));
-G2L["9f"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["9f"]["WorldCFrame"] = CFrame.new(Vector3.new(991.81812, 1841.66724, -3979.11914), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["9f"]["Name"] = [[HatAttachment]];
-G2L["9f"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
-
-
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.HairAttachment
-G2L["a0"] = Instance.new("Attachment", G2L["65"]);
-G2L["a0"]["CFrame"] = CFrame.new(Vector3.new(0, 0.6, 0), Vector3.new(0, 0, -1));
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.FaceCenterAttachment
+G2L["a0"] = Instance.new("Attachment", G2L["68"]);
 G2L["a0"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
-G2L["a0"]["WorldCFrame"] = CFrame.new(Vector3.new(991.81812, 1841.66724, -3979.11914), Vector3.new(0.3355, -0.0973, 0.937));
-G2L["a0"]["Name"] = [[HairAttachment]];
+G2L["a0"]["WorldCFrame"] = CFrame.new(Vector3.new(991.86682, 1841.07446, -3979.19824), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["a0"]["Name"] = [[FaceCenterAttachment]];
 G2L["a0"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.Mesh
-G2L["a1"] = Instance.new("SpecialMesh", G2L["65"]);
-G2L["a1"]["Scale"] = Vector3.new(1.25, 1.25, 1.25);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.FaceFrontAttachment
+G2L["a1"] = Instance.new("Attachment", G2L["68"]);
+G2L["a1"]["CFrame"] = CFrame.new(Vector3.new(0, 0, -0.6), Vector3.new(0, 0, -1));
+G2L["a1"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
+G2L["a1"]["WorldCFrame"] = CFrame.new(Vector3.new(992.06812, 1841.01611, -3978.63599), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["a1"]["Name"] = [[FaceFrontAttachment]];
+G2L["a1"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Head.CharacterSoundEvent
-G2L["a2"] = Instance.new("RemoteEvent", G2L["65"]);
-G2L["a2"]["Name"] = [[CharacterSoundEvent]];
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.HatAttachment
+G2L["a2"] = Instance.new("Attachment", G2L["68"]);
+G2L["a2"]["CFrame"] = CFrame.new(Vector3.new(0, 0.6, 0), Vector3.new(0, 0, -1));
+G2L["a2"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
+G2L["a2"]["WorldCFrame"] = CFrame.new(Vector3.new(991.81812, 1841.66724, -3979.11914), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["a2"]["Name"] = [[HatAttachment]];
+G2L["a2"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
--- StarterGui.AIDS.topbar.back.executor.R6.LocalScript
-G2L["a3"] = Instance.new("LocalScript", G2L["21"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.HairAttachment
+G2L["a3"] = Instance.new("Attachment", G2L["68"]);
+G2L["a3"]["CFrame"] = CFrame.new(Vector3.new(0, 0.6, 0), Vector3.new(0, 0, -1));
+G2L["a3"]["WorldSecondaryAxis"] = Vector3.new(-0.08114, 0.98797, 0.13164);
+G2L["a3"]["WorldCFrame"] = CFrame.new(Vector3.new(991.81812, 1841.66724, -3979.11914), Vector3.new(0.3355, -0.0973, 0.937));
+G2L["a3"]["Name"] = [[HairAttachment]];
+G2L["a3"]["WorldAxis"] = Vector3.new(-0.93854, -0.12019, 0.32357);
 
 
-
--- StarterGui.AIDS.topbar.back.executor.RE
-G2L["a4"] = Instance.new("TextButton", G2L["7"]);
-G2L["a4"]["TextSize"] = 18;
-G2L["a4"]["AutoButtonColor"] = false;
-G2L["a4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a4"]["BackgroundColor3"] = Color3.fromRGB(228, 230, 229);
-G2L["a4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["a4"]["Size"] = UDim2.new(0, 39, 0, 31);
-G2L["a4"]["BorderColor3"] = Color3.fromRGB(197, 195, 195);
-G2L["a4"]["Text"] = [[RE]];
-G2L["a4"]["Name"] = [[RE]];
-G2L["a4"]["Position"] = UDim2.new(0.52226, 0, 0.66416, 0);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.Mesh
+G2L["a4"] = Instance.new("SpecialMesh", G2L["68"]);
+G2L["a4"]["Scale"] = Vector3.new(1.25, 1.25, 1.25);
 
 
--- StarterGui.AIDS.topbar.back.executor.RE.LocalScript
-G2L["a5"] = Instance.new("LocalScript", G2L["a4"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Head.CharacterSoundEvent
+G2L["a5"] = Instance.new("RemoteEvent", G2L["68"]);
+G2L["a5"]["Name"] = [[CharacterSoundEvent]];
 
 
-
--- StarterGui.AIDS.topbar.back.executor.RE.LocalScript
-G2L["a6"] = Instance.new("LocalScript", G2L["a4"]);
-
-
-
--- StarterGui.AIDS.topbar.back.executor.RE.Script
-G2L["a7"] = Instance.new("Script", G2L["a4"]);
-
-
-
--- StarterGui.AIDS.topbar.back.executor.RE.RemoteEvent
-G2L["a8"] = Instance.new("RemoteEvent", G2L["a4"]);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.LocalScript
+G2L["a6"] = Instance.new("LocalScript", G2L["24"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.logsback
-G2L["a9"] = Instance.new("ScrollingFrame", G2L["7"]);
-G2L["a9"]["Active"] = true;
-G2L["a9"]["BorderSizePixel"] = 0;
-G2L["a9"]["CanvasSize"] = UDim2.new(0, 0, 0.6, 0);
-G2L["a9"]["Name"] = [[logsback]];
-G2L["a9"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["a9"]["Size"] = UDim2.new(0, 487, 0, 67);
-G2L["a9"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a9"]["Position"] = UDim2.new(0.01335, 0, 0.75689, 0);
-G2L["a9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a9"]["ScrollBarThickness"] = 2;
+-- StarterGui.ScreenGui.topbar.back.executor.RE
+G2L["a7"] = Instance.new("TextButton", G2L["a"]);
+G2L["a7"]["TextSize"] = 18;
+G2L["a7"]["AutoButtonColor"] = false;
+G2L["a7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a7"]["BackgroundColor3"] = Color3.fromRGB(228, 230, 229);
+G2L["a7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a7"]["Size"] = UDim2.new(0, 39, 0, 31);
+G2L["a7"]["BorderColor3"] = Color3.fromRGB(197, 195, 195);
+G2L["a7"]["Text"] = [[RE]];
+G2L["a7"]["Name"] = [[RE]];
+G2L["a7"]["Position"] = UDim2.new(0.52226, 0, 0.66416, 0);
 
 
--- StarterGui.AIDS.topbar.back.executor.logsback.logs
-G2L["aa"] = Instance.new("TextLabel", G2L["a9"]);
-G2L["aa"]["BorderSizePixel"] = 0;
-G2L["aa"]["TextSize"] = 17;
-G2L["aa"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["aa"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["aa"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["aa"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["aa"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["aa"]["BackgroundTransparency"] = 1;
-G2L["aa"]["Size"] = UDim2.new(0, 476, 0, 240);
-G2L["aa"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["aa"]["Text"] = [[Welcome hackerman]];
-G2L["aa"]["Name"] = [[logs]];
-
-
--- StarterGui.AIDS.topbar.back.executor.logsback.logs.LocalScript
-G2L["ab"] = Instance.new("LocalScript", G2L["aa"]);
+-- StarterGui.ScreenGui.topbar.back.executor.RE.LocalScript
+G2L["a8"] = Instance.new("LocalScript", G2L["a7"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scrollbar
-G2L["ac"] = Instance.new("Frame", G2L["7"]);
+-- StarterGui.ScreenGui.topbar.back.executor.RE.LocalScript
+G2L["a9"] = Instance.new("LocalScript", G2L["a7"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.RE.Script
+G2L["aa"] = Instance.new("Script", G2L["a7"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.RE.RemoteEvent
+G2L["ab"] = Instance.new("RemoteEvent", G2L["a7"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.logsback
+G2L["ac"] = Instance.new("ScrollingFrame", G2L["a"]);
+G2L["ac"]["Active"] = true;
 G2L["ac"]["BorderSizePixel"] = 0;
+G2L["ac"]["CanvasSize"] = UDim2.new(0, 0, 0.6, 0);
+G2L["ac"]["Name"] = [[logsback]];
 G2L["ac"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["ac"]["Size"] = UDim2.new(0, 7, 0, 67);
-G2L["ac"]["Position"] = UDim2.new(0.73442, 0, 0.76441, 0);
+G2L["ac"]["Size"] = UDim2.new(0, 487, 0, 67);
+G2L["ac"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ac"]["Position"] = UDim2.new(0.01335, 0, 0.75689, 0);
 G2L["ac"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ac"]["Name"] = [[scrollbar]];
+G2L["ac"]["ScrollBarThickness"] = 2;
 
 
--- StarterGui.AIDS.topbar.back.executor..
-G2L["ad"] = Instance.new("Frame", G2L["7"]);
+-- StarterGui.ScreenGui.topbar.back.executor.logsback.logs
+G2L["ad"] = Instance.new("TextLabel", G2L["ac"]);
 G2L["ad"]["BorderSizePixel"] = 0;
-G2L["ad"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
-G2L["ad"]["Size"] = UDim2.new(0, 3, 0, 67);
-G2L["ad"]["Position"] = UDim2.new(0.7181, 0, 0.76441, 0);
+G2L["ad"]["TextSize"] = 17;
+G2L["ad"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["ad"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["ad"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ad"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["ad"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ad"]["BackgroundTransparency"] = 1;
+G2L["ad"]["Size"] = UDim2.new(0, 476, 0, 240);
 G2L["ad"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ad"]["Name"] = [[.]];
+G2L["ad"]["Text"] = [[Welcome hackerman]];
+G2L["ad"]["Name"] = [[logs]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts
-G2L["ae"] = Instance.new("ScrollingFrame", G2L["7"]);
-G2L["ae"]["Active"] = true;
-G2L["ae"]["BorderSizePixel"] = 0;
-G2L["ae"]["CanvasSize"] = UDim2.new(0, 0, 4, 0);
+-- StarterGui.ScreenGui.topbar.back.executor.logsback.logs.LocalScript
+G2L["ae"] = Instance.new("LocalScript", G2L["ad"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.scrollbar
+G2L["af"] = Instance.new("Frame", G2L["a"]);
+G2L["af"]["BorderSizePixel"] = 0;
+G2L["af"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
+G2L["af"]["Size"] = UDim2.new(0, 7, 0, 67);
+G2L["af"]["Position"] = UDim2.new(0.73442, 0, 0.76441, 0);
+G2L["af"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["af"]["Name"] = [[scrollbar]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor..
+G2L["b0"] = Instance.new("Frame", G2L["a"]);
+G2L["b0"]["BorderSizePixel"] = 0;
+G2L["b0"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
+G2L["b0"]["Size"] = UDim2.new(0, 3, 0, 67);
+G2L["b0"]["Position"] = UDim2.new(0.7181, 0, 0.76441, 0);
+G2L["b0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b0"]["Name"] = [[.]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.scripts
+G2L["b1"] = Instance.new("ScrollingFrame", G2L["a"]);
+G2L["b1"]["Active"] = true;
+G2L["b1"]["BorderSizePixel"] = 0;
+G2L["b1"]["CanvasSize"] = UDim2.new(0, 0, 4, 0);
 -- [ERROR] cannot convert TopImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["ae"]["TopImage"] = [[]];
-G2L["ae"]["Name"] = [[scripts]];
-G2L["ae"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
+G2L["b1"]["TopImage"] = [[]];
+G2L["b1"]["Name"] = [[scripts]];
+G2L["b1"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
 -- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["ae"]["BottomImage"] = [[]];
-G2L["ae"]["Size"] = UDim2.new(0, 137, 0, 374);
-G2L["ae"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ae"]["Position"] = UDim2.new(0.77003, 0, 0.04261, 0);
-G2L["ae"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ae"]["ScrollBarThickness"] = 7;
+G2L["b1"]["BottomImage"] = [[]];
+G2L["b1"]["Size"] = UDim2.new(0, 137, 0, 374);
+G2L["b1"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b1"]["Position"] = UDim2.new(0.77003, 0, 0.04261, 0);
+G2L["b1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b1"]["ScrollBarThickness"] = 7;
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.LocalScript
-G2L["af"] = Instance.new("LocalScript", G2L["ae"]);
-
-
-
--- StarterGui.AIDS.topbar.back.executor.scripts.LocalScript
-G2L["b0"] = Instance.new("LocalScript", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.LocalScript
+G2L["b2"] = Instance.new("LocalScript", G2L["b1"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.UIStroke
-G2L["b1"] = Instance.new("UIStroke", G2L["ae"]);
-G2L["b1"]["Thickness"] = 1.5;
-G2L["b1"]["Color"] = Color3.fromRGB(154, 152, 152);
-
-
--- StarterGui.AIDS.topbar.back.executor.scripts.UIGridLayout
-G2L["b2"] = Instance.new("UIGridLayout", G2L["ae"]);
-G2L["b2"]["CellSize"] = UDim2.new(0, 126, 0, 15);
-G2L["b2"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-G2L["b2"]["CellPadding"] = UDim2.new(0, 5, 0, 0);
-
-
--- StarterGui.AIDS.topbar.back.executor.scripts.rc7cloud
-G2L["b3"] = Instance.new("TextButton", G2L["ae"]);
-G2L["b3"]["BorderSizePixel"] = 0;
-G2L["b3"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["b3"]["TextSize"] = 14;
-G2L["b3"]["AutoButtonColor"] = false;
-G2L["b3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["b3"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["b3"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["b3"]["LayoutOrder"] = 47;
-G2L["b3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b3"]["Text"] = [[Rc7 Cloud.lua]];
-G2L["b3"]["Name"] = [[rc7cloud]];
-
-
--- StarterGui.AIDS.topbar.back.executor.scripts.rc7cloud.LocalScript
-G2L["b4"] = Instance.new("LocalScript", G2L["b3"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.LocalScript
+G2L["b3"] = Instance.new("LocalScript", G2L["b1"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.rc7cloud.LocalScript
-G2L["b5"] = Instance.new("LocalScript", G2L["b3"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.UIStroke
+G2L["b4"] = Instance.new("UIStroke", G2L["b1"]);
+G2L["b4"]["Thickness"] = 1.5;
+G2L["b4"]["Color"] = Color3.fromRGB(154, 152, 152);
 
 
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.UIGridLayout
+G2L["b5"] = Instance.new("UIGridLayout", G2L["b1"]);
+G2L["b5"]["CellSize"] = UDim2.new(0, 126, 0, 15);
+G2L["b5"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["b5"]["CellPadding"] = UDim2.new(0, 5, 0, 0);
 
--- StarterGui.AIDS.topbar.back.executor.scripts.windows error
-G2L["b6"] = Instance.new("TextButton", G2L["ae"]);
+
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.rc7cloud
+G2L["b6"] = Instance.new("TextButton", G2L["b1"]);
 G2L["b6"]["BorderSizePixel"] = 0;
 G2L["b6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["b6"]["TextSize"] = 14;
@@ -1438,24 +1432,24 @@ G2L["b6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b6"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["b6"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["b6"]["LayoutOrder"] = 54;
+G2L["b6"]["LayoutOrder"] = 47;
 G2L["b6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b6"]["Text"] = [[Windows Error.lua]];
-G2L["b6"]["Name"] = [[windows error]];
+G2L["b6"]["Text"] = [[Rc7 Cloud.lua]];
+G2L["b6"]["Name"] = [[rc7cloud]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.windows error.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.rc7cloud.LocalScript
 G2L["b7"] = Instance.new("LocalScript", G2L["b6"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.windows error.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.rc7cloud.LocalScript
 G2L["b8"] = Instance.new("LocalScript", G2L["b6"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.atlas
-G2L["b9"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.windows error
+G2L["b9"] = Instance.new("TextButton", G2L["b1"]);
 G2L["b9"]["BorderSizePixel"] = 0;
 G2L["b9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["b9"]["TextSize"] = 14;
@@ -1464,24 +1458,24 @@ G2L["b9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["b9"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["b9"]["LayoutOrder"] = 8;
+G2L["b9"]["LayoutOrder"] = 54;
 G2L["b9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b9"]["Text"] = [[Atlas axe.txt]];
-G2L["b9"]["Name"] = [[atlas]];
+G2L["b9"]["Text"] = [[Windows Error.lua]];
+G2L["b9"]["Name"] = [[windows error]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.atlas.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.windows error.LocalScript
 G2L["ba"] = Instance.new("LocalScript", G2L["b9"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.atlas.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.windows error.LocalScript
 G2L["bb"] = Instance.new("LocalScript", G2L["b9"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.devoy
-G2L["bc"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.atlas
+G2L["bc"] = Instance.new("TextButton", G2L["b1"]);
 G2L["bc"]["BorderSizePixel"] = 0;
 G2L["bc"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["bc"]["TextSize"] = 14;
@@ -1490,24 +1484,24 @@ G2L["bc"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["bc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["bc"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["bc"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["bc"]["LayoutOrder"] = 17;
+G2L["bc"]["LayoutOrder"] = 8;
 G2L["bc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bc"]["Text"] = [[Devoyance Glitcher V4.txt]];
-G2L["bc"]["Name"] = [[devoy]];
+G2L["bc"]["Text"] = [[Atlas axe.txt]];
+G2L["bc"]["Name"] = [[atlas]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.devoy.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.atlas.LocalScript
 G2L["bd"] = Instance.new("LocalScript", G2L["bc"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.devoy.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.atlas.LocalScript
 G2L["be"] = Instance.new("LocalScript", G2L["bc"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.lua hammer
-G2L["bf"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.devoy
+G2L["bf"] = Instance.new("TextButton", G2L["b1"]);
 G2L["bf"]["BorderSizePixel"] = 0;
 G2L["bf"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["bf"]["TextSize"] = 14;
@@ -1516,24 +1510,24 @@ G2L["bf"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["bf"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["bf"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["bf"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["bf"]["LayoutOrder"] = 37;
+G2L["bf"]["LayoutOrder"] = 17;
 G2L["bf"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bf"]["Text"] = [[Lua hammer.txt]];
-G2L["bf"]["Name"] = [[lua hammer]];
+G2L["bf"]["Text"] = [[Devoyance Glitcher V4.txt]];
+G2L["bf"]["Name"] = [[devoy]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.lua hammer.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.devoy.LocalScript
 G2L["c0"] = Instance.new("LocalScript", G2L["bf"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.lua hammer.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.devoy.LocalScript
 G2L["c1"] = Instance.new("LocalScript", G2L["bf"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["c2"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.lua hammer
+G2L["c2"] = Instance.new("TextButton", G2L["b1"]);
 G2L["c2"]["BorderSizePixel"] = 0;
 G2L["c2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["c2"]["TextSize"] = 14;
@@ -1542,24 +1536,24 @@ G2L["c2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["c2"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["c2"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["c2"]["LayoutOrder"] = 91;
-G2L["c2"]["ClipsDescendants"] = true;
+G2L["c2"]["LayoutOrder"] = 37;
 G2L["c2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c2"]["Text"] = [[]];
+G2L["c2"]["Text"] = [[Lua hammer.txt]];
+G2L["c2"]["Name"] = [[lua hammer]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.lua hammer.LocalScript
 G2L["c3"] = Instance.new("LocalScript", G2L["c2"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.lua hammer.LocalScript
 G2L["c4"] = Instance.new("LocalScript", G2L["c2"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.anonymousparticle
-G2L["c5"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["c5"] = Instance.new("TextButton", G2L["b1"]);
 G2L["c5"]["BorderSizePixel"] = 0;
 G2L["c5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["c5"]["TextSize"] = 14;
@@ -1568,25 +1562,24 @@ G2L["c5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["c5"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["c5"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["c5"]["LayoutOrder"] = 5;
+G2L["c5"]["LayoutOrder"] = 91;
 G2L["c5"]["ClipsDescendants"] = true;
 G2L["c5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c5"]["Text"] = [[Anonymous Particles.lua]];
-G2L["c5"]["Name"] = [[anonymousparticle]];
+G2L["c5"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.anonymousparticle.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["c6"] = Instance.new("LocalScript", G2L["c5"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.anonymousparticle.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["c7"] = Instance.new("LocalScript", G2L["c5"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.hackermans
-G2L["c8"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.anonymousparticle
+G2L["c8"] = Instance.new("TextButton", G2L["b1"]);
 G2L["c8"]["BorderSizePixel"] = 0;
 G2L["c8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["c8"]["TextSize"] = 14;
@@ -1595,24 +1588,25 @@ G2L["c8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["c8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["c8"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["c8"]["LayoutOrder"] = 31;
+G2L["c8"]["LayoutOrder"] = 5;
+G2L["c8"]["ClipsDescendants"] = true;
 G2L["c8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c8"]["Text"] = [[Hackermans.lua]];
-G2L["c8"]["Name"] = [[hackermans]];
+G2L["c8"]["Text"] = [[Anonymous Particles.lua]];
+G2L["c8"]["Name"] = [[anonymousparticle]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.hackermans.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.anonymousparticle.LocalScript
 G2L["c9"] = Instance.new("LocalScript", G2L["c8"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.hackermans.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.anonymousparticle.LocalScript
 G2L["ca"] = Instance.new("LocalScript", G2L["c8"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkiddtheme
-G2L["cb"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.hackermans
+G2L["cb"] = Instance.new("TextButton", G2L["b1"]);
 G2L["cb"]["BorderSizePixel"] = 0;
 G2L["cb"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["cb"]["TextSize"] = 14;
@@ -1621,24 +1615,24 @@ G2L["cb"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["cb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["cb"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["cb"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["cb"]["LayoutOrder"] = 15;
+G2L["cb"]["LayoutOrder"] = 31;
 G2L["cb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["cb"]["Text"] = [[c00lkidd Theme.lua]];
-G2L["cb"]["Name"] = [[c00lkiddtheme]];
+G2L["cb"]["Text"] = [[Hackermans.lua]];
+G2L["cb"]["Name"] = [[hackermans]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkiddtheme.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.hackermans.LocalScript
 G2L["cc"] = Instance.new("LocalScript", G2L["cb"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkiddtheme.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.hackermans.LocalScript
 G2L["cd"] = Instance.new("LocalScript", G2L["cb"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkidddecal
-G2L["ce"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkiddtheme
+G2L["ce"] = Instance.new("TextButton", G2L["b1"]);
 G2L["ce"]["BorderSizePixel"] = 0;
 G2L["ce"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["ce"]["TextSize"] = 14;
@@ -1647,24 +1641,24 @@ G2L["ce"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["ce"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["ce"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["ce"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["ce"]["LayoutOrder"] = 14;
+G2L["ce"]["LayoutOrder"] = 15;
 G2L["ce"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ce"]["Text"] = [[c00lkidd Decal.lua]];
-G2L["ce"]["Name"] = [[c00lkidddecal]];
+G2L["ce"]["Text"] = [[c00lkidd Theme.lua]];
+G2L["ce"]["Name"] = [[c00lkiddtheme]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkidddecal.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkiddtheme.LocalScript
 G2L["cf"] = Instance.new("LocalScript", G2L["ce"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkidddecal.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkiddtheme.LocalScript
 G2L["d0"] = Instance.new("LocalScript", G2L["ce"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkiddsky
-G2L["d1"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkidddecal
+G2L["d1"] = Instance.new("TextButton", G2L["b1"]);
 G2L["d1"]["BorderSizePixel"] = 0;
 G2L["d1"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["d1"]["TextSize"] = 14;
@@ -1673,24 +1667,24 @@ G2L["d1"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["d1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["d1"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["d1"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["d1"]["LayoutOrder"] = 13;
+G2L["d1"]["LayoutOrder"] = 14;
 G2L["d1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d1"]["Text"] = [[c00lkidd Skybox.txt]];
-G2L["d1"]["Name"] = [[c00lkiddsky]];
+G2L["d1"]["Text"] = [[c00lkidd Decal.lua]];
+G2L["d1"]["Name"] = [[c00lkidddecal]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkiddsky.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkidddecal.LocalScript
 G2L["d2"] = Instance.new("LocalScript", G2L["d1"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkiddsky.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkidddecal.LocalScript
 G2L["d3"] = Instance.new("LocalScript", G2L["d1"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.g00bydecal
-G2L["d4"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkiddsky
+G2L["d4"] = Instance.new("TextButton", G2L["b1"]);
 G2L["d4"]["BorderSizePixel"] = 0;
 G2L["d4"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["d4"]["TextSize"] = 14;
@@ -1699,25 +1693,24 @@ G2L["d4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["d4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["d4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["d4"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["d4"]["LayoutOrder"] = 24;
-G2L["d4"]["ClipsDescendants"] = true;
+G2L["d4"]["LayoutOrder"] = 13;
 G2L["d4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d4"]["Text"] = [[g00byd0lan Decal.lua]];
-G2L["d4"]["Name"] = [[g00bydecal]];
+G2L["d4"]["Text"] = [[c00lkidd Skybox.txt]];
+G2L["d4"]["Name"] = [[c00lkiddsky]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.g00bydecal.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkiddsky.LocalScript
 G2L["d5"] = Instance.new("LocalScript", G2L["d4"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.g00bydecal.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkiddsky.LocalScript
 G2L["d6"] = Instance.new("LocalScript", G2L["d4"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.grabknife
-G2L["d7"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.g00bydecal
+G2L["d7"] = Instance.new("TextButton", G2L["b1"]);
 G2L["d7"]["BorderSizePixel"] = 0;
 G2L["d7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["d7"]["TextSize"] = 14;
@@ -1726,24 +1719,25 @@ G2L["d7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["d7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["d7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["d7"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["d7"]["LayoutOrder"] = 29;
+G2L["d7"]["LayoutOrder"] = 24;
+G2L["d7"]["ClipsDescendants"] = true;
 G2L["d7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d7"]["Text"] = [[Grab Knife V4.txt]];
-G2L["d7"]["Name"] = [[grabknife]];
+G2L["d7"]["Text"] = [[g00byd0lan Decal.lua]];
+G2L["d7"]["Name"] = [[g00bydecal]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.grabknife.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.g00bydecal.LocalScript
 G2L["d8"] = Instance.new("LocalScript", G2L["d7"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.grabknife.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.g00bydecal.LocalScript
 G2L["d9"] = Instance.new("LocalScript", G2L["d7"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.mystic
-G2L["da"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.grabknife
+G2L["da"] = Instance.new("TextButton", G2L["b1"]);
 G2L["da"]["BorderSizePixel"] = 0;
 G2L["da"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["da"]["TextSize"] = 14;
@@ -1752,24 +1746,24 @@ G2L["da"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["da"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["da"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["da"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["da"]["LayoutOrder"] = 6;
+G2L["da"]["LayoutOrder"] = 29;
 G2L["da"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["da"]["Text"] = [[Arc of Mystics.txt]];
-G2L["da"]["Name"] = [[mystic]];
+G2L["da"]["Text"] = [[Grab Knife V4.txt]];
+G2L["da"]["Name"] = [[grabknife]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.mystic.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.grabknife.LocalScript
 G2L["db"] = Instance.new("LocalScript", G2L["da"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.mystic.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.grabknife.LocalScript
 G2L["dc"] = Instance.new("LocalScript", G2L["da"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.grandosla
-G2L["dd"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.mystic
+G2L["dd"] = Instance.new("TextButton", G2L["b1"]);
 G2L["dd"]["BorderSizePixel"] = 0;
 G2L["dd"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["dd"]["TextSize"] = 14;
@@ -1778,24 +1772,24 @@ G2L["dd"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["dd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["dd"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["dd"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["dd"]["LayoutOrder"] = 25;
+G2L["dd"]["LayoutOrder"] = 6;
 G2L["dd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["dd"]["Text"] = [[Grandosla Tower.txt]];
-G2L["dd"]["Name"] = [[grandosla]];
+G2L["dd"]["Text"] = [[Arc of Mystics.txt]];
+G2L["dd"]["Name"] = [[mystic]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.grandosla.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.mystic.LocalScript
 G2L["de"] = Instance.new("LocalScript", G2L["dd"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.grandosla.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.mystic.LocalScript
 G2L["df"] = Instance.new("LocalScript", G2L["dd"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.guns
-G2L["e0"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.grandosla
+G2L["e0"] = Instance.new("TextButton", G2L["b1"]);
 G2L["e0"]["BorderSizePixel"] = 0;
 G2L["e0"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["e0"]["TextSize"] = 14;
@@ -1804,24 +1798,24 @@ G2L["e0"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["e0"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["e0"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["e0"]["LayoutOrder"] = 30;
+G2L["e0"]["LayoutOrder"] = 25;
 G2L["e0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e0"]["Text"] = [[Guns.txt]];
-G2L["e0"]["Name"] = [[guns]];
+G2L["e0"]["Text"] = [[Grandosla Tower.txt]];
+G2L["e0"]["Name"] = [[grandosla]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.guns.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.grandosla.LocalScript
 G2L["e1"] = Instance.new("LocalScript", G2L["e0"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.guns.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.grandosla.LocalScript
 G2L["e2"] = Instance.new("LocalScript", G2L["e0"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.devuzi
-G2L["e3"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.guns
+G2L["e3"] = Instance.new("TextButton", G2L["b1"]);
 G2L["e3"]["BorderSizePixel"] = 0;
 G2L["e3"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["e3"]["TextSize"] = 14;
@@ -1830,24 +1824,24 @@ G2L["e3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["e3"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["e3"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["e3"]["LayoutOrder"] = 21;
+G2L["e3"]["LayoutOrder"] = 30;
 G2L["e3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e3"]["Text"] = [[Dev Uzi.txt]];
-G2L["e3"]["Name"] = [[devuzi]];
+G2L["e3"]["Text"] = [[Guns.txt]];
+G2L["e3"]["Name"] = [[guns]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.devuzi.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.guns.LocalScript
 G2L["e4"] = Instance.new("LocalScript", G2L["e3"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.devuzi.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.guns.LocalScript
 G2L["e5"] = Instance.new("LocalScript", G2L["e3"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.sledgehammer
-G2L["e6"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.devuzi
+G2L["e6"] = Instance.new("TextButton", G2L["b1"]);
 G2L["e6"]["BorderSizePixel"] = 0;
 G2L["e6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["e6"]["TextSize"] = 14;
@@ -1856,24 +1850,24 @@ G2L["e6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["e6"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["e6"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["e6"]["LayoutOrder"] = 52;
+G2L["e6"]["LayoutOrder"] = 21;
 G2L["e6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e6"]["Text"] = [[Sledge Hammer.txt]];
-G2L["e6"]["Name"] = [[sledgehammer]];
+G2L["e6"]["Text"] = [[Dev Uzi.txt]];
+G2L["e6"]["Name"] = [[devuzi]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.sledgehammer.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.devuzi.LocalScript
 G2L["e7"] = Instance.new("LocalScript", G2L["e6"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.sledgehammer.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.devuzi.LocalScript
 G2L["e8"] = Instance.new("LocalScript", G2L["e6"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.johndoe
-G2L["e9"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.sledgehammer
+G2L["e9"] = Instance.new("TextButton", G2L["b1"]);
 G2L["e9"]["BorderSizePixel"] = 0;
 G2L["e9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["e9"]["TextSize"] = 14;
@@ -1882,24 +1876,24 @@ G2L["e9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["e9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["e9"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["e9"]["LayoutOrder"] = 36;
+G2L["e9"]["LayoutOrder"] = 52;
 G2L["e9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e9"]["Text"] = [[John Doe.txt]];
-G2L["e9"]["Name"] = [[johndoe]];
+G2L["e9"]["Text"] = [[Sledge Hammer.txt]];
+G2L["e9"]["Name"] = [[sledgehammer]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.johndoe.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.sledgehammer.LocalScript
 G2L["ea"] = Instance.new("LocalScript", G2L["e9"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.johndoe.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.sledgehammer.LocalScript
 G2L["eb"] = Instance.new("LocalScript", G2L["e9"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.dualultima
-G2L["ec"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.johndoe
+G2L["ec"] = Instance.new("TextButton", G2L["b1"]);
 G2L["ec"]["BorderSizePixel"] = 0;
 G2L["ec"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["ec"]["TextSize"] = 14;
@@ -1908,24 +1902,24 @@ G2L["ec"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["ec"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["ec"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["ec"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["ec"]["LayoutOrder"] = 19;
+G2L["ec"]["LayoutOrder"] = 36;
 G2L["ec"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ec"]["Text"] = [[Dual Ultima.txt]];
-G2L["ec"]["Name"] = [[dualultima]];
+G2L["ec"]["Text"] = [[John Doe.txt]];
+G2L["ec"]["Name"] = [[johndoe]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.dualultima.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.johndoe.LocalScript
 G2L["ed"] = Instance.new("LocalScript", G2L["ec"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.dualultima.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.johndoe.LocalScript
 G2L["ee"] = Instance.new("LocalScript", G2L["ec"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.excavator 
-G2L["ef"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.dualultima
+G2L["ef"] = Instance.new("TextButton", G2L["b1"]);
 G2L["ef"]["BorderSizePixel"] = 0;
 G2L["ef"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["ef"]["TextSize"] = 14;
@@ -1934,24 +1928,24 @@ G2L["ef"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["ef"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["ef"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["ef"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["ef"]["LayoutOrder"] = 22;
+G2L["ef"]["LayoutOrder"] = 19;
 G2L["ef"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ef"]["Text"] = [[Excavator.txt]];
-G2L["ef"]["Name"] = [[excavator ]];
+G2L["ef"]["Text"] = [[Dual Ultima.txt]];
+G2L["ef"]["Name"] = [[dualultima]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.excavator .LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.dualultima.LocalScript
 G2L["f0"] = Instance.new("LocalScript", G2L["ef"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.excavator .LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.dualultima.LocalScript
 G2L["f1"] = Instance.new("LocalScript", G2L["ef"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.scythe
-G2L["f2"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.excavator 
+G2L["f2"] = Instance.new("TextButton", G2L["b1"]);
 G2L["f2"]["BorderSizePixel"] = 0;
 G2L["f2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["f2"]["TextSize"] = 14;
@@ -1960,76 +1954,76 @@ G2L["f2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["f2"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["f2"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["f2"]["LayoutOrder"] = 44;
-G2L["f2"]["ClipsDescendants"] = true;
+G2L["f2"]["LayoutOrder"] = 22;
 G2L["f2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f2"]["Text"] = [[Powerfull Purple Electric Sycthe.txt]];
-G2L["f2"]["Name"] = [[scythe]];
+G2L["f2"]["Text"] = [[Excavator.txt]];
+G2L["f2"]["Name"] = [[excavator ]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.scythe.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.excavator .LocalScript
 G2L["f3"] = Instance.new("LocalScript", G2L["f2"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.scythe.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.excavator .LocalScript
 G2L["f4"] = Instance.new("LocalScript", G2L["f2"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.happyhub
-G2L["f5"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.scythe
+G2L["f5"] = Instance.new("TextButton", G2L["b1"]);
 G2L["f5"]["BorderSizePixel"] = 0;
 G2L["f5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["f5"]["TextSize"] = 14;
+G2L["f5"]["AutoButtonColor"] = false;
 G2L["f5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["f5"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["f5"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["f5"]["LayoutOrder"] = 32;
+G2L["f5"]["LayoutOrder"] = 44;
+G2L["f5"]["ClipsDescendants"] = true;
 G2L["f5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f5"]["Text"] = [[Happy Hub.txt]];
-G2L["f5"]["Name"] = [[happyhub]];
+G2L["f5"]["Text"] = [[Powerfull Purple Electric Sycthe.txt]];
+G2L["f5"]["Name"] = [[scythe]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.happyhub.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.scythe.LocalScript
 G2L["f6"] = Instance.new("LocalScript", G2L["f5"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.happyhub.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.scythe.LocalScript
 G2L["f7"] = Instance.new("LocalScript", G2L["f5"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lgui
-G2L["f8"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.happyhub
+G2L["f8"] = Instance.new("TextButton", G2L["b1"]);
 G2L["f8"]["BorderSizePixel"] = 0;
 G2L["f8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["f8"]["TextSize"] = 14;
-G2L["f8"]["AutoButtonColor"] = false;
 G2L["f8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["f8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["f8"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["f8"]["LayoutOrder"] = 16;
+G2L["f8"]["LayoutOrder"] = 32;
 G2L["f8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f8"]["Text"] = [[c00lgui.txt]];
-G2L["f8"]["Name"] = [[c00lgui]];
+G2L["f8"]["Text"] = [[Happy Hub.txt]];
+G2L["f8"]["Name"] = [[happyhub]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lgui.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.happyhub.LocalScript
 G2L["f9"] = Instance.new("LocalScript", G2L["f8"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lgui.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.happyhub.LocalScript
 G2L["fa"] = Instance.new("LocalScript", G2L["f8"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.bipolaria
-G2L["fb"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lgui
+G2L["fb"] = Instance.new("TextButton", G2L["b1"]);
 G2L["fb"]["BorderSizePixel"] = 0;
 G2L["fb"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["fb"]["TextSize"] = 14;
@@ -2038,24 +2032,24 @@ G2L["fb"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["fb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["fb"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["fb"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["fb"]["LayoutOrder"] = 12;
+G2L["fb"]["LayoutOrder"] = 16;
 G2L["fb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["fb"]["Text"] = [[Bipolaria.txt]];
-G2L["fb"]["Name"] = [[bipolaria]];
+G2L["fb"]["Text"] = [[c00lgui.txt]];
+G2L["fb"]["Name"] = [[c00lgui]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.bipolaria.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lgui.LocalScript
 G2L["fc"] = Instance.new("LocalScript", G2L["fb"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.bipolaria.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lgui.LocalScript
 G2L["fd"] = Instance.new("LocalScript", G2L["fb"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.iy
-G2L["fe"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.bipolaria
+G2L["fe"] = Instance.new("TextButton", G2L["b1"]);
 G2L["fe"]["BorderSizePixel"] = 0;
 G2L["fe"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["fe"]["TextSize"] = 14;
@@ -2064,25 +2058,24 @@ G2L["fe"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["fe"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["fe"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["fe"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["fe"]["LayoutOrder"] = 34;
-G2L["fe"]["ClipsDescendants"] = true;
+G2L["fe"]["LayoutOrder"] = 12;
 G2L["fe"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["fe"]["Text"] = [[Infinite Yield.txt]];
-G2L["fe"]["Name"] = [[iy]];
+G2L["fe"]["Text"] = [[Bipolaria.txt]];
+G2L["fe"]["Name"] = [[bipolaria]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.iy.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.bipolaria.LocalScript
 G2L["ff"] = Instance.new("LocalScript", G2L["fe"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.iy.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.bipolaria.LocalScript
 G2L["100"] = Instance.new("LocalScript", G2L["fe"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.dex
-G2L["101"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.iy
+G2L["101"] = Instance.new("TextButton", G2L["b1"]);
 G2L["101"]["BorderSizePixel"] = 0;
 G2L["101"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["101"]["TextSize"] = 14;
@@ -2091,24 +2084,25 @@ G2L["101"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["101"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["101"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["101"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["101"]["LayoutOrder"] = 18;
+G2L["101"]["LayoutOrder"] = 34;
+G2L["101"]["ClipsDescendants"] = true;
 G2L["101"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["101"]["Text"] = [[Dex Explorer.txt]];
-G2L["101"]["Name"] = [[dex]];
+G2L["101"]["Text"] = [[Infinite Yield.txt]];
+G2L["101"]["Name"] = [[iy]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.dex.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.iy.LocalScript
 G2L["102"] = Instance.new("LocalScript", G2L["101"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.dex.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.iy.LocalScript
 G2L["103"] = Instance.new("LocalScript", G2L["101"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.antiskidgun
-G2L["104"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.dex
+G2L["104"] = Instance.new("TextButton", G2L["b1"]);
 G2L["104"]["BorderSizePixel"] = 0;
 G2L["104"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["104"]["TextSize"] = 14;
@@ -2117,24 +2111,24 @@ G2L["104"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["104"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["104"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["104"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["104"]["LayoutOrder"] = 7;
+G2L["104"]["LayoutOrder"] = 18;
 G2L["104"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["104"]["Text"] = [[Anti Skid Gun.txt]];
-G2L["104"]["Name"] = [[antiskidgun]];
+G2L["104"]["Text"] = [[Dex Explorer.txt]];
+G2L["104"]["Name"] = [[dex]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.antiskidgun.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.dex.LocalScript
 G2L["105"] = Instance.new("LocalScript", G2L["104"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.antiskidgun.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.dex.LocalScript
 G2L["106"] = Instance.new("LocalScript", G2L["104"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.billboard
-G2L["107"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.antiskidgun
+G2L["107"] = Instance.new("TextButton", G2L["b1"]);
 G2L["107"]["BorderSizePixel"] = 0;
 G2L["107"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["107"]["TextSize"] = 14;
@@ -2143,25 +2137,24 @@ G2L["107"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["107"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["107"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["107"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["107"]["LayoutOrder"] = 10;
-G2L["107"]["ClipsDescendants"] = true;
+G2L["107"]["LayoutOrder"] = 7;
 G2L["107"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["107"]["Text"] = [[Billboard Text.lua]];
-G2L["107"]["Name"] = [[billboard]];
+G2L["107"]["Text"] = [[Anti Skid Gun.txt]];
+G2L["107"]["Name"] = [[antiskidgun]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.billboard.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.antiskidgun.LocalScript
 G2L["108"] = Instance.new("LocalScript", G2L["107"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.billboard.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.antiskidgun.LocalScript
 G2L["109"] = Instance.new("LocalScript", G2L["107"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.1x1x1x1
-G2L["10a"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.billboard
+G2L["10a"] = Instance.new("TextButton", G2L["b1"]);
 G2L["10a"]["BorderSizePixel"] = 0;
 G2L["10a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["10a"]["TextSize"] = 14;
@@ -2170,25 +2163,25 @@ G2L["10a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["10a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["10a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["10a"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["10a"]["LayoutOrder"] = 1;
+G2L["10a"]["LayoutOrder"] = 10;
 G2L["10a"]["ClipsDescendants"] = true;
 G2L["10a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10a"]["Text"] = [[1x1x1x1 revenge Script.lua]];
-G2L["10a"]["Name"] = [[1x1x1x1]];
+G2L["10a"]["Text"] = [[Billboard Text.lua]];
+G2L["10a"]["Name"] = [[billboard]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.1x1x1x1.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.billboard.LocalScript
 G2L["10b"] = Instance.new("LocalScript", G2L["10a"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.1x1x1x1.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.billboard.LocalScript
 G2L["10c"] = Instance.new("LocalScript", G2L["10a"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.baseplate
-G2L["10d"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.1x1x1x1
+G2L["10d"] = Instance.new("TextButton", G2L["b1"]);
 G2L["10d"]["BorderSizePixel"] = 0;
 G2L["10d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["10d"]["TextSize"] = 14;
@@ -2197,24 +2190,25 @@ G2L["10d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["10d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["10d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["10d"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["10d"]["LayoutOrder"] = 11;
+G2L["10d"]["LayoutOrder"] = 1;
+G2L["10d"]["ClipsDescendants"] = true;
 G2L["10d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10d"]["Text"] = [[Baseplate.lua]];
-G2L["10d"]["Name"] = [[baseplate]];
+G2L["10d"]["Text"] = [[1x1x1x1 revenge Script.lua]];
+G2L["10d"]["Name"] = [[1x1x1x1]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.baseplate.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.1x1x1x1.LocalScript
 G2L["10e"] = Instance.new("LocalScript", G2L["10d"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.baseplate.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.1x1x1x1.LocalScript
 G2L["10f"] = Instance.new("LocalScript", G2L["10d"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.jimcarreyface
-G2L["110"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.baseplate
+G2L["110"] = Instance.new("TextButton", G2L["b1"]);
 G2L["110"]["BorderSizePixel"] = 0;
 G2L["110"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["110"]["TextSize"] = 14;
@@ -2223,25 +2217,24 @@ G2L["110"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["110"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["110"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["110"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["110"]["LayoutOrder"] = 35;
-G2L["110"]["ClipsDescendants"] = true;
+G2L["110"]["LayoutOrder"] = 11;
 G2L["110"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["110"]["Text"] = [[Jim Carrey face.lua]];
-G2L["110"]["Name"] = [[jimcarreyface]];
+G2L["110"]["Text"] = [[Baseplate.lua]];
+G2L["110"]["Name"] = [[baseplate]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.jimcarreyface.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.baseplate.LocalScript
 G2L["111"] = Instance.new("LocalScript", G2L["110"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.jimcarreyface.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.baseplate.LocalScript
 G2L["112"] = Instance.new("LocalScript", G2L["110"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c4
-G2L["113"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.jimcarreyface
+G2L["113"] = Instance.new("TextButton", G2L["b1"]);
 G2L["113"]["BorderSizePixel"] = 0;
 G2L["113"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["113"]["TextSize"] = 14;
@@ -2250,24 +2243,25 @@ G2L["113"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["113"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["113"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["113"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["113"]["LayoutOrder"] = 48;
+G2L["113"]["LayoutOrder"] = 35;
+G2L["113"]["ClipsDescendants"] = true;
 G2L["113"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["113"]["Text"] = [[Remote C4.txt]];
-G2L["113"]["Name"] = [[c4]];
+G2L["113"]["Text"] = [[Jim Carrey face.lua]];
+G2L["113"]["Name"] = [[jimcarreyface]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c4.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.jimcarreyface.LocalScript
 G2L["114"] = Instance.new("LocalScript", G2L["113"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.c4.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.jimcarreyface.LocalScript
 G2L["115"] = Instance.new("LocalScript", G2L["113"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.mlg
-G2L["116"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c4
+G2L["116"] = Instance.new("TextButton", G2L["b1"]);
 G2L["116"]["BorderSizePixel"] = 0;
 G2L["116"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["116"]["TextSize"] = 14;
@@ -2276,24 +2270,24 @@ G2L["116"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["116"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["116"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["116"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["116"]["LayoutOrder"] = 42;
+G2L["116"]["LayoutOrder"] = 48;
 G2L["116"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["116"]["Text"] = [[MLG GUN.txt]];
-G2L["116"]["Name"] = [[mlg]];
+G2L["116"]["Text"] = [[Remote C4.txt]];
+G2L["116"]["Name"] = [[c4]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.mlg.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c4.LocalScript
 G2L["117"] = Instance.new("LocalScript", G2L["116"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.mlg.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c4.LocalScript
 G2L["118"] = Instance.new("LocalScript", G2L["116"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.fencing
-G2L["119"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.mlg
+G2L["119"] = Instance.new("TextButton", G2L["b1"]);
 G2L["119"]["BorderSizePixel"] = 0;
 G2L["119"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["119"]["TextSize"] = 14;
@@ -2302,24 +2296,24 @@ G2L["119"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["119"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["119"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["119"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["119"]["LayoutOrder"] = 23;
+G2L["119"]["LayoutOrder"] = 42;
 G2L["119"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["119"]["Text"] = [[Fencing.txt]];
-G2L["119"]["Name"] = [[fencing]];
+G2L["119"]["Text"] = [[MLG GUN.txt]];
+G2L["119"]["Name"] = [[mlg]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.fencing.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.mlg.LocalScript
 G2L["11a"] = Instance.new("LocalScript", G2L["119"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.fencing.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.mlg.LocalScript
 G2L["11b"] = Instance.new("LocalScript", G2L["119"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.skeletonsky
-G2L["11c"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.fencing
+G2L["11c"] = Instance.new("TextButton", G2L["b1"]);
 G2L["11c"]["BorderSizePixel"] = 0;
 G2L["11c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["11c"]["TextSize"] = 14;
@@ -2328,25 +2322,24 @@ G2L["11c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["11c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["11c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["11c"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["11c"]["LayoutOrder"] = 50;
-G2L["11c"]["ClipsDescendants"] = true;
+G2L["11c"]["LayoutOrder"] = 23;
 G2L["11c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11c"]["Text"] = [[Skeleton Skybox.txt]];
-G2L["11c"]["Name"] = [[skeletonsky]];
+G2L["11c"]["Text"] = [[Fencing.txt]];
+G2L["11c"]["Name"] = [[fencing]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.skeletonsky.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.fencing.LocalScript
 G2L["11d"] = Instance.new("LocalScript", G2L["11c"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.skeletonsky.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.fencing.LocalScript
 G2L["11e"] = Instance.new("LocalScript", G2L["11c"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.noopdog face
-G2L["11f"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.skeletonsky
+G2L["11f"] = Instance.new("TextButton", G2L["b1"]);
 G2L["11f"]["BorderSizePixel"] = 0;
 G2L["11f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["11f"]["TextSize"] = 14;
@@ -2355,24 +2348,25 @@ G2L["11f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["11f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["11f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["11f"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["11f"]["LayoutOrder"] = 51;
+G2L["11f"]["LayoutOrder"] = 50;
+G2L["11f"]["ClipsDescendants"] = true;
 G2L["11f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11f"]["Text"] = [[Snoop Dog Face.lua]];
-G2L["11f"]["Name"] = [[noopdog face]];
+G2L["11f"]["Text"] = [[Skeleton Skybox.txt]];
+G2L["11f"]["Name"] = [[skeletonsky]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.noopdog face.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.skeletonsky.LocalScript
 G2L["120"] = Instance.new("LocalScript", G2L["11f"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.noopdog face.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.skeletonsky.LocalScript
 G2L["121"] = Instance.new("LocalScript", G2L["11f"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.shedletsky
-G2L["122"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.noopdog face
+G2L["122"] = Instance.new("TextButton", G2L["b1"]);
 G2L["122"]["BorderSizePixel"] = 0;
 G2L["122"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["122"]["TextSize"] = 14;
@@ -2381,24 +2375,24 @@ G2L["122"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["122"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["122"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["122"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["122"]["LayoutOrder"] = 53;
+G2L["122"]["LayoutOrder"] = 51;
 G2L["122"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["122"]["Text"] = [[Shedletsky.txt]];
-G2L["122"]["Name"] = [[shedletsky]];
+G2L["122"]["Text"] = [[Snoop Dog Face.lua]];
+G2L["122"]["Name"] = [[noopdog face]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.shedletsky.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.noopdog face.LocalScript
 G2L["123"] = Instance.new("LocalScript", G2L["122"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.shedletsky.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.noopdog face.LocalScript
 G2L["124"] = Instance.new("LocalScript", G2L["122"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.beanadmin
-G2L["125"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.shedletsky
+G2L["125"] = Instance.new("TextButton", G2L["b1"]);
 G2L["125"]["BorderSizePixel"] = 0;
 G2L["125"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["125"]["TextSize"] = 14;
@@ -2407,25 +2401,24 @@ G2L["125"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["125"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["125"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["125"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["125"]["LayoutOrder"] = 41;
-G2L["125"]["ClipsDescendants"] = true;
+G2L["125"]["LayoutOrder"] = 53;
 G2L["125"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["125"]["Text"] = [[Mr.bean admin.txt]];
-G2L["125"]["Name"] = [[beanadmin]];
+G2L["125"]["Text"] = [[Shedletsky.txt]];
+G2L["125"]["Name"] = [[shedletsky]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.beanadmin.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.shedletsky.LocalScript
 G2L["126"] = Instance.new("LocalScript", G2L["125"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.beanadmin.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.shedletsky.LocalScript
 G2L["127"] = Instance.new("LocalScript", G2L["125"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.2dscript
-G2L["128"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.beanadmin
+G2L["128"] = Instance.new("TextButton", G2L["b1"]);
 G2L["128"]["BorderSizePixel"] = 0;
 G2L["128"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["128"]["TextSize"] = 14;
@@ -2434,25 +2427,25 @@ G2L["128"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["128"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["128"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["128"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["128"]["LayoutOrder"] = 2;
+G2L["128"]["LayoutOrder"] = 41;
 G2L["128"]["ClipsDescendants"] = true;
 G2L["128"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["128"]["Text"] = [[2D Script.lua]];
-G2L["128"]["Name"] = [[2dscript]];
+G2L["128"]["Text"] = [[Mr.bean admin.txt]];
+G2L["128"]["Name"] = [[beanadmin]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.2dscript.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.beanadmin.LocalScript
 G2L["129"] = Instance.new("LocalScript", G2L["128"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.2dscript.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.beanadmin.LocalScript
 G2L["12a"] = Instance.new("LocalScript", G2L["128"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.2d
-G2L["12b"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.2dscript
+G2L["12b"] = Instance.new("TextButton", G2L["b1"]);
 G2L["12b"]["BorderSizePixel"] = 0;
 G2L["12b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["12b"]["TextSize"] = 14;
@@ -2461,25 +2454,25 @@ G2L["12b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["12b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["12b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["12b"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["12b"]["LayoutOrder"] = 3;
+G2L["12b"]["LayoutOrder"] = 2;
 G2L["12b"]["ClipsDescendants"] = true;
 G2L["12b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12b"]["Text"] = [[2D.lua]];
-G2L["12b"]["Name"] = [[2d]];
+G2L["12b"]["Text"] = [[2D Script.lua]];
+G2L["12b"]["Name"] = [[2dscript]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.2d.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.2dscript.LocalScript
 G2L["12c"] = Instance.new("LocalScript", G2L["12b"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.2d.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.2dscript.LocalScript
 G2L["12d"] = Instance.new("LocalScript", G2L["12b"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.3d
-G2L["12e"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.2d
+G2L["12e"] = Instance.new("TextButton", G2L["b1"]);
 G2L["12e"]["BorderSizePixel"] = 0;
 G2L["12e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["12e"]["TextSize"] = 14;
@@ -2488,25 +2481,25 @@ G2L["12e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["12e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["12e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["12e"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["12e"]["LayoutOrder"] = 4;
+G2L["12e"]["LayoutOrder"] = 3;
 G2L["12e"]["ClipsDescendants"] = true;
 G2L["12e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12e"]["Text"] = [[3D.lua]];
-G2L["12e"]["Name"] = [[3d]];
+G2L["12e"]["Text"] = [[2D.lua]];
+G2L["12e"]["Name"] = [[2d]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.3d.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.2d.LocalScript
 G2L["12f"] = Instance.new("LocalScript", G2L["12e"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.3d.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.2d.LocalScript
 G2L["130"] = Instance.new("LocalScript", G2L["12e"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.obunga
-G2L["131"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.3d
+G2L["131"] = Instance.new("TextButton", G2L["b1"]);
 G2L["131"]["BorderSizePixel"] = 0;
 G2L["131"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["131"]["TextSize"] = 14;
@@ -2515,25 +2508,25 @@ G2L["131"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["131"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["131"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["131"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["131"]["LayoutOrder"] = 43;
+G2L["131"]["LayoutOrder"] = 4;
 G2L["131"]["ClipsDescendants"] = true;
 G2L["131"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["131"]["Text"] = [[Obunga Jumpscare.txt]];
-G2L["131"]["Name"] = [[obunga]];
+G2L["131"]["Text"] = [[3D.lua]];
+G2L["131"]["Name"] = [[3d]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.obunga.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.3d.LocalScript
 G2L["132"] = Instance.new("LocalScript", G2L["131"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.obunga.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.3d.LocalScript
 G2L["133"] = Instance.new("LocalScript", G2L["131"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.ssp
-G2L["134"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.obunga
+G2L["134"] = Instance.new("TextButton", G2L["b1"]);
 G2L["134"]["BorderSizePixel"] = 0;
 G2L["134"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["134"]["TextSize"] = 14;
@@ -2542,25 +2535,25 @@ G2L["134"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["134"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["134"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["134"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["134"]["LayoutOrder"] = 49;
+G2L["134"]["LayoutOrder"] = 43;
 G2L["134"]["ClipsDescendants"] = true;
 G2L["134"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["134"]["Text"] = [[Secret Service Panel.txt]];
-G2L["134"]["Name"] = [[ssp]];
+G2L["134"]["Text"] = [[Obunga Jumpscare.txt]];
+G2L["134"]["Name"] = [[obunga]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.ssp.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.obunga.LocalScript
 G2L["135"] = Instance.new("LocalScript", G2L["134"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.ssp.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.obunga.LocalScript
 G2L["136"] = Instance.new("LocalScript", G2L["134"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.creeper
-G2L["137"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.ssp
+G2L["137"] = Instance.new("TextButton", G2L["b1"]);
 G2L["137"]["BorderSizePixel"] = 0;
 G2L["137"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["137"]["TextSize"] = 14;
@@ -2569,25 +2562,25 @@ G2L["137"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["137"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["137"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["137"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["137"]["LayoutOrder"] = 39;
+G2L["137"]["LayoutOrder"] = 49;
 G2L["137"]["ClipsDescendants"] = true;
 G2L["137"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["137"]["Text"] = [[Minecraft Crepper.txt]];
-G2L["137"]["Name"] = [[creeper]];
+G2L["137"]["Text"] = [[Secret Service Panel.txt]];
+G2L["137"]["Name"] = [[ssp]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.creeper.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.ssp.LocalScript
 G2L["138"] = Instance.new("LocalScript", G2L["137"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.creeper.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.ssp.LocalScript
 G2L["139"] = Instance.new("LocalScript", G2L["137"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.enderman
-G2L["13a"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.creeper
+G2L["13a"] = Instance.new("TextButton", G2L["b1"]);
 G2L["13a"]["BorderSizePixel"] = 0;
 G2L["13a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["13a"]["TextSize"] = 14;
@@ -2596,25 +2589,25 @@ G2L["13a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["13a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["13a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["13a"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["13a"]["LayoutOrder"] = 38;
+G2L["13a"]["LayoutOrder"] = 39;
 G2L["13a"]["ClipsDescendants"] = true;
 G2L["13a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13a"]["Text"] = [[Minecraft Enderman.txt]];
-G2L["13a"]["Name"] = [[enderman]];
+G2L["13a"]["Text"] = [[Minecraft Crepper.txt]];
+G2L["13a"]["Name"] = [[creeper]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.enderman.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.creeper.LocalScript
 G2L["13b"] = Instance.new("LocalScript", G2L["13a"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.enderman.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.creeper.LocalScript
 G2L["13c"] = Instance.new("LocalScript", G2L["13a"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.steve
-G2L["13d"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.enderman
+G2L["13d"] = Instance.new("TextButton", G2L["b1"]);
 G2L["13d"]["BorderSizePixel"] = 0;
 G2L["13d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["13d"]["TextSize"] = 14;
@@ -2623,25 +2616,25 @@ G2L["13d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["13d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["13d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["13d"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["13d"]["LayoutOrder"] = 40;
+G2L["13d"]["LayoutOrder"] = 38;
 G2L["13d"]["ClipsDescendants"] = true;
 G2L["13d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13d"]["Text"] = [[Minecraft Steve.txt]];
-G2L["13d"]["Name"] = [[steve]];
+G2L["13d"]["Text"] = [[Minecraft Enderman.txt]];
+G2L["13d"]["Name"] = [[enderman]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.steve.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.enderman.LocalScript
 G2L["13e"] = Instance.new("LocalScript", G2L["13d"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.steve.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.enderman.LocalScript
 G2L["13f"] = Instance.new("LocalScript", G2L["13d"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.remington
-G2L["140"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.steve
+G2L["140"] = Instance.new("TextButton", G2L["b1"]);
 G2L["140"]["BorderSizePixel"] = 0;
 G2L["140"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["140"]["TextSize"] = 14;
@@ -2650,25 +2643,25 @@ G2L["140"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["140"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["140"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["140"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["140"]["LayoutOrder"] = 46;
+G2L["140"]["LayoutOrder"] = 40;
 G2L["140"]["ClipsDescendants"] = true;
 G2L["140"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["140"]["Text"] = [[Remington 870.txt]];
-G2L["140"]["Name"] = [[remington]];
+G2L["140"]["Text"] = [[Minecraft Steve.txt]];
+G2L["140"]["Name"] = [[steve]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.remington.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.steve.LocalScript
 G2L["141"] = Instance.new("LocalScript", G2L["140"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.remington.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.steve.LocalScript
 G2L["142"] = Instance.new("LocalScript", G2L["140"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.ar15
-G2L["143"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.remington
+G2L["143"] = Instance.new("TextButton", G2L["b1"]);
 G2L["143"]["BorderSizePixel"] = 0;
 G2L["143"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["143"]["TextSize"] = 14;
@@ -2677,25 +2670,25 @@ G2L["143"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["143"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["143"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["143"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["143"]["LayoutOrder"] = 9;
+G2L["143"]["LayoutOrder"] = 46;
 G2L["143"]["ClipsDescendants"] = true;
 G2L["143"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["143"]["Text"] = [[AR-15.txt]];
-G2L["143"]["Name"] = [[ar15]];
+G2L["143"]["Text"] = [[Remington 870.txt]];
+G2L["143"]["Name"] = [[remington]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.ar15.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.remington.LocalScript
 G2L["144"] = Instance.new("LocalScript", G2L["143"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.ar15.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.remington.LocalScript
 G2L["145"] = Instance.new("LocalScript", G2L["143"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.pee
-G2L["146"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.ar15
+G2L["146"] = Instance.new("TextButton", G2L["b1"]);
 G2L["146"]["BorderSizePixel"] = 0;
 G2L["146"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["146"]["TextSize"] = 14;
@@ -2704,25 +2697,25 @@ G2L["146"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["146"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["146"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["146"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["146"]["LayoutOrder"] = 45;
+G2L["146"]["LayoutOrder"] = 9;
 G2L["146"]["ClipsDescendants"] = true;
 G2L["146"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["146"]["Text"] = [[Pee.txt]];
-G2L["146"]["Name"] = [[pee]];
+G2L["146"]["Text"] = [[AR-15.txt]];
+G2L["146"]["Name"] = [[ar15]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.pee.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.ar15.LocalScript
 G2L["147"] = Instance.new("LocalScript", G2L["146"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.pee.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.ar15.LocalScript
 G2L["148"] = Instance.new("LocalScript", G2L["146"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv1
-G2L["149"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.pee
+G2L["149"] = Instance.new("TextButton", G2L["b1"]);
 G2L["149"]["BorderSizePixel"] = 0;
 G2L["149"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["149"]["TextSize"] = 14;
@@ -2731,25 +2724,25 @@ G2L["149"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["149"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["149"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["149"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["149"]["LayoutOrder"] = 26;
+G2L["149"]["LayoutOrder"] = 45;
 G2L["149"]["ClipsDescendants"] = true;
 G2L["149"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["149"]["Text"] = [[Grab Knife V1.txt]];
-G2L["149"]["Name"] = [[gkv1]];
+G2L["149"]["Text"] = [[Pee.txt]];
+G2L["149"]["Name"] = [[pee]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv1.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.pee.LocalScript
 G2L["14a"] = Instance.new("LocalScript", G2L["149"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv1.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.pee.LocalScript
 G2L["14b"] = Instance.new("LocalScript", G2L["149"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv2
-G2L["14c"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv1
+G2L["14c"] = Instance.new("TextButton", G2L["b1"]);
 G2L["14c"]["BorderSizePixel"] = 0;
 G2L["14c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["14c"]["TextSize"] = 14;
@@ -2758,25 +2751,25 @@ G2L["14c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["14c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["14c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["14c"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["14c"]["LayoutOrder"] = 27;
+G2L["14c"]["LayoutOrder"] = 26;
 G2L["14c"]["ClipsDescendants"] = true;
 G2L["14c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14c"]["Text"] = [[Grab knife V2.txt]];
-G2L["14c"]["Name"] = [[gkv2]];
+G2L["14c"]["Text"] = [[Grab Knife V1.txt]];
+G2L["14c"]["Name"] = [[gkv1]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv2.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv1.LocalScript
 G2L["14d"] = Instance.new("LocalScript", G2L["14c"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv2.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv1.LocalScript
 G2L["14e"] = Instance.new("LocalScript", G2L["14c"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv3
-G2L["14f"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv2
+G2L["14f"] = Instance.new("TextButton", G2L["b1"]);
 G2L["14f"]["BorderSizePixel"] = 0;
 G2L["14f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["14f"]["TextSize"] = 14;
@@ -2785,25 +2778,25 @@ G2L["14f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["14f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["14f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["14f"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["14f"]["LayoutOrder"] = 28;
+G2L["14f"]["LayoutOrder"] = 27;
 G2L["14f"]["ClipsDescendants"] = true;
 G2L["14f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14f"]["Text"] = [[Grab knife V3.txt]];
-G2L["14f"]["Name"] = [[gkv3]];
+G2L["14f"]["Text"] = [[Grab knife V2.txt]];
+G2L["14f"]["Name"] = [[gkv2]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv3.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv2.LocalScript
 G2L["150"] = Instance.new("LocalScript", G2L["14f"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv3.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv2.LocalScript
 G2L["151"] = Instance.new("LocalScript", G2L["14f"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.doge
-G2L["152"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv3
+G2L["152"] = Instance.new("TextButton", G2L["b1"]);
 G2L["152"]["BorderSizePixel"] = 0;
 G2L["152"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["152"]["TextSize"] = 14;
@@ -2812,25 +2805,25 @@ G2L["152"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["152"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["152"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["152"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["152"]["LayoutOrder"] = 20;
+G2L["152"]["LayoutOrder"] = 28;
 G2L["152"]["ClipsDescendants"] = true;
 G2L["152"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["152"]["Text"] = [[Doge Army.txt]];
-G2L["152"]["Name"] = [[doge]];
+G2L["152"]["Text"] = [[Grab knife V3.txt]];
+G2L["152"]["Name"] = [[gkv3]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.doge.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv3.LocalScript
 G2L["153"] = Instance.new("LocalScript", G2L["152"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.doge.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv3.LocalScript
 G2L["154"] = Instance.new("LocalScript", G2L["152"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.virus
-G2L["155"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.doge
+G2L["155"] = Instance.new("TextButton", G2L["b1"]);
 G2L["155"]["BorderSizePixel"] = 0;
 G2L["155"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["155"]["TextSize"] = 14;
@@ -2839,25 +2832,25 @@ G2L["155"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["155"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["155"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["155"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["155"]["LayoutOrder"] = 33;
+G2L["155"]["LayoutOrder"] = 20;
 G2L["155"]["ClipsDescendants"] = true;
 G2L["155"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["155"]["Text"] = [[Infection Virus.txt]];
-G2L["155"]["Name"] = [[virus]];
+G2L["155"]["Text"] = [[Doge Army.txt]];
+G2L["155"]["Name"] = [[doge]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.virus.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.doge.LocalScript
 G2L["156"] = Instance.new("LocalScript", G2L["155"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.virus.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.doge.LocalScript
 G2L["157"] = Instance.new("LocalScript", G2L["155"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["158"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.virus
+G2L["158"] = Instance.new("TextButton", G2L["b1"]);
 G2L["158"]["BorderSizePixel"] = 0;
 G2L["158"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["158"]["TextSize"] = 14;
@@ -2866,24 +2859,25 @@ G2L["158"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["158"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["158"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["158"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["158"]["LayoutOrder"] = 88;
+G2L["158"]["LayoutOrder"] = 33;
 G2L["158"]["ClipsDescendants"] = true;
 G2L["158"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["158"]["Text"] = [[]];
+G2L["158"]["Text"] = [[Infection Virus.txt]];
+G2L["158"]["Name"] = [[virus]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.virus.LocalScript
 G2L["159"] = Instance.new("LocalScript", G2L["158"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.virus.LocalScript
 G2L["15a"] = Instance.new("LocalScript", G2L["158"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["15b"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["15b"] = Instance.new("TextButton", G2L["b1"]);
 G2L["15b"]["BorderSizePixel"] = 0;
 G2L["15b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["15b"]["TextSize"] = 14;
@@ -2892,24 +2886,24 @@ G2L["15b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["15b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["15b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["15b"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["15b"]["LayoutOrder"] = 89;
+G2L["15b"]["LayoutOrder"] = 88;
 G2L["15b"]["ClipsDescendants"] = true;
 G2L["15b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["15b"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["15c"] = Instance.new("LocalScript", G2L["15b"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["15d"] = Instance.new("LocalScript", G2L["15b"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["15e"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["15e"] = Instance.new("TextButton", G2L["b1"]);
 G2L["15e"]["BorderSizePixel"] = 0;
 G2L["15e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["15e"]["TextSize"] = 14;
@@ -2918,24 +2912,24 @@ G2L["15e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["15e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["15e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["15e"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["15e"]["LayoutOrder"] = 87;
+G2L["15e"]["LayoutOrder"] = 89;
 G2L["15e"]["ClipsDescendants"] = true;
 G2L["15e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["15e"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["15f"] = Instance.new("LocalScript", G2L["15e"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["160"] = Instance.new("LocalScript", G2L["15e"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["161"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["161"] = Instance.new("TextButton", G2L["b1"]);
 G2L["161"]["BorderSizePixel"] = 0;
 G2L["161"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["161"]["TextSize"] = 14;
@@ -2944,24 +2938,24 @@ G2L["161"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["161"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["161"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["161"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["161"]["LayoutOrder"] = 83;
+G2L["161"]["LayoutOrder"] = 87;
 G2L["161"]["ClipsDescendants"] = true;
 G2L["161"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["161"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["162"] = Instance.new("LocalScript", G2L["161"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["163"] = Instance.new("LocalScript", G2L["161"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["164"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["164"] = Instance.new("TextButton", G2L["b1"]);
 G2L["164"]["BorderSizePixel"] = 0;
 G2L["164"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["164"]["TextSize"] = 14;
@@ -2970,24 +2964,24 @@ G2L["164"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["164"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["164"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["164"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["164"]["LayoutOrder"] = 82;
+G2L["164"]["LayoutOrder"] = 83;
 G2L["164"]["ClipsDescendants"] = true;
 G2L["164"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["164"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["165"] = Instance.new("LocalScript", G2L["164"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["166"] = Instance.new("LocalScript", G2L["164"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["167"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["167"] = Instance.new("TextButton", G2L["b1"]);
 G2L["167"]["BorderSizePixel"] = 0;
 G2L["167"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["167"]["TextSize"] = 14;
@@ -2996,24 +2990,24 @@ G2L["167"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["167"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["167"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["167"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["167"]["LayoutOrder"] = 84;
+G2L["167"]["LayoutOrder"] = 82;
 G2L["167"]["ClipsDescendants"] = true;
 G2L["167"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["167"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["168"] = Instance.new("LocalScript", G2L["167"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["169"] = Instance.new("LocalScript", G2L["167"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["16a"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["16a"] = Instance.new("TextButton", G2L["b1"]);
 G2L["16a"]["BorderSizePixel"] = 0;
 G2L["16a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["16a"]["TextSize"] = 14;
@@ -3022,24 +3016,24 @@ G2L["16a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["16a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["16a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["16a"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["16a"]["LayoutOrder"] = 85;
+G2L["16a"]["LayoutOrder"] = 84;
 G2L["16a"]["ClipsDescendants"] = true;
 G2L["16a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["16a"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["16b"] = Instance.new("LocalScript", G2L["16a"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["16c"] = Instance.new("LocalScript", G2L["16a"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["16d"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["16d"] = Instance.new("TextButton", G2L["b1"]);
 G2L["16d"]["BorderSizePixel"] = 0;
 G2L["16d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["16d"]["TextSize"] = 14;
@@ -3048,24 +3042,24 @@ G2L["16d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["16d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["16d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["16d"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["16d"]["LayoutOrder"] = 86;
+G2L["16d"]["LayoutOrder"] = 85;
 G2L["16d"]["ClipsDescendants"] = true;
 G2L["16d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["16d"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["16e"] = Instance.new("LocalScript", G2L["16d"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["16f"] = Instance.new("LocalScript", G2L["16d"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["170"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["170"] = Instance.new("TextButton", G2L["b1"]);
 G2L["170"]["BorderSizePixel"] = 0;
 G2L["170"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["170"]["TextSize"] = 14;
@@ -3074,24 +3068,24 @@ G2L["170"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["170"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["170"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["170"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["170"]["LayoutOrder"] = 93;
+G2L["170"]["LayoutOrder"] = 86;
 G2L["170"]["ClipsDescendants"] = true;
 G2L["170"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["170"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["171"] = Instance.new("LocalScript", G2L["170"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["172"] = Instance.new("LocalScript", G2L["170"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["173"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["173"] = Instance.new("TextButton", G2L["b1"]);
 G2L["173"]["BorderSizePixel"] = 0;
 G2L["173"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["173"]["TextSize"] = 14;
@@ -3100,24 +3094,24 @@ G2L["173"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["173"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["173"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["173"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["173"]["LayoutOrder"] = 99;
+G2L["173"]["LayoutOrder"] = 93;
 G2L["173"]["ClipsDescendants"] = true;
 G2L["173"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["173"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["174"] = Instance.new("LocalScript", G2L["173"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["175"] = Instance.new("LocalScript", G2L["173"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["176"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["176"] = Instance.new("TextButton", G2L["b1"]);
 G2L["176"]["BorderSizePixel"] = 0;
 G2L["176"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["176"]["TextSize"] = 14;
@@ -3126,24 +3120,24 @@ G2L["176"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["176"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["176"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["176"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["176"]["LayoutOrder"] = 94;
+G2L["176"]["LayoutOrder"] = 99;
 G2L["176"]["ClipsDescendants"] = true;
 G2L["176"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["176"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["177"] = Instance.new("LocalScript", G2L["176"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["178"] = Instance.new("LocalScript", G2L["176"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["179"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["179"] = Instance.new("TextButton", G2L["b1"]);
 G2L["179"]["BorderSizePixel"] = 0;
 G2L["179"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["179"]["TextSize"] = 14;
@@ -3152,24 +3146,24 @@ G2L["179"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["179"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["179"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["179"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["179"]["LayoutOrder"] = 103;
+G2L["179"]["LayoutOrder"] = 94;
 G2L["179"]["ClipsDescendants"] = true;
 G2L["179"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["179"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["17a"] = Instance.new("LocalScript", G2L["179"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["17b"] = Instance.new("LocalScript", G2L["179"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["17c"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["17c"] = Instance.new("TextButton", G2L["b1"]);
 G2L["17c"]["BorderSizePixel"] = 0;
 G2L["17c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["17c"]["TextSize"] = 14;
@@ -3178,24 +3172,24 @@ G2L["17c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["17c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["17c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["17c"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["17c"]["LayoutOrder"] = 104;
+G2L["17c"]["LayoutOrder"] = 103;
 G2L["17c"]["ClipsDescendants"] = true;
 G2L["17c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["17c"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["17d"] = Instance.new("LocalScript", G2L["17c"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["17e"] = Instance.new("LocalScript", G2L["17c"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["17f"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["17f"] = Instance.new("TextButton", G2L["b1"]);
 G2L["17f"]["BorderSizePixel"] = 0;
 G2L["17f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["17f"]["TextSize"] = 14;
@@ -3204,24 +3198,24 @@ G2L["17f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["17f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["17f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["17f"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["17f"]["LayoutOrder"] = 101;
+G2L["17f"]["LayoutOrder"] = 104;
 G2L["17f"]["ClipsDescendants"] = true;
 G2L["17f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["17f"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["180"] = Instance.new("LocalScript", G2L["17f"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["181"] = Instance.new("LocalScript", G2L["17f"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["182"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["182"] = Instance.new("TextButton", G2L["b1"]);
 G2L["182"]["BorderSizePixel"] = 0;
 G2L["182"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["182"]["TextSize"] = 14;
@@ -3230,24 +3224,24 @@ G2L["182"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["182"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["182"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["182"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["182"]["LayoutOrder"] = 102;
+G2L["182"]["LayoutOrder"] = 101;
 G2L["182"]["ClipsDescendants"] = true;
 G2L["182"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["182"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["183"] = Instance.new("LocalScript", G2L["182"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["184"] = Instance.new("LocalScript", G2L["182"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["185"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["185"] = Instance.new("TextButton", G2L["b1"]);
 G2L["185"]["BorderSizePixel"] = 0;
 G2L["185"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["185"]["TextSize"] = 14;
@@ -3256,24 +3250,24 @@ G2L["185"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["185"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["185"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["185"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["185"]["LayoutOrder"] = 100;
+G2L["185"]["LayoutOrder"] = 102;
 G2L["185"]["ClipsDescendants"] = true;
 G2L["185"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["185"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["186"] = Instance.new("LocalScript", G2L["185"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["187"] = Instance.new("LocalScript", G2L["185"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["188"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["188"] = Instance.new("TextButton", G2L["b1"]);
 G2L["188"]["BorderSizePixel"] = 0;
 G2L["188"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["188"]["TextSize"] = 14;
@@ -3282,24 +3276,24 @@ G2L["188"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["188"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["188"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["188"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["188"]["LayoutOrder"] = 96;
+G2L["188"]["LayoutOrder"] = 100;
 G2L["188"]["ClipsDescendants"] = true;
 G2L["188"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["188"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["189"] = Instance.new("LocalScript", G2L["188"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["18a"] = Instance.new("LocalScript", G2L["188"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["18b"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["18b"] = Instance.new("TextButton", G2L["b1"]);
 G2L["18b"]["BorderSizePixel"] = 0;
 G2L["18b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["18b"]["TextSize"] = 14;
@@ -3308,24 +3302,24 @@ G2L["18b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["18b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["18b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["18b"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["18b"]["LayoutOrder"] = 95;
+G2L["18b"]["LayoutOrder"] = 96;
 G2L["18b"]["ClipsDescendants"] = true;
 G2L["18b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["18b"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["18c"] = Instance.new("LocalScript", G2L["18b"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["18d"] = Instance.new("LocalScript", G2L["18b"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["18e"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["18e"] = Instance.new("TextButton", G2L["b1"]);
 G2L["18e"]["BorderSizePixel"] = 0;
 G2L["18e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["18e"]["TextSize"] = 14;
@@ -3334,24 +3328,24 @@ G2L["18e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["18e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["18e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["18e"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["18e"]["LayoutOrder"] = 97;
+G2L["18e"]["LayoutOrder"] = 95;
 G2L["18e"]["ClipsDescendants"] = true;
 G2L["18e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["18e"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["18f"] = Instance.new("LocalScript", G2L["18e"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["190"] = Instance.new("LocalScript", G2L["18e"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["191"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["191"] = Instance.new("TextButton", G2L["b1"]);
 G2L["191"]["BorderSizePixel"] = 0;
 G2L["191"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["191"]["TextSize"] = 14;
@@ -3360,24 +3354,24 @@ G2L["191"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["191"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["191"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["191"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["191"]["LayoutOrder"] = 98;
+G2L["191"]["LayoutOrder"] = 97;
 G2L["191"]["ClipsDescendants"] = true;
 G2L["191"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["191"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["192"] = Instance.new("LocalScript", G2L["191"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["193"] = Instance.new("LocalScript", G2L["191"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["194"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["194"] = Instance.new("TextButton", G2L["b1"]);
 G2L["194"]["BorderSizePixel"] = 0;
 G2L["194"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["194"]["TextSize"] = 14;
@@ -3386,24 +3380,24 @@ G2L["194"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["194"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["194"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["194"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["194"]["LayoutOrder"] = 80;
+G2L["194"]["LayoutOrder"] = 98;
 G2L["194"]["ClipsDescendants"] = true;
 G2L["194"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["194"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["195"] = Instance.new("LocalScript", G2L["194"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["196"] = Instance.new("LocalScript", G2L["194"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["197"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["197"] = Instance.new("TextButton", G2L["b1"]);
 G2L["197"]["BorderSizePixel"] = 0;
 G2L["197"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["197"]["TextSize"] = 14;
@@ -3412,24 +3406,24 @@ G2L["197"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["197"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["197"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["197"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["197"]["LayoutOrder"] = 81;
+G2L["197"]["LayoutOrder"] = 80;
 G2L["197"]["ClipsDescendants"] = true;
 G2L["197"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["197"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["198"] = Instance.new("LocalScript", G2L["197"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["199"] = Instance.new("LocalScript", G2L["197"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["19a"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["19a"] = Instance.new("TextButton", G2L["b1"]);
 G2L["19a"]["BorderSizePixel"] = 0;
 G2L["19a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["19a"]["TextSize"] = 14;
@@ -3438,24 +3432,24 @@ G2L["19a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["19a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["19a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["19a"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["19a"]["LayoutOrder"] = 92;
+G2L["19a"]["LayoutOrder"] = 81;
 G2L["19a"]["ClipsDescendants"] = true;
 G2L["19a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["19a"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["19b"] = Instance.new("LocalScript", G2L["19a"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["19c"] = Instance.new("LocalScript", G2L["19a"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["19d"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["19d"] = Instance.new("TextButton", G2L["b1"]);
 G2L["19d"]["BorderSizePixel"] = 0;
 G2L["19d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["19d"]["TextSize"] = 14;
@@ -3464,24 +3458,24 @@ G2L["19d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["19d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["19d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["19d"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["19d"]["LayoutOrder"] = 79;
+G2L["19d"]["LayoutOrder"] = 92;
 G2L["19d"]["ClipsDescendants"] = true;
 G2L["19d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["19d"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["19e"] = Instance.new("LocalScript", G2L["19d"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["19f"] = Instance.new("LocalScript", G2L["19d"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1a0"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1a0"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1a0"]["BorderSizePixel"] = 0;
 G2L["1a0"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1a0"]["TextSize"] = 14;
@@ -3490,24 +3484,24 @@ G2L["1a0"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1a0"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1a0"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1a0"]["LayoutOrder"] = 75;
+G2L["1a0"]["LayoutOrder"] = 79;
 G2L["1a0"]["ClipsDescendants"] = true;
 G2L["1a0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a0"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1a1"] = Instance.new("LocalScript", G2L["1a0"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1a2"] = Instance.new("LocalScript", G2L["1a0"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1a3"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1a3"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1a3"]["BorderSizePixel"] = 0;
 G2L["1a3"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1a3"]["TextSize"] = 14;
@@ -3516,24 +3510,24 @@ G2L["1a3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1a3"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1a3"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1a3"]["LayoutOrder"] = 63;
+G2L["1a3"]["LayoutOrder"] = 75;
 G2L["1a3"]["ClipsDescendants"] = true;
 G2L["1a3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a3"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1a4"] = Instance.new("LocalScript", G2L["1a3"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1a5"] = Instance.new("LocalScript", G2L["1a3"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1a6"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1a6"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1a6"]["BorderSizePixel"] = 0;
 G2L["1a6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1a6"]["TextSize"] = 14;
@@ -3542,24 +3536,24 @@ G2L["1a6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1a6"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1a6"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1a6"]["LayoutOrder"] = 60;
+G2L["1a6"]["LayoutOrder"] = 63;
 G2L["1a6"]["ClipsDescendants"] = true;
 G2L["1a6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a6"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1a7"] = Instance.new("LocalScript", G2L["1a6"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1a8"] = Instance.new("LocalScript", G2L["1a6"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1a9"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1a9"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1a9"]["BorderSizePixel"] = 0;
 G2L["1a9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1a9"]["TextSize"] = 14;
@@ -3568,24 +3562,24 @@ G2L["1a9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1a9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1a9"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1a9"]["LayoutOrder"] = 61;
+G2L["1a9"]["LayoutOrder"] = 60;
 G2L["1a9"]["ClipsDescendants"] = true;
 G2L["1a9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a9"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1aa"] = Instance.new("LocalScript", G2L["1a9"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1ab"] = Instance.new("LocalScript", G2L["1a9"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1ac"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1ac"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1ac"]["BorderSizePixel"] = 0;
 G2L["1ac"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1ac"]["TextSize"] = 14;
@@ -3594,24 +3588,24 @@ G2L["1ac"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1ac"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1ac"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1ac"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1ac"]["LayoutOrder"] = 62;
+G2L["1ac"]["LayoutOrder"] = 61;
 G2L["1ac"]["ClipsDescendants"] = true;
 G2L["1ac"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1ac"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1ad"] = Instance.new("LocalScript", G2L["1ac"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1ae"] = Instance.new("LocalScript", G2L["1ac"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1af"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1af"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1af"]["BorderSizePixel"] = 0;
 G2L["1af"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1af"]["TextSize"] = 14;
@@ -3620,24 +3614,24 @@ G2L["1af"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1af"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1af"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1af"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1af"]["LayoutOrder"] = 59;
+G2L["1af"]["LayoutOrder"] = 62;
 G2L["1af"]["ClipsDescendants"] = true;
 G2L["1af"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1af"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1b0"] = Instance.new("LocalScript", G2L["1af"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1b1"] = Instance.new("LocalScript", G2L["1af"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1b2"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1b2"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1b2"]["BorderSizePixel"] = 0;
 G2L["1b2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1b2"]["TextSize"] = 14;
@@ -3646,24 +3640,24 @@ G2L["1b2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1b2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1b2"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1b2"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1b2"]["LayoutOrder"] = 58;
+G2L["1b2"]["LayoutOrder"] = 59;
 G2L["1b2"]["ClipsDescendants"] = true;
 G2L["1b2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1b2"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1b3"] = Instance.new("LocalScript", G2L["1b2"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1b4"] = Instance.new("LocalScript", G2L["1b2"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1b5"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1b5"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1b5"]["BorderSizePixel"] = 0;
 G2L["1b5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1b5"]["TextSize"] = 14;
@@ -3672,24 +3666,24 @@ G2L["1b5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1b5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1b5"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1b5"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1b5"]["LayoutOrder"] = 55;
+G2L["1b5"]["LayoutOrder"] = 58;
 G2L["1b5"]["ClipsDescendants"] = true;
 G2L["1b5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1b5"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1b6"] = Instance.new("LocalScript", G2L["1b5"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1b7"] = Instance.new("LocalScript", G2L["1b5"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1b8"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1b8"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1b8"]["BorderSizePixel"] = 0;
 G2L["1b8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1b8"]["TextSize"] = 14;
@@ -3698,24 +3692,24 @@ G2L["1b8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1b8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1b8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1b8"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1b8"]["LayoutOrder"] = 56;
+G2L["1b8"]["LayoutOrder"] = 55;
 G2L["1b8"]["ClipsDescendants"] = true;
 G2L["1b8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1b8"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1b9"] = Instance.new("LocalScript", G2L["1b8"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1ba"] = Instance.new("LocalScript", G2L["1b8"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1bb"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1bb"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1bb"]["BorderSizePixel"] = 0;
 G2L["1bb"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1bb"]["TextSize"] = 14;
@@ -3724,24 +3718,24 @@ G2L["1bb"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1bb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1bb"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1bb"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1bb"]["LayoutOrder"] = 57;
+G2L["1bb"]["LayoutOrder"] = 56;
 G2L["1bb"]["ClipsDescendants"] = true;
 G2L["1bb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1bb"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1bc"] = Instance.new("LocalScript", G2L["1bb"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1bd"] = Instance.new("LocalScript", G2L["1bb"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1be"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1be"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1be"]["BorderSizePixel"] = 0;
 G2L["1be"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1be"]["TextSize"] = 14;
@@ -3750,24 +3744,24 @@ G2L["1be"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1be"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1be"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1be"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1be"]["LayoutOrder"] = 64;
+G2L["1be"]["LayoutOrder"] = 57;
 G2L["1be"]["ClipsDescendants"] = true;
 G2L["1be"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1be"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1bf"] = Instance.new("LocalScript", G2L["1be"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1c0"] = Instance.new("LocalScript", G2L["1be"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1c1"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1c1"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1c1"]["BorderSizePixel"] = 0;
 G2L["1c1"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1c1"]["TextSize"] = 14;
@@ -3776,24 +3770,24 @@ G2L["1c1"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1c1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1c1"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1c1"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1c1"]["LayoutOrder"] = 65;
+G2L["1c1"]["LayoutOrder"] = 64;
 G2L["1c1"]["ClipsDescendants"] = true;
 G2L["1c1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1c1"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1c2"] = Instance.new("LocalScript", G2L["1c1"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1c3"] = Instance.new("LocalScript", G2L["1c1"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1c4"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1c4"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1c4"]["BorderSizePixel"] = 0;
 G2L["1c4"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1c4"]["TextSize"] = 14;
@@ -3802,24 +3796,24 @@ G2L["1c4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1c4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1c4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1c4"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1c4"]["LayoutOrder"] = 72;
+G2L["1c4"]["LayoutOrder"] = 65;
 G2L["1c4"]["ClipsDescendants"] = true;
 G2L["1c4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1c4"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1c5"] = Instance.new("LocalScript", G2L["1c4"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1c6"] = Instance.new("LocalScript", G2L["1c4"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1c7"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1c7"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1c7"]["BorderSizePixel"] = 0;
 G2L["1c7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1c7"]["TextSize"] = 14;
@@ -3828,24 +3822,24 @@ G2L["1c7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1c7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1c7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1c7"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1c7"]["LayoutOrder"] = 67;
+G2L["1c7"]["LayoutOrder"] = 72;
 G2L["1c7"]["ClipsDescendants"] = true;
 G2L["1c7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1c7"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1c8"] = Instance.new("LocalScript", G2L["1c7"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1c9"] = Instance.new("LocalScript", G2L["1c7"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1ca"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1ca"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1ca"]["BorderSizePixel"] = 0;
 G2L["1ca"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1ca"]["TextSize"] = 14;
@@ -3854,24 +3848,24 @@ G2L["1ca"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1ca"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1ca"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1ca"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1ca"]["LayoutOrder"] = 66;
+G2L["1ca"]["LayoutOrder"] = 67;
 G2L["1ca"]["ClipsDescendants"] = true;
 G2L["1ca"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1ca"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1cb"] = Instance.new("LocalScript", G2L["1ca"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1cc"] = Instance.new("LocalScript", G2L["1ca"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1cd"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1cd"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1cd"]["BorderSizePixel"] = 0;
 G2L["1cd"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1cd"]["TextSize"] = 14;
@@ -3880,24 +3874,24 @@ G2L["1cd"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1cd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1cd"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1cd"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1cd"]["LayoutOrder"] = 77;
+G2L["1cd"]["LayoutOrder"] = 66;
 G2L["1cd"]["ClipsDescendants"] = true;
 G2L["1cd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1cd"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1ce"] = Instance.new("LocalScript", G2L["1cd"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1cf"] = Instance.new("LocalScript", G2L["1cd"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1d0"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1d0"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1d0"]["BorderSizePixel"] = 0;
 G2L["1d0"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1d0"]["TextSize"] = 14;
@@ -3906,24 +3900,24 @@ G2L["1d0"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1d0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1d0"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1d0"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1d0"]["LayoutOrder"] = 78;
+G2L["1d0"]["LayoutOrder"] = 77;
 G2L["1d0"]["ClipsDescendants"] = true;
 G2L["1d0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1d0"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1d1"] = Instance.new("LocalScript", G2L["1d0"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1d2"] = Instance.new("LocalScript", G2L["1d0"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1d3"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1d3"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1d3"]["BorderSizePixel"] = 0;
 G2L["1d3"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1d3"]["TextSize"] = 14;
@@ -3932,24 +3926,24 @@ G2L["1d3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1d3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1d3"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1d3"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1d3"]["LayoutOrder"] = 74;
+G2L["1d3"]["LayoutOrder"] = 78;
 G2L["1d3"]["ClipsDescendants"] = true;
 G2L["1d3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1d3"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1d4"] = Instance.new("LocalScript", G2L["1d3"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1d5"] = Instance.new("LocalScript", G2L["1d3"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1d6"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1d6"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1d6"]["BorderSizePixel"] = 0;
 G2L["1d6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1d6"]["TextSize"] = 14;
@@ -3958,24 +3952,24 @@ G2L["1d6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1d6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1d6"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1d6"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1d6"]["LayoutOrder"] = 76;
+G2L["1d6"]["LayoutOrder"] = 74;
 G2L["1d6"]["ClipsDescendants"] = true;
 G2L["1d6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1d6"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1d7"] = Instance.new("LocalScript", G2L["1d6"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1d8"] = Instance.new("LocalScript", G2L["1d6"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1d9"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1d9"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1d9"]["BorderSizePixel"] = 0;
 G2L["1d9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1d9"]["TextSize"] = 14;
@@ -3984,24 +3978,24 @@ G2L["1d9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1d9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1d9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1d9"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1d9"]["LayoutOrder"] = 73;
+G2L["1d9"]["LayoutOrder"] = 76;
 G2L["1d9"]["ClipsDescendants"] = true;
 G2L["1d9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1d9"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1da"] = Instance.new("LocalScript", G2L["1d9"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1db"] = Instance.new("LocalScript", G2L["1d9"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1dc"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1dc"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1dc"]["BorderSizePixel"] = 0;
 G2L["1dc"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1dc"]["TextSize"] = 14;
@@ -4010,24 +4004,24 @@ G2L["1dc"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1dc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1dc"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1dc"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1dc"]["LayoutOrder"] = 69;
+G2L["1dc"]["LayoutOrder"] = 73;
 G2L["1dc"]["ClipsDescendants"] = true;
 G2L["1dc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1dc"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1dd"] = Instance.new("LocalScript", G2L["1dc"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1de"] = Instance.new("LocalScript", G2L["1dc"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1df"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1df"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1df"]["BorderSizePixel"] = 0;
 G2L["1df"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1df"]["TextSize"] = 14;
@@ -4036,24 +4030,24 @@ G2L["1df"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1df"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1df"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1df"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1df"]["LayoutOrder"] = 68;
+G2L["1df"]["LayoutOrder"] = 69;
 G2L["1df"]["ClipsDescendants"] = true;
 G2L["1df"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1df"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1e0"] = Instance.new("LocalScript", G2L["1df"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1e1"] = Instance.new("LocalScript", G2L["1df"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1e2"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1e2"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1e2"]["BorderSizePixel"] = 0;
 G2L["1e2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1e2"]["TextSize"] = 14;
@@ -4062,24 +4056,24 @@ G2L["1e2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1e2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1e2"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1e2"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1e2"]["LayoutOrder"] = 70;
+G2L["1e2"]["LayoutOrder"] = 68;
 G2L["1e2"]["ClipsDescendants"] = true;
 G2L["1e2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1e2"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1e3"] = Instance.new("LocalScript", G2L["1e2"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1e4"] = Instance.new("LocalScript", G2L["1e2"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1e5"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1e5"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1e5"]["BorderSizePixel"] = 0;
 G2L["1e5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1e5"]["TextSize"] = 14;
@@ -4088,24 +4082,24 @@ G2L["1e5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1e5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1e5"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1e5"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1e5"]["LayoutOrder"] = 71;
+G2L["1e5"]["LayoutOrder"] = 70;
 G2L["1e5"]["ClipsDescendants"] = true;
 G2L["1e5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1e5"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1e6"] = Instance.new("LocalScript", G2L["1e5"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1e7"] = Instance.new("LocalScript", G2L["1e5"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1e8"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1e8"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1e8"]["BorderSizePixel"] = 0;
 G2L["1e8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1e8"]["TextSize"] = 14;
@@ -4114,24 +4108,24 @@ G2L["1e8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1e8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1e8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1e8"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1e8"]["LayoutOrder"] = 90;
+G2L["1e8"]["LayoutOrder"] = 71;
 G2L["1e8"]["ClipsDescendants"] = true;
 G2L["1e8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1e8"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1e9"] = Instance.new("LocalScript", G2L["1e8"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1ea"] = Instance.new("LocalScript", G2L["1e8"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton
-G2L["1eb"] = Instance.new("TextButton", G2L["ae"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1eb"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1eb"]["BorderSizePixel"] = 0;
 G2L["1eb"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["1eb"]["TextSize"] = 14;
@@ -4140,234 +4134,233 @@ G2L["1eb"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1eb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1eb"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["1eb"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["1eb"]["LayoutOrder"] = 105;
+G2L["1eb"]["LayoutOrder"] = 90;
 G2L["1eb"]["ClipsDescendants"] = true;
 G2L["1eb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1eb"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1ec"] = Instance.new("LocalScript", G2L["1eb"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 G2L["1ed"] = Instance.new("LocalScript", G2L["1eb"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.scrollbar
-G2L["1ee"] = Instance.new("Frame", G2L["7"]);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton
+G2L["1ee"] = Instance.new("TextButton", G2L["b1"]);
 G2L["1ee"]["BorderSizePixel"] = 0;
-G2L["1ee"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["1ee"]["Size"] = UDim2.new(0, -4, 0, 374);
-G2L["1ee"]["Position"] = UDim2.new(0.97329, 0, 0.04261, 0);
+G2L["1ee"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1ee"]["TextSize"] = 14;
+G2L["1ee"]["AutoButtonColor"] = false;
+G2L["1ee"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1ee"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1ee"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1ee"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["1ee"]["LayoutOrder"] = 105;
+G2L["1ee"]["ClipsDescendants"] = true;
 G2L["1ee"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1ee"]["Name"] = [[scrollbar]];
+G2L["1ee"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.executor.bar2
-G2L["1ef"] = Instance.new("Frame", G2L["7"]);
-G2L["1ef"]["BorderSizePixel"] = 0;
-G2L["1ef"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1ef"]["Size"] = UDim2.new(0, 433, 0, 225);
-G2L["1ef"]["Position"] = UDim2.new(0.10237, 0, 0.06266, 0);
-G2L["1ef"]["BorderColor3"] = Color3.fromRGB(239, 239, 239);
-G2L["1ef"]["Name"] = [[bar2]];
-G2L["1ef"]["BackgroundTransparency"] = 1;
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
+G2L["1ef"] = Instance.new("LocalScript", G2L["1ee"]);
 
 
--- StarterGui.AIDS.topbar.back.executor.bar2.localscript
-G2L["1f0"] = Instance.new("LocalScript", G2L["1ef"]);
-G2L["1f0"]["Name"] = [[localscript]];
+
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
+G2L["1f0"] = Instance.new("LocalScript", G2L["1ee"]);
 
 
--- StarterGui.AIDS.topbar.back.executor.bar2.UIStroke
-G2L["1f1"] = Instance.new("UIStroke", G2L["1ef"]);
-G2L["1f1"]["Color"] = Color3.fromRGB(239, 239, 239);
+
+-- StarterGui.ScreenGui.topbar.back.executor.scrollbar
+G2L["1f1"] = Instance.new("Frame", G2L["a"]);
+G2L["1f1"]["BorderSizePixel"] = 0;
+G2L["1f1"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
+G2L["1f1"]["Size"] = UDim2.new(0, -4, 0, 374);
+G2L["1f1"]["Position"] = UDim2.new(0.97329, 0, 0.04261, 0);
+G2L["1f1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f1"]["Name"] = [[scrollbar]];
 
 
--- StarterGui.AIDS.topbar.back.executor.scrollbarback
-G2L["1f2"] = Instance.new("Frame", G2L["7"]);
-G2L["1f2"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
-G2L["1f2"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["1f2"]["Size"] = UDim2.new(0, 433, 0, 15);
-G2L["1f2"]["Position"] = UDim2.new(0.10237, 0, 0.58647, 0);
+-- StarterGui.ScreenGui.topbar.back.executor.bar2
+G2L["1f2"] = Instance.new("Frame", G2L["a"]);
+G2L["1f2"]["BorderSizePixel"] = 0;
+G2L["1f2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f2"]["Size"] = UDim2.new(0, 433, 0, 225);
+G2L["1f2"]["Position"] = UDim2.new(0.10237, 0, 0.06266, 0);
 G2L["1f2"]["BorderColor3"] = Color3.fromRGB(239, 239, 239);
-G2L["1f2"]["Name"] = [[scrollbarback]];
+G2L["1f2"]["Name"] = [[bar2]];
+G2L["1f2"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.AIDS.topbar.back.executor.textboxback
-G2L["1f3"] = Instance.new("ScrollingFrame", G2L["7"]);
-G2L["1f3"]["Active"] = true;
-G2L["1f3"]["BorderSizePixel"] = 0;
-G2L["1f3"]["CanvasSize"] = UDim2.new(0, 0, 2.5, 0);
+-- StarterGui.ScreenGui.topbar.back.executor.bar2.localscript
+G2L["1f3"] = Instance.new("LocalScript", G2L["1f2"]);
+G2L["1f3"]["Name"] = [[localscript]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.bar2.UIStroke
+G2L["1f4"] = Instance.new("UIStroke", G2L["1f2"]);
+G2L["1f4"]["Color"] = Color3.fromRGB(239, 239, 239);
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.scrollbarback
+G2L["1f5"] = Instance.new("Frame", G2L["a"]);
+G2L["1f5"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
+G2L["1f5"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["1f5"]["Size"] = UDim2.new(0, 433, 0, 15);
+G2L["1f5"]["Position"] = UDim2.new(0.10237, 0, 0.58647, 0);
+G2L["1f5"]["BorderColor3"] = Color3.fromRGB(239, 239, 239);
+G2L["1f5"]["Name"] = [[scrollbarback]];
+
+
+-- StarterGui.ScreenGui.topbar.back.executor.textboxback
+G2L["1f6"] = Instance.new("ScrollingFrame", G2L["a"]);
+G2L["1f6"]["Active"] = true;
+G2L["1f6"]["BorderSizePixel"] = 0;
+G2L["1f6"]["CanvasSize"] = UDim2.new(0, 0, 2.5, 0);
 -- [ERROR] cannot convert TopImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["1f3"]["TopImage"] = [[]];
-G2L["1f3"]["Name"] = [[textboxback]];
-G2L["1f3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f6"]["TopImage"] = [[]];
+G2L["1f6"]["Name"] = [[textboxback]];
+G2L["1f6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 -- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["1f3"]["BottomImage"] = [[]];
-G2L["1f3"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY;
-G2L["1f3"]["Size"] = UDim2.new(0, 433, 0, 225);
-G2L["1f3"]["ScrollBarImageColor3"] = Color3.fromRGB(223, 223, 223);
-G2L["1f3"]["Position"] = UDim2.new(0.10237, 0, 0.06266, 0);
-G2L["1f3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1f3"]["ScrollBarThickness"] = 15;
-G2L["1f3"]["BackgroundTransparency"] = 1;
+G2L["1f6"]["BottomImage"] = [[]];
+G2L["1f6"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY;
+G2L["1f6"]["Size"] = UDim2.new(0, 433, 0, 225);
+G2L["1f6"]["ScrollBarImageColor3"] = Color3.fromRGB(223, 223, 223);
+G2L["1f6"]["Position"] = UDim2.new(0.10237, 0, 0.06266, 0);
+G2L["1f6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f6"]["ScrollBarThickness"] = 15;
+G2L["1f6"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.AIDS.topbar.back.executor.textboxback.LocalScript
-G2L["1f4"] = Instance.new("LocalScript", G2L["1f3"]);
-
-
-
--- StarterGui.AIDS.topbar.back.executor.textboxback.textbox
-G2L["1f5"] = Instance.new("TextBox", G2L["1f3"]);
-G2L["1f5"]["Name"] = [[textbox]];
-G2L["1f5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["1f5"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
-G2L["1f5"]["BorderSizePixel"] = 0;
-G2L["1f5"]["TextWrapped"] = true;
-G2L["1f5"]["TextSize"] = 15;
-G2L["1f5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1f5"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["1f5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1f5"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1f5"]["AutomaticSize"] = Enum.AutomaticSize.XY;
-G2L["1f5"]["MultiLine"] = true;
-G2L["1f5"]["ClearTextOnFocus"] = false;
-G2L["1f5"]["Size"] = UDim2.new(0, 800, 0, 1012);
-G2L["1f5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1f5"]["Text"] = [[]];
-G2L["1f5"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.AIDS.topbar.back.executor.textboxback.textbox.LocalScript
-G2L["1f6"] = Instance.new("LocalScript", G2L["1f5"]);
+-- StarterGui.ScreenGui.topbar.back.executor.textboxback.LocalScript
+G2L["1f7"] = Instance.new("LocalScript", G2L["1f6"]);
 
 
 
--- StarterGui.AIDS.topbar.back.executor.textboxback.syndex
-G2L["1f7"] = Instance.new("TextLabel", G2L["1f3"]);
-G2L["1f7"]["TextWrapped"] = true;
-G2L["1f7"]["BorderSizePixel"] = 0;
-G2L["1f7"]["TextSize"] = 15;
-G2L["1f7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["1f7"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["1f7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1f7"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1f7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1f7"]["BackgroundTransparency"] = 1;
-G2L["1f7"]["RichText"] = true;
-G2L["1f7"]["Size"] = UDim2.new(0, 800, 0, 1012);
-G2L["1f7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1f7"]["Text"] = [[]];
-G2L["1f7"]["AutomaticSize"] = Enum.AutomaticSize.XY;
-G2L["1f7"]["Name"] = [[syndex]];
-
-
--- StarterGui.AIDS.topbar.back.executor.stroke
-G2L["1f8"] = Instance.new("Frame", G2L["7"]);
+-- StarterGui.ScreenGui.topbar.back.executor.textboxback.textbox
+G2L["1f8"] = Instance.new("TextBox", G2L["1f6"]);
+G2L["1f8"]["Name"] = [[textbox]];
+G2L["1f8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1f8"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
 G2L["1f8"]["BorderSizePixel"] = 0;
+G2L["1f8"]["TextWrapped"] = true;
+G2L["1f8"]["TextSize"] = 15;
+G2L["1f8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f8"]["TextYAlignment"] = Enum.TextYAlignment.Top;
 G2L["1f8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1f8"]["Size"] = UDim2.new(0, 492, 0, 66);
-G2L["1f8"]["Position"] = UDim2.new(0.01335, 0, 0.76441, 0);
+G2L["1f8"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f8"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+G2L["1f8"]["MultiLine"] = true;
+G2L["1f8"]["ClearTextOnFocus"] = false;
+G2L["1f8"]["Size"] = UDim2.new(0, 800, 0, 1012);
 G2L["1f8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1f8"]["Name"] = [[stroke]];
+G2L["1f8"]["Text"] = [[]];
 G2L["1f8"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.AIDS.topbar.back.executor.stroke.UIStroke
-G2L["1f9"] = Instance.new("UIStroke", G2L["1f8"]);
-G2L["1f9"]["Thickness"] = 1.5;
-G2L["1f9"]["Color"] = Color3.fromRGB(154, 152, 152);
+-- StarterGui.ScreenGui.topbar.back.executor.textboxback.textbox.LocalScript
+G2L["1f9"] = Instance.new("LocalScript", G2L["1f8"]);
 
 
--- StarterGui.AIDS.topbar.back.adminpanel
-G2L["1fa"] = Instance.new("Frame", G2L["4"]);
-G2L["1fa"]["Visible"] = false;
-G2L["1fa"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
-G2L["1fa"]["Size"] = UDim2.new(0, 674, 0, 399);
-G2L["1fa"]["Position"] = UDim2.new(0.039, 0, 0.099, 0);
-G2L["1fa"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["1fa"]["Name"] = [[adminpanel]];
+
+-- StarterGui.ScreenGui.topbar.back.executor.textboxback.syndex
+G2L["1fa"] = Instance.new("TextLabel", G2L["1f6"]);
+G2L["1fa"]["TextWrapped"] = true;
+G2L["1fa"]["BorderSizePixel"] = 0;
+G2L["1fa"]["TextSize"] = 15;
+G2L["1fa"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1fa"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["1fa"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1fa"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1fa"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1fa"]["BackgroundTransparency"] = 1;
+G2L["1fa"]["RichText"] = true;
+G2L["1fa"]["Size"] = UDim2.new(0, 800, 0, 1012);
+G2L["1fa"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1fa"]["Text"] = [[]];
+G2L["1fa"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+G2L["1fa"]["Name"] = [[syndex]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.scrollbar
-G2L["1fb"] = Instance.new("Frame", G2L["1fa"]);
+-- StarterGui.ScreenGui.topbar.back.executor.stroke
+G2L["1fb"] = Instance.new("Frame", G2L["a"]);
 G2L["1fb"]["BorderSizePixel"] = 0;
-G2L["1fb"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["1fb"]["Size"] = UDim2.new(0, 17, 0, 335);
-G2L["1fb"]["Position"] = UDim2.new(0.18991, 0, 0.03008, 0);
+G2L["1fb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1fb"]["Size"] = UDim2.new(0, 492, 0, 66);
+G2L["1fb"]["Position"] = UDim2.new(0.01335, 0, 0.76441, 0);
 G2L["1fb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1fb"]["Name"] = [[scrollbar]];
+G2L["1fb"]["Name"] = [[stroke]];
+G2L["1fb"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands
-G2L["1fc"] = Instance.new("ScrollingFrame", G2L["1fa"]);
-G2L["1fc"]["Active"] = true;
-G2L["1fc"]["BorderSizePixel"] = 0;
+-- StarterGui.ScreenGui.topbar.back.executor.stroke.UIStroke
+G2L["1fc"] = Instance.new("UIStroke", G2L["1fb"]);
+G2L["1fc"]["Thickness"] = 1.5;
+G2L["1fc"]["Color"] = Color3.fromRGB(154, 152, 152);
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel
+G2L["1fd"] = Instance.new("Frame", G2L["7"]);
+G2L["1fd"]["Visible"] = false;
+G2L["1fd"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
+G2L["1fd"]["Size"] = UDim2.new(0, 674, 0, 399);
+G2L["1fd"]["Position"] = UDim2.new(0.039, 0, 0.099, 0);
+G2L["1fd"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["1fd"]["Name"] = [[adminpanel]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.scrollbar
+G2L["1fe"] = Instance.new("Frame", G2L["1fd"]);
+G2L["1fe"]["BorderSizePixel"] = 0;
+G2L["1fe"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
+G2L["1fe"]["Size"] = UDim2.new(0, 17, 0, 335);
+G2L["1fe"]["Position"] = UDim2.new(0.18991, 0, 0.03008, 0);
+G2L["1fe"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1fe"]["Name"] = [[scrollbar]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands
+G2L["1ff"] = Instance.new("ScrollingFrame", G2L["1fd"]);
+G2L["1ff"]["Active"] = true;
+G2L["1ff"]["BorderSizePixel"] = 0;
 -- [ERROR] cannot convert TopImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["1fc"]["TopImage"] = [[]];
-G2L["1fc"]["Name"] = [[commands]];
-G2L["1fc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1ff"]["TopImage"] = [[]];
+G2L["1ff"]["Name"] = [[commands]];
+G2L["1ff"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 -- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["1fc"]["BottomImage"] = [[]];
-G2L["1fc"]["Size"] = UDim2.new(0, 131, 0, 335);
-G2L["1fc"]["ScrollBarImageColor3"] = Color3.fromRGB(205, 205, 205);
-G2L["1fc"]["Position"] = UDim2.new(0.02077, 0, 0.02757, 0);
-G2L["1fc"]["BorderColor3"] = Color3.fromRGB(161, 160, 160);
-G2L["1fc"]["ScrollBarThickness"] = 17;
-G2L["1fc"]["BackgroundTransparency"] = 1;
+G2L["1ff"]["BottomImage"] = [[]];
+G2L["1ff"]["Size"] = UDim2.new(0, 131, 0, 335);
+G2L["1ff"]["ScrollBarImageColor3"] = Color3.fromRGB(205, 205, 205);
+G2L["1ff"]["Position"] = UDim2.new(0.02077, 0, 0.02757, 0);
+G2L["1ff"]["BorderColor3"] = Color3.fromRGB(161, 160, 160);
+G2L["1ff"]["ScrollBarThickness"] = 17;
+G2L["1ff"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.LocalScript
-G2L["1fd"] = Instance.new("LocalScript", G2L["1fc"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.UIStroke
-G2L["1fe"] = Instance.new("UIStroke", G2L["1fc"]);
-G2L["1fe"]["Color"] = Color3.fromRGB(161, 160, 160);
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.UIGridLayout
-G2L["1ff"] = Instance.new("UIGridLayout", G2L["1fc"]);
-G2L["1ff"]["CellSize"] = UDim2.new(0, 114, 0, 17);
-G2L["1ff"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-G2L["1ff"]["CellPadding"] = UDim2.new(0, 5, 0, 0);
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.anim
-G2L["200"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["200"]["BorderSizePixel"] = 0;
-G2L["200"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["200"]["TextSize"] = 14;
-G2L["200"]["AutoButtonColor"] = false;
-G2L["200"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["200"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["200"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["200"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["200"]["LayoutOrder"] = 1;
-G2L["200"]["ClipsDescendants"] = true;
-G2L["200"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["200"]["Text"] = [[anim]];
-G2L["200"]["Name"] = [[anim]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.anim.LocalScript
-G2L["201"] = Instance.new("LocalScript", G2L["200"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.LocalScript
+G2L["200"] = Instance.new("LocalScript", G2L["1ff"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.anim.LocalScript
-G2L["202"] = Instance.new("LocalScript", G2L["200"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.UIStroke
+G2L["201"] = Instance.new("UIStroke", G2L["1ff"]);
+G2L["201"]["Color"] = Color3.fromRGB(161, 160, 160);
 
 
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.UIGridLayout
+G2L["202"] = Instance.new("UIGridLayout", G2L["1ff"]);
+G2L["202"]["CellSize"] = UDim2.new(0, 114, 0, 17);
+G2L["202"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["202"]["CellPadding"] = UDim2.new(0, 5, 0, 0);
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["203"] = Instance.new("TextButton", G2L["1fc"]);
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.anim
+G2L["203"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["203"]["BorderSizePixel"] = 0;
 G2L["203"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["203"]["TextSize"] = 14;
@@ -4376,24 +4369,25 @@ G2L["203"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["203"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["203"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["203"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["203"]["LayoutOrder"] = 3;
+G2L["203"]["LayoutOrder"] = 1;
 G2L["203"]["ClipsDescendants"] = true;
 G2L["203"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["203"]["Text"] = [[ban]];
+G2L["203"]["Text"] = [[anim]];
+G2L["203"]["Name"] = [[anim]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.anim.LocalScript
 G2L["204"] = Instance.new("LocalScript", G2L["203"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.anim.LocalScript
 G2L["205"] = Instance.new("LocalScript", G2L["203"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["206"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["206"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["206"]["BorderSizePixel"] = 0;
 G2L["206"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["206"]["TextSize"] = 14;
@@ -4402,24 +4396,24 @@ G2L["206"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["206"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["206"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["206"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["206"]["LayoutOrder"] = 2;
+G2L["206"]["LayoutOrder"] = 3;
 G2L["206"]["ClipsDescendants"] = true;
 G2L["206"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["206"]["Text"] = [[bring]];
+G2L["206"]["Text"] = [[ban]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["207"] = Instance.new("LocalScript", G2L["206"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["208"] = Instance.new("LocalScript", G2L["206"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["209"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["209"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["209"]["BorderSizePixel"] = 0;
 G2L["209"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["209"]["TextSize"] = 14;
@@ -4428,24 +4422,24 @@ G2L["209"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["209"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["209"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["209"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["209"]["LayoutOrder"] = 7;
+G2L["209"]["LayoutOrder"] = 2;
 G2L["209"]["ClipsDescendants"] = true;
 G2L["209"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["209"]["Text"] = [[char]];
+G2L["209"]["Text"] = [[bring]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["20a"] = Instance.new("LocalScript", G2L["209"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["20b"] = Instance.new("LocalScript", G2L["209"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["20c"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["20c"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["20c"]["BorderSizePixel"] = 0;
 G2L["20c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["20c"]["TextSize"] = 14;
@@ -4454,24 +4448,24 @@ G2L["20c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["20c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["20c"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["20c"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["20c"]["LayoutOrder"] = 8;
+G2L["20c"]["LayoutOrder"] = 7;
 G2L["20c"]["ClipsDescendants"] = true;
 G2L["20c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20c"]["Text"] = [[chat]];
+G2L["20c"]["Text"] = [[char]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["20d"] = Instance.new("LocalScript", G2L["20c"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["20e"] = Instance.new("LocalScript", G2L["20c"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["20f"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["20f"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["20f"]["BorderSizePixel"] = 0;
 G2L["20f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["20f"]["TextSize"] = 14;
@@ -4480,24 +4474,24 @@ G2L["20f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["20f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["20f"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["20f"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["20f"]["LayoutOrder"] = 4;
+G2L["20f"]["LayoutOrder"] = 8;
 G2L["20f"]["ClipsDescendants"] = true;
 G2L["20f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20f"]["Text"] = [[clearlighting]];
+G2L["20f"]["Text"] = [[chat]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["210"] = Instance.new("LocalScript", G2L["20f"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["211"] = Instance.new("LocalScript", G2L["20f"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["212"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["212"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["212"]["BorderSizePixel"] = 0;
 G2L["212"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["212"]["TextSize"] = 14;
@@ -4506,25 +4500,24 @@ G2L["212"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["212"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["212"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["212"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["212"]["LayoutOrder"] = 5;
+G2L["212"]["LayoutOrder"] = 4;
 G2L["212"]["ClipsDescendants"] = true;
 G2L["212"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["212"]["Text"] = [[creepscare]];
-G2L["212"]["Position"] = UDim2.new(0, 0, 0.30448, 0);
+G2L["212"]["Text"] = [[clearlighting]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["213"] = Instance.new("LocalScript", G2L["212"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["214"] = Instance.new("LocalScript", G2L["212"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["215"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["215"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["215"]["BorderSizePixel"] = 0;
 G2L["215"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["215"]["TextSize"] = 14;
@@ -4533,24 +4526,25 @@ G2L["215"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["215"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["215"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["215"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["215"]["LayoutOrder"] = 6;
+G2L["215"]["LayoutOrder"] = 5;
 G2L["215"]["ClipsDescendants"] = true;
 G2L["215"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["215"]["Text"] = [[cripple]];
+G2L["215"]["Text"] = [[creepscare]];
+G2L["215"]["Position"] = UDim2.new(0, 0, 0.30448, 0);
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["216"] = Instance.new("LocalScript", G2L["215"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["217"] = Instance.new("LocalScript", G2L["215"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["218"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["218"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["218"]["BorderSizePixel"] = 0;
 G2L["218"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["218"]["TextSize"] = 14;
@@ -4559,24 +4553,24 @@ G2L["218"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["218"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["218"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["218"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["218"]["LayoutOrder"] = 9;
+G2L["218"]["LayoutOrder"] = 6;
 G2L["218"]["ClipsDescendants"] = true;
 G2L["218"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["218"]["Text"] = [[decalspam]];
+G2L["218"]["Text"] = [[cripple]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["219"] = Instance.new("LocalScript", G2L["218"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["21a"] = Instance.new("LocalScript", G2L["218"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["21b"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["21b"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["21b"]["BorderSizePixel"] = 0;
 G2L["21b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["21b"]["TextSize"] = 14;
@@ -4585,24 +4579,24 @@ G2L["21b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["21b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["21b"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["21b"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["21b"]["LayoutOrder"] = 10;
+G2L["21b"]["LayoutOrder"] = 9;
 G2L["21b"]["ClipsDescendants"] = true;
 G2L["21b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["21b"]["Text"] = [[explode]];
+G2L["21b"]["Text"] = [[decalspam]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["21c"] = Instance.new("LocalScript", G2L["21b"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["21d"] = Instance.new("LocalScript", G2L["21b"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["21e"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["21e"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["21e"]["BorderSizePixel"] = 0;
 G2L["21e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["21e"]["TextSize"] = 14;
@@ -4611,24 +4605,24 @@ G2L["21e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["21e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["21e"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["21e"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["21e"]["LayoutOrder"] = 18;
+G2L["21e"]["LayoutOrder"] = 10;
 G2L["21e"]["ClipsDescendants"] = true;
 G2L["21e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["21e"]["Text"] = [[f3x]];
+G2L["21e"]["Text"] = [[explode]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["21f"] = Instance.new("LocalScript", G2L["21e"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["220"] = Instance.new("LocalScript", G2L["21e"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["221"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["221"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["221"]["BorderSizePixel"] = 0;
 G2L["221"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["221"]["TextSize"] = 14;
@@ -4637,24 +4631,24 @@ G2L["221"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["221"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["221"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["221"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["221"]["LayoutOrder"] = 19;
+G2L["221"]["LayoutOrder"] = 18;
 G2L["221"]["ClipsDescendants"] = true;
 G2L["221"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["221"]["Text"] = [[ff]];
+G2L["221"]["Text"] = [[f3x]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["222"] = Instance.new("LocalScript", G2L["221"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["223"] = Instance.new("LocalScript", G2L["221"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["224"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["224"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["224"]["BorderSizePixel"] = 0;
 G2L["224"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["224"]["TextSize"] = 14;
@@ -4663,24 +4657,24 @@ G2L["224"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["224"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["224"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["224"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["224"]["LayoutOrder"] = 17;
+G2L["224"]["LayoutOrder"] = 19;
 G2L["224"]["ClipsDescendants"] = true;
 G2L["224"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["224"]["Text"] = [[fire]];
+G2L["224"]["Text"] = [[ff]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["225"] = Instance.new("LocalScript", G2L["224"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["226"] = Instance.new("LocalScript", G2L["224"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["227"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["227"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["227"]["BorderSizePixel"] = 0;
 G2L["227"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["227"]["TextSize"] = 14;
@@ -4688,26 +4682,25 @@ G2L["227"]["AutoButtonColor"] = false;
 G2L["227"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["227"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["227"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["227"]["Size"] = UDim2.new(0, 114, 0, 17);
-G2L["227"]["LayoutOrder"] = 16;
+G2L["227"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["227"]["LayoutOrder"] = 17;
 G2L["227"]["ClipsDescendants"] = true;
 G2L["227"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["227"]["Text"] = [[fling]];
-G2L["227"]["Position"] = UDim2.new(0, 0, 0.6597, 0);
+G2L["227"]["Text"] = [[fire]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["228"] = Instance.new("LocalScript", G2L["227"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["229"] = Instance.new("LocalScript", G2L["227"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["22a"] = Instance.new("TextButton", G2L["1fc"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["22a"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["22a"]["BorderSizePixel"] = 0;
 G2L["22a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["22a"]["TextSize"] = 14;
@@ -4715,925 +4708,930 @@ G2L["22a"]["AutoButtonColor"] = false;
 G2L["22a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["22a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["22a"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["22a"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["22a"]["LayoutOrder"] = 12;
+G2L["22a"]["Size"] = UDim2.new(0, 114, 0, 17);
+G2L["22a"]["LayoutOrder"] = 16;
 G2L["22a"]["ClipsDescendants"] = true;
 G2L["22a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22a"]["Text"] = [[fogcolor]];
+G2L["22a"]["Text"] = [[fling]];
+G2L["22a"]["Position"] = UDim2.new(0, 0, 0.6597, 0);
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 G2L["22b"] = Instance.new("LocalScript", G2L["22a"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["22c"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["22c"]["BorderSizePixel"] = 0;
-G2L["22c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["22c"]["TextSize"] = 14;
-G2L["22c"]["AutoButtonColor"] = false;
-G2L["22c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22c"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["22c"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["22c"]["LayoutOrder"] = 13;
-G2L["22c"]["ClipsDescendants"] = true;
-G2L["22c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22c"]["Text"] = [[fogstart]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["22d"] = Instance.new("LocalScript", G2L["22c"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["22e"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["22e"]["BorderSizePixel"] = 0;
-G2L["22e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["22e"]["TextSize"] = 14;
-G2L["22e"]["AutoButtonColor"] = false;
-G2L["22e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22e"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["22e"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["22e"]["LayoutOrder"] = 14;
-G2L["22e"]["ClipsDescendants"] = true;
-G2L["22e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22e"]["Text"] = [[fogend]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["22f"] = Instance.new("LocalScript", G2L["22e"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["230"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["230"]["BorderSizePixel"] = 0;
-G2L["230"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["230"]["TextSize"] = 14;
-G2L["230"]["AutoButtonColor"] = false;
-G2L["230"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["230"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["230"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["230"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["230"]["LayoutOrder"] = 15;
-G2L["230"]["ClipsDescendants"] = true;
-G2L["230"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["230"]["Text"] = [[freeze]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["231"] = Instance.new("LocalScript", G2L["230"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["232"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["232"]["BorderSizePixel"] = 0;
-G2L["232"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["232"]["TextSize"] = 14;
-G2L["232"]["AutoButtonColor"] = false;
-G2L["232"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["232"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["232"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["232"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["232"]["LayoutOrder"] = 11;
-G2L["232"]["ClipsDescendants"] = true;
-G2L["232"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["232"]["Text"] = [[fullghost]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["233"] = Instance.new("LocalScript", G2L["232"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["234"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["234"]["BorderSizePixel"] = 0;
-G2L["234"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["234"]["TextSize"] = 14;
-G2L["234"]["AutoButtonColor"] = false;
-G2L["234"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["234"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["234"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["234"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["234"]["LayoutOrder"] = 20;
-G2L["234"]["ClipsDescendants"] = true;
-G2L["234"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["234"]["Text"] = [[gear]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["235"] = Instance.new("LocalScript", G2L["234"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["236"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["236"]["BorderSizePixel"] = 0;
-G2L["236"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["236"]["TextSize"] = 14;
-G2L["236"]["AutoButtonColor"] = false;
-G2L["236"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["236"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["236"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["236"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["236"]["LayoutOrder"] = 22;
-G2L["236"]["ClipsDescendants"] = true;
-G2L["236"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["236"]["Text"] = [[heal]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["237"] = Instance.new("LocalScript", G2L["236"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["238"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["238"]["BorderSizePixel"] = 0;
-G2L["238"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["238"]["TextSize"] = 14;
-G2L["238"]["AutoButtonColor"] = false;
-G2L["238"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["238"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["238"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["238"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["238"]["LayoutOrder"] = 21;
-G2L["238"]["ClipsDescendants"] = true;
-G2L["238"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["238"]["Text"] = [[health]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["239"] = Instance.new("LocalScript", G2L["238"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["23a"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["23a"]["BorderSizePixel"] = 0;
-G2L["23a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["23a"]["TextSize"] = 14;
-G2L["23a"]["AutoButtonColor"] = false;
-G2L["23a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["23a"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["23a"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["23a"]["LayoutOrder"] = 23;
-G2L["23a"]["ClipsDescendants"] = true;
-G2L["23a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23a"]["Text"] = [[hurt]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["23b"] = Instance.new("LocalScript", G2L["23a"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["23c"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["23c"]["BorderSizePixel"] = 0;
-G2L["23c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["23c"]["TextSize"] = 14;
-G2L["23c"]["AutoButtonColor"] = false;
-G2L["23c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["23c"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["23c"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["23c"]["LayoutOrder"] = 24;
-G2L["23c"]["ClipsDescendants"] = true;
-G2L["23c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23c"]["Text"] = [[invisible]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["23d"] = Instance.new("LocalScript", G2L["23c"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["23e"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["23e"]["BorderSizePixel"] = 0;
-G2L["23e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["23e"]["TextSize"] = 14;
-G2L["23e"]["AutoButtonColor"] = false;
-G2L["23e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["23e"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["23e"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["23e"]["LayoutOrder"] = 26;
-G2L["23e"]["ClipsDescendants"] = true;
-G2L["23e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23e"]["Text"] = [[jail]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["23f"] = Instance.new("LocalScript", G2L["23e"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["240"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["240"]["BorderSizePixel"] = 0;
-G2L["240"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["240"]["TextSize"] = 14;
-G2L["240"]["AutoButtonColor"] = false;
-G2L["240"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["240"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["240"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["240"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["240"]["LayoutOrder"] = 25;
-G2L["240"]["ClipsDescendants"] = true;
-G2L["240"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["240"]["Text"] = [[jumppower]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["241"] = Instance.new("LocalScript", G2L["240"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["242"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["242"]["BorderSizePixel"] = 0;
-G2L["242"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["242"]["TextSize"] = 14;
-G2L["242"]["AutoButtonColor"] = false;
-G2L["242"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["242"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["242"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["242"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["242"]["LayoutOrder"] = 27;
-G2L["242"]["ClipsDescendants"] = true;
-G2L["242"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["242"]["Text"] = [[kick]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["243"] = Instance.new("LocalScript", G2L["242"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["244"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["244"]["BorderSizePixel"] = 0;
-G2L["244"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["244"]["TextSize"] = 14;
-G2L["244"]["AutoButtonColor"] = false;
-G2L["244"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["244"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["244"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["244"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["244"]["LayoutOrder"] = 28;
-G2L["244"]["ClipsDescendants"] = true;
-G2L["244"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["244"]["Text"] = [[kill]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["245"] = Instance.new("LocalScript", G2L["244"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["246"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["246"]["BorderSizePixel"] = 0;
-G2L["246"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["246"]["TextSize"] = 14;
-G2L["246"]["AutoButtonColor"] = false;
-G2L["246"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["246"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["246"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["246"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["246"]["LayoutOrder"] = 29;
-G2L["246"]["ClipsDescendants"] = true;
-G2L["246"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["246"]["Text"] = [[lag]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["247"] = Instance.new("LocalScript", G2L["246"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["248"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["248"]["BorderSizePixel"] = 0;
-G2L["248"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["248"]["TextSize"] = 14;
-G2L["248"]["AutoButtonColor"] = false;
-G2L["248"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["248"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["248"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["248"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["248"]["LayoutOrder"] = 31;
-G2L["248"]["ClipsDescendants"] = true;
-G2L["248"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["248"]["Text"] = [[music]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["249"] = Instance.new("LocalScript", G2L["248"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["24a"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["24a"]["BorderSizePixel"] = 0;
-G2L["24a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["24a"]["TextSize"] = 14;
-G2L["24a"]["AutoButtonColor"] = false;
-G2L["24a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["24a"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["24a"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["24a"]["LayoutOrder"] = 30;
-G2L["24a"]["ClipsDescendants"] = true;
-G2L["24a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24a"]["Text"] = [[message]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["24b"] = Instance.new("LocalScript", G2L["24a"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["24c"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["24c"]["BorderSizePixel"] = 0;
-G2L["24c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["24c"]["TextSize"] = 14;
-G2L["24c"]["AutoButtonColor"] = false;
-G2L["24c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["24c"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["24c"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["24c"]["LayoutOrder"] = 34;
-G2L["24c"]["ClipsDescendants"] = true;
-G2L["24c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24c"]["Text"] = [[nuke]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["24d"] = Instance.new("LocalScript", G2L["24c"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["24e"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["24e"]["BorderSizePixel"] = 0;
-G2L["24e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["24e"]["TextSize"] = 14;
-G2L["24e"]["AutoButtonColor"] = false;
-G2L["24e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["24e"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["24e"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["24e"]["LayoutOrder"] = 32;
-G2L["24e"]["ClipsDescendants"] = true;
-G2L["24e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24e"]["Text"] = [[noclip]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["24f"] = Instance.new("LocalScript", G2L["24e"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["250"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["250"]["BorderSizePixel"] = 0;
-G2L["250"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["250"]["TextSize"] = 14;
-G2L["250"]["AutoButtonColor"] = false;
-G2L["250"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["250"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["250"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["250"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["250"]["LayoutOrder"] = 33;
-G2L["250"]["ClipsDescendants"] = true;
-G2L["250"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["250"]["Text"] = [[name]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["251"] = Instance.new("LocalScript", G2L["250"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["252"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["252"]["BorderSizePixel"] = 0;
-G2L["252"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["252"]["TextSize"] = 14;
-G2L["252"]["AutoButtonColor"] = false;
-G2L["252"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["252"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["252"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["252"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["252"]["LayoutOrder"] = 35;
-G2L["252"]["ClipsDescendants"] = true;
-G2L["252"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["252"]["Text"] = [[particle]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["253"] = Instance.new("LocalScript", G2L["252"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["254"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["254"]["BorderSizePixel"] = 0;
-G2L["254"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["254"]["TextSize"] = 14;
-G2L["254"]["AutoButtonColor"] = false;
-G2L["254"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["254"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["254"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["254"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["254"]["LayoutOrder"] = 36;
-G2L["254"]["ClipsDescendants"] = true;
-G2L["254"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["254"]["Text"] = [[reset]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["255"] = Instance.new("LocalScript", G2L["254"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["256"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["256"]["BorderSizePixel"] = 0;
-G2L["256"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["256"]["TextSize"] = 14;
-G2L["256"]["AutoButtonColor"] = false;
-G2L["256"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["256"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["256"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["256"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["256"]["LayoutOrder"] = 38;
-G2L["256"]["ClipsDescendants"] = true;
-G2L["256"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["256"]["Text"] = [[sit]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["257"] = Instance.new("LocalScript", G2L["256"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["258"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["258"]["BorderSizePixel"] = 0;
-G2L["258"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["258"]["TextSize"] = 14;
-G2L["258"]["AutoButtonColor"] = false;
-G2L["258"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["258"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["258"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["258"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["258"]["LayoutOrder"] = 37;
-G2L["258"]["ClipsDescendants"] = true;
-G2L["258"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["258"]["Text"] = [[speed]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["259"] = Instance.new("LocalScript", G2L["258"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["25a"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["25a"]["BorderSizePixel"] = 0;
-G2L["25a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["25a"]["TextSize"] = 14;
-G2L["25a"]["AutoButtonColor"] = false;
-G2L["25a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25a"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["25a"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["25a"]["LayoutOrder"] = 40;
-G2L["25a"]["ClipsDescendants"] = true;
-G2L["25a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25a"]["Text"] = [[tp]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["25b"] = Instance.new("LocalScript", G2L["25a"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["25c"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["25c"]["BorderSizePixel"] = 0;
-G2L["25c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["25c"]["TextSize"] = 14;
-G2L["25c"]["AutoButtonColor"] = false;
-G2L["25c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25c"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["25c"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["25c"]["LayoutOrder"] = 44;
-G2L["25c"]["ClipsDescendants"] = true;
-G2L["25c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25c"]["Text"] = [[unff]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["25d"] = Instance.new("LocalScript", G2L["25c"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["25e"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["25e"]["BorderSizePixel"] = 0;
-G2L["25e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["25e"]["TextSize"] = 14;
-G2L["25e"]["AutoButtonColor"] = false;
-G2L["25e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25e"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["25e"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["25e"]["LayoutOrder"] = 41;
-G2L["25e"]["ClipsDescendants"] = true;
-G2L["25e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25e"]["Text"] = [[unfreeze]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["25f"] = Instance.new("LocalScript", G2L["25e"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["260"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["260"]["BorderSizePixel"] = 0;
-G2L["260"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["260"]["TextSize"] = 14;
-G2L["260"]["AutoButtonColor"] = false;
-G2L["260"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["260"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["260"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["260"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["260"]["LayoutOrder"] = 43;
-G2L["260"]["ClipsDescendants"] = true;
-G2L["260"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["260"]["Text"] = [[unjail]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["261"] = Instance.new("LocalScript", G2L["260"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["262"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["262"]["BorderSizePixel"] = 0;
-G2L["262"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["262"]["TextSize"] = 14;
-G2L["262"]["AutoButtonColor"] = false;
-G2L["262"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["262"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["262"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["262"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["262"]["LayoutOrder"] = 42;
-G2L["262"]["ClipsDescendants"] = true;
-G2L["262"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["262"]["Text"] = [[unnoclip]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["263"] = Instance.new("LocalScript", G2L["262"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["264"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["264"]["BorderSizePixel"] = 0;
-G2L["264"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["264"]["TextSize"] = 14;
-G2L["264"]["AutoButtonColor"] = false;
-G2L["264"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["264"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["264"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["264"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["264"]["LayoutOrder"] = 39;
-G2L["264"]["ClipsDescendants"] = true;
-G2L["264"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["264"]["Text"] = [[time]];
-G2L["264"]["Position"] = UDim2.new(0, 0, 0.40615, 0);
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["265"] = Instance.new("LocalScript", G2L["264"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["266"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["266"]["BorderSizePixel"] = 0;
-G2L["266"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["266"]["TextSize"] = 14;
-G2L["266"]["AutoButtonColor"] = false;
-G2L["266"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["266"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["266"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["266"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["266"]["LayoutOrder"] = 45;
-G2L["266"]["ClipsDescendants"] = true;
-G2L["266"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["266"]["Text"] = [[visible]];
-G2L["266"]["Position"] = UDim2.new(0, 0, 0.40615, 0);
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["267"] = Instance.new("LocalScript", G2L["266"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton
-G2L["268"] = Instance.new("TextButton", G2L["1fc"]);
-G2L["268"]["BorderSizePixel"] = 0;
-G2L["268"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["268"]["TextSize"] = 14;
-G2L["268"]["AutoButtonColor"] = false;
-G2L["268"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["268"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["268"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["268"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["268"]["LayoutOrder"] = 46;
-G2L["268"]["ClipsDescendants"] = true;
-G2L["268"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["268"]["Text"] = [[xray]];
-G2L["268"]["Position"] = UDim2.new(0, 0, 0.40615, 0);
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-G2L["269"] = Instance.new("LocalScript", G2L["268"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.scrollbar
-G2L["26a"] = Instance.new("Frame", G2L["1fa"]);
-G2L["26a"]["BorderSizePixel"] = 0;
-G2L["26a"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["26a"]["Size"] = UDim2.new(0, 500, 0, 335);
-G2L["26a"]["Position"] = UDim2.new(0.23442, 0, 0.03008, 0);
-G2L["26a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26a"]["Name"] = [[scrollbar]];
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.logsback
-G2L["26b"] = Instance.new("ScrollingFrame", G2L["1fa"]);
-G2L["26b"]["Active"] = true;
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["22c"] = Instance.new("LocalScript", G2L["22a"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["22d"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["22d"]["BorderSizePixel"] = 0;
+G2L["22d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["22d"]["TextSize"] = 14;
+G2L["22d"]["AutoButtonColor"] = false;
+G2L["22d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22d"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22d"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["22d"]["LayoutOrder"] = 12;
+G2L["22d"]["ClipsDescendants"] = true;
+G2L["22d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22d"]["Text"] = [[fogcolor]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["22e"] = Instance.new("LocalScript", G2L["22d"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["22f"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["22f"]["BorderSizePixel"] = 0;
+G2L["22f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["22f"]["TextSize"] = 14;
+G2L["22f"]["AutoButtonColor"] = false;
+G2L["22f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22f"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22f"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["22f"]["LayoutOrder"] = 13;
+G2L["22f"]["ClipsDescendants"] = true;
+G2L["22f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22f"]["Text"] = [[fogstart]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["230"] = Instance.new("LocalScript", G2L["22f"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["231"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["231"]["BorderSizePixel"] = 0;
+G2L["231"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["231"]["TextSize"] = 14;
+G2L["231"]["AutoButtonColor"] = false;
+G2L["231"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["231"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["231"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["231"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["231"]["LayoutOrder"] = 14;
+G2L["231"]["ClipsDescendants"] = true;
+G2L["231"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["231"]["Text"] = [[fogend]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["232"] = Instance.new("LocalScript", G2L["231"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["233"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["233"]["BorderSizePixel"] = 0;
+G2L["233"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["233"]["TextSize"] = 14;
+G2L["233"]["AutoButtonColor"] = false;
+G2L["233"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["233"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["233"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["233"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["233"]["LayoutOrder"] = 15;
+G2L["233"]["ClipsDescendants"] = true;
+G2L["233"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["233"]["Text"] = [[freeze]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["234"] = Instance.new("LocalScript", G2L["233"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["235"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["235"]["BorderSizePixel"] = 0;
+G2L["235"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["235"]["TextSize"] = 14;
+G2L["235"]["AutoButtonColor"] = false;
+G2L["235"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["235"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["235"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["235"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["235"]["LayoutOrder"] = 11;
+G2L["235"]["ClipsDescendants"] = true;
+G2L["235"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["235"]["Text"] = [[fullghost]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["236"] = Instance.new("LocalScript", G2L["235"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["237"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["237"]["BorderSizePixel"] = 0;
+G2L["237"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["237"]["TextSize"] = 14;
+G2L["237"]["AutoButtonColor"] = false;
+G2L["237"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["237"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["237"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["237"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["237"]["LayoutOrder"] = 20;
+G2L["237"]["ClipsDescendants"] = true;
+G2L["237"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["237"]["Text"] = [[gear]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["238"] = Instance.new("LocalScript", G2L["237"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["239"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["239"]["BorderSizePixel"] = 0;
+G2L["239"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["239"]["TextSize"] = 14;
+G2L["239"]["AutoButtonColor"] = false;
+G2L["239"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["239"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["239"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["239"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["239"]["LayoutOrder"] = 22;
+G2L["239"]["ClipsDescendants"] = true;
+G2L["239"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["239"]["Text"] = [[heal]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["23a"] = Instance.new("LocalScript", G2L["239"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["23b"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["23b"]["BorderSizePixel"] = 0;
+G2L["23b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["23b"]["TextSize"] = 14;
+G2L["23b"]["AutoButtonColor"] = false;
+G2L["23b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23b"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23b"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["23b"]["LayoutOrder"] = 21;
+G2L["23b"]["ClipsDescendants"] = true;
+G2L["23b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23b"]["Text"] = [[health]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["23c"] = Instance.new("LocalScript", G2L["23b"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["23d"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["23d"]["BorderSizePixel"] = 0;
+G2L["23d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["23d"]["TextSize"] = 14;
+G2L["23d"]["AutoButtonColor"] = false;
+G2L["23d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23d"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23d"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["23d"]["LayoutOrder"] = 23;
+G2L["23d"]["ClipsDescendants"] = true;
+G2L["23d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23d"]["Text"] = [[hurt]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["23e"] = Instance.new("LocalScript", G2L["23d"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["23f"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["23f"]["BorderSizePixel"] = 0;
+G2L["23f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["23f"]["TextSize"] = 14;
+G2L["23f"]["AutoButtonColor"] = false;
+G2L["23f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23f"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23f"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["23f"]["LayoutOrder"] = 24;
+G2L["23f"]["ClipsDescendants"] = true;
+G2L["23f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23f"]["Text"] = [[invisible]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["240"] = Instance.new("LocalScript", G2L["23f"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["241"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["241"]["BorderSizePixel"] = 0;
+G2L["241"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["241"]["TextSize"] = 14;
+G2L["241"]["AutoButtonColor"] = false;
+G2L["241"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["241"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["241"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["241"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["241"]["LayoutOrder"] = 26;
+G2L["241"]["ClipsDescendants"] = true;
+G2L["241"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["241"]["Text"] = [[jail]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["242"] = Instance.new("LocalScript", G2L["241"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["243"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["243"]["BorderSizePixel"] = 0;
+G2L["243"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["243"]["TextSize"] = 14;
+G2L["243"]["AutoButtonColor"] = false;
+G2L["243"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["243"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["243"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["243"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["243"]["LayoutOrder"] = 25;
+G2L["243"]["ClipsDescendants"] = true;
+G2L["243"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["243"]["Text"] = [[jumppower]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["244"] = Instance.new("LocalScript", G2L["243"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["245"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["245"]["BorderSizePixel"] = 0;
+G2L["245"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["245"]["TextSize"] = 14;
+G2L["245"]["AutoButtonColor"] = false;
+G2L["245"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["245"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["245"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["245"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["245"]["LayoutOrder"] = 27;
+G2L["245"]["ClipsDescendants"] = true;
+G2L["245"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["245"]["Text"] = [[kick]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["246"] = Instance.new("LocalScript", G2L["245"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["247"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["247"]["BorderSizePixel"] = 0;
+G2L["247"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["247"]["TextSize"] = 14;
+G2L["247"]["AutoButtonColor"] = false;
+G2L["247"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["247"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["247"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["247"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["247"]["LayoutOrder"] = 28;
+G2L["247"]["ClipsDescendants"] = true;
+G2L["247"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["247"]["Text"] = [[kill]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["248"] = Instance.new("LocalScript", G2L["247"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["249"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["249"]["BorderSizePixel"] = 0;
+G2L["249"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["249"]["TextSize"] = 14;
+G2L["249"]["AutoButtonColor"] = false;
+G2L["249"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["249"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["249"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["249"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["249"]["LayoutOrder"] = 29;
+G2L["249"]["ClipsDescendants"] = true;
+G2L["249"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["249"]["Text"] = [[lag]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["24a"] = Instance.new("LocalScript", G2L["249"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["24b"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["24b"]["BorderSizePixel"] = 0;
+G2L["24b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["24b"]["TextSize"] = 14;
+G2L["24b"]["AutoButtonColor"] = false;
+G2L["24b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24b"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24b"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["24b"]["LayoutOrder"] = 31;
+G2L["24b"]["ClipsDescendants"] = true;
+G2L["24b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24b"]["Text"] = [[music]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["24c"] = Instance.new("LocalScript", G2L["24b"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["24d"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["24d"]["BorderSizePixel"] = 0;
+G2L["24d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["24d"]["TextSize"] = 14;
+G2L["24d"]["AutoButtonColor"] = false;
+G2L["24d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24d"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24d"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["24d"]["LayoutOrder"] = 30;
+G2L["24d"]["ClipsDescendants"] = true;
+G2L["24d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24d"]["Text"] = [[message]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["24e"] = Instance.new("LocalScript", G2L["24d"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["24f"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["24f"]["BorderSizePixel"] = 0;
+G2L["24f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["24f"]["TextSize"] = 14;
+G2L["24f"]["AutoButtonColor"] = false;
+G2L["24f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24f"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24f"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["24f"]["LayoutOrder"] = 34;
+G2L["24f"]["ClipsDescendants"] = true;
+G2L["24f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24f"]["Text"] = [[nuke]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["250"] = Instance.new("LocalScript", G2L["24f"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["251"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["251"]["BorderSizePixel"] = 0;
+G2L["251"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["251"]["TextSize"] = 14;
+G2L["251"]["AutoButtonColor"] = false;
+G2L["251"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["251"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["251"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["251"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["251"]["LayoutOrder"] = 32;
+G2L["251"]["ClipsDescendants"] = true;
+G2L["251"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["251"]["Text"] = [[noclip]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["252"] = Instance.new("LocalScript", G2L["251"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["253"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["253"]["BorderSizePixel"] = 0;
+G2L["253"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["253"]["TextSize"] = 14;
+G2L["253"]["AutoButtonColor"] = false;
+G2L["253"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["253"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["253"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["253"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["253"]["LayoutOrder"] = 33;
+G2L["253"]["ClipsDescendants"] = true;
+G2L["253"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["253"]["Text"] = [[name]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["254"] = Instance.new("LocalScript", G2L["253"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["255"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["255"]["BorderSizePixel"] = 0;
+G2L["255"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["255"]["TextSize"] = 14;
+G2L["255"]["AutoButtonColor"] = false;
+G2L["255"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["255"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["255"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["255"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["255"]["LayoutOrder"] = 35;
+G2L["255"]["ClipsDescendants"] = true;
+G2L["255"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["255"]["Text"] = [[particle]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["256"] = Instance.new("LocalScript", G2L["255"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["257"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["257"]["BorderSizePixel"] = 0;
+G2L["257"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["257"]["TextSize"] = 14;
+G2L["257"]["AutoButtonColor"] = false;
+G2L["257"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["257"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["257"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["257"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["257"]["LayoutOrder"] = 36;
+G2L["257"]["ClipsDescendants"] = true;
+G2L["257"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["257"]["Text"] = [[reset]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["258"] = Instance.new("LocalScript", G2L["257"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["259"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["259"]["BorderSizePixel"] = 0;
+G2L["259"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["259"]["TextSize"] = 14;
+G2L["259"]["AutoButtonColor"] = false;
+G2L["259"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["259"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["259"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["259"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["259"]["LayoutOrder"] = 38;
+G2L["259"]["ClipsDescendants"] = true;
+G2L["259"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["259"]["Text"] = [[sit]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["25a"] = Instance.new("LocalScript", G2L["259"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["25b"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["25b"]["BorderSizePixel"] = 0;
+G2L["25b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25b"]["TextSize"] = 14;
+G2L["25b"]["AutoButtonColor"] = false;
+G2L["25b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25b"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25b"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["25b"]["LayoutOrder"] = 37;
+G2L["25b"]["ClipsDescendants"] = true;
+G2L["25b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25b"]["Text"] = [[speed]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["25c"] = Instance.new("LocalScript", G2L["25b"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["25d"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["25d"]["BorderSizePixel"] = 0;
+G2L["25d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25d"]["TextSize"] = 14;
+G2L["25d"]["AutoButtonColor"] = false;
+G2L["25d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25d"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25d"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["25d"]["LayoutOrder"] = 40;
+G2L["25d"]["ClipsDescendants"] = true;
+G2L["25d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25d"]["Text"] = [[tp]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["25e"] = Instance.new("LocalScript", G2L["25d"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["25f"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["25f"]["BorderSizePixel"] = 0;
+G2L["25f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25f"]["TextSize"] = 14;
+G2L["25f"]["AutoButtonColor"] = false;
+G2L["25f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25f"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25f"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["25f"]["LayoutOrder"] = 44;
+G2L["25f"]["ClipsDescendants"] = true;
+G2L["25f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25f"]["Text"] = [[unff]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["260"] = Instance.new("LocalScript", G2L["25f"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["261"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["261"]["BorderSizePixel"] = 0;
+G2L["261"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["261"]["TextSize"] = 14;
+G2L["261"]["AutoButtonColor"] = false;
+G2L["261"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["261"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["261"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["261"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["261"]["LayoutOrder"] = 41;
+G2L["261"]["ClipsDescendants"] = true;
+G2L["261"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["261"]["Text"] = [[unfreeze]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["262"] = Instance.new("LocalScript", G2L["261"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["263"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["263"]["BorderSizePixel"] = 0;
+G2L["263"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["263"]["TextSize"] = 14;
+G2L["263"]["AutoButtonColor"] = false;
+G2L["263"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["263"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["263"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["263"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["263"]["LayoutOrder"] = 43;
+G2L["263"]["ClipsDescendants"] = true;
+G2L["263"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["263"]["Text"] = [[unjail]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["264"] = Instance.new("LocalScript", G2L["263"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["265"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["265"]["BorderSizePixel"] = 0;
+G2L["265"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["265"]["TextSize"] = 14;
+G2L["265"]["AutoButtonColor"] = false;
+G2L["265"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["265"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["265"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["265"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["265"]["LayoutOrder"] = 42;
+G2L["265"]["ClipsDescendants"] = true;
+G2L["265"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["265"]["Text"] = [[unnoclip]];
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["266"] = Instance.new("LocalScript", G2L["265"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["267"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["267"]["BorderSizePixel"] = 0;
+G2L["267"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["267"]["TextSize"] = 14;
+G2L["267"]["AutoButtonColor"] = false;
+G2L["267"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["267"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["267"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["267"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["267"]["LayoutOrder"] = 39;
+G2L["267"]["ClipsDescendants"] = true;
+G2L["267"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["267"]["Text"] = [[time]];
+G2L["267"]["Position"] = UDim2.new(0, 0, 0.40615, 0);
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["268"] = Instance.new("LocalScript", G2L["267"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["269"] = Instance.new("TextButton", G2L["1ff"]);
+G2L["269"]["BorderSizePixel"] = 0;
+G2L["269"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["269"]["TextSize"] = 14;
+G2L["269"]["AutoButtonColor"] = false;
+G2L["269"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["269"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["269"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["269"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["269"]["LayoutOrder"] = 45;
+G2L["269"]["ClipsDescendants"] = true;
+G2L["269"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["269"]["Text"] = [[visible]];
+G2L["269"]["Position"] = UDim2.new(0, 0, 0.40615, 0);
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["26a"] = Instance.new("LocalScript", G2L["269"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton
+G2L["26b"] = Instance.new("TextButton", G2L["1ff"]);
 G2L["26b"]["BorderSizePixel"] = 0;
-G2L["26b"]["CanvasSize"] = UDim2.new(0, 0, 2.5, 0);
--- [ERROR] cannot convert TopImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["26b"]["TopImage"] = [[]];
-G2L["26b"]["Name"] = [[logsback]];
+G2L["26b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["26b"]["TextSize"] = 14;
+G2L["26b"]["AutoButtonColor"] = false;
+G2L["26b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["26b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
--- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["26b"]["BottomImage"] = [[]];
-G2L["26b"]["Size"] = UDim2.new(0, 501, 0, 335);
-G2L["26b"]["ScrollBarImageColor3"] = Color3.fromRGB(205, 205, 205);
-G2L["26b"]["Position"] = UDim2.new(0.23294, 0, 0.02757, 0);
-G2L["26b"]["BorderColor3"] = Color3.fromRGB(161, 160, 160);
-G2L["26b"]["ScrollBarThickness"] = 17;
-G2L["26b"]["BackgroundTransparency"] = 1;
+G2L["26b"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["26b"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["26b"]["LayoutOrder"] = 46;
+G2L["26b"]["ClipsDescendants"] = true;
+G2L["26b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26b"]["Text"] = [[xray]];
+G2L["26b"]["Position"] = UDim2.new(0, 0, 0.40615, 0);
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.logsback.UIStroke
-G2L["26c"] = Instance.new("UIStroke", G2L["26b"]);
-G2L["26c"]["Color"] = Color3.fromRGB(161, 160, 160);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+G2L["26c"] = Instance.new("LocalScript", G2L["26b"]);
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.logsback.logs
-G2L["26d"] = Instance.new("TextLabel", G2L["26b"]);
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.scrollbar
+G2L["26d"] = Instance.new("Frame", G2L["1fd"]);
 G2L["26d"]["BorderSizePixel"] = 0;
-G2L["26d"]["TextSize"] = 14;
-G2L["26d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["26d"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["26d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["26d"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["26d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26d"]["Size"] = UDim2.new(0, 483, 0, 1000);
+G2L["26d"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
+G2L["26d"]["Size"] = UDim2.new(0, 500, 0, 335);
+G2L["26d"]["Position"] = UDim2.new(0.23442, 0, 0.03008, 0);
 G2L["26d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26d"]["Text"] = [[]];
-G2L["26d"]["Name"] = [[logs]];
+G2L["26d"]["Name"] = [[scrollbar]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commadbar
-G2L["26e"] = Instance.new("TextBox", G2L["1fa"]);
-G2L["26e"]["Name"] = [[commadbar]];
-G2L["26e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["26e"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
-G2L["26e"]["TextSize"] = 14;
-G2L["26e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.logsback
+G2L["26e"] = Instance.new("ScrollingFrame", G2L["1fd"]);
+G2L["26e"]["Active"] = true;
+G2L["26e"]["BorderSizePixel"] = 0;
+G2L["26e"]["CanvasSize"] = UDim2.new(0, 0, 2.5, 0);
+-- [ERROR] cannot convert TopImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["26e"]["TopImage"] = [[]];
+G2L["26e"]["Name"] = [[logsback]];
 G2L["26e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["26e"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["26e"]["ClearTextOnFocus"] = false;
-G2L["26e"]["ClipsDescendants"] = true;
-G2L["26e"]["Size"] = UDim2.new(0, 612, 0, -17);
-G2L["26e"]["Position"] = UDim2.new(0.06825, 0, 0.92231, 0);
+-- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["26e"]["BottomImage"] = [[]];
+G2L["26e"]["Size"] = UDim2.new(0, 501, 0, 335);
+G2L["26e"]["ScrollBarImageColor3"] = Color3.fromRGB(205, 205, 205);
+G2L["26e"]["Position"] = UDim2.new(0.23294, 0, 0.02757, 0);
 G2L["26e"]["BorderColor3"] = Color3.fromRGB(161, 160, 160);
-G2L["26e"]["Text"] = [[]];
+G2L["26e"]["ScrollBarThickness"] = 17;
+G2L["26e"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.commadbar.LocalScript
-G2L["26f"] = Instance.new("LocalScript", G2L["26e"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.logsback.UIStroke
+G2L["26f"] = Instance.new("UIStroke", G2L["26e"]);
+G2L["26f"]["Color"] = Color3.fromRGB(161, 160, 160);
 
 
-
--- StarterGui.AIDS.topbar.back.adminpanel.commadbar.Script
-G2L["270"] = Instance.new("Script", G2L["26e"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.commadbar.RemoteEvent
-G2L["271"] = Instance.new("RemoteEvent", G2L["26e"]);
-
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.>
-G2L["272"] = Instance.new("TextLabel", G2L["1fa"]);
-G2L["272"]["BorderSizePixel"] = 0;
-G2L["272"]["TextSize"] = 20;
-G2L["272"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["272"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["272"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["272"]["BackgroundTransparency"] = 1;
-G2L["272"]["Size"] = UDim2.new(0, 13, 0, 17);
-G2L["272"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["272"]["Text"] = [[>]];
-G2L["272"]["Name"] = [[>]];
-G2L["272"]["Position"] = UDim2.new(0.03412, 0, 0.8797, 0);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.logsback.logs
+G2L["270"] = Instance.new("TextLabel", G2L["26e"]);
+G2L["270"]["BorderSizePixel"] = 0;
+G2L["270"]["TextSize"] = 14;
+G2L["270"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["270"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["270"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["270"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["270"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["270"]["Size"] = UDim2.new(0, 483, 0, 1000);
+G2L["270"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["270"]["Text"] = [[]];
+G2L["270"]["Name"] = [[logs]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.settings
-G2L["273"] = Instance.new("TextButton", G2L["1fa"]);
-G2L["273"]["TextSize"] = 14;
-G2L["273"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["273"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["273"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["273"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["273"]["Size"] = UDim2.new(0, 47, 0, 18);
-G2L["273"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["273"]["Text"] = [[Settings]];
-G2L["273"]["Name"] = [[settings]];
-G2L["273"]["Position"] = UDim2.new(0.20455, 0, -0.04831, 0);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commadbar
+G2L["271"] = Instance.new("TextBox", G2L["1fd"]);
+G2L["271"]["Name"] = [[commadbar]];
+G2L["271"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["271"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
+G2L["271"]["TextSize"] = 14;
+G2L["271"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["271"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["271"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["271"]["ClearTextOnFocus"] = false;
+G2L["271"]["ClipsDescendants"] = true;
+G2L["271"]["Size"] = UDim2.new(0, 612, 0, -17);
+G2L["271"]["Position"] = UDim2.new(0.06825, 0, 0.92231, 0);
+G2L["271"]["BorderColor3"] = Color3.fromRGB(161, 160, 160);
+G2L["271"]["Text"] = [[]];
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.exe
-G2L["274"] = Instance.new("TextButton", G2L["1fa"]);
-G2L["274"]["TextSize"] = 14;
-G2L["274"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["274"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
-G2L["274"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["274"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["274"]["Size"] = UDim2.new(0, 70, 0, 17);
-G2L["274"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["274"]["Text"] = [[Executor]];
-G2L["274"]["Name"] = [[exe]];
-G2L["274"]["Position"] = UDim2.new(0, 0, -0.0458, 0);
-
-
--- StarterGui.AIDS.topbar.back.adminpanel.exe.LocalScript
-G2L["275"] = Instance.new("LocalScript", G2L["274"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commadbar.LocalScript
+G2L["272"] = Instance.new("LocalScript", G2L["271"]);
 
 
 
--- StarterGui.AIDS.topbar.back.adminpanel.admin
-G2L["276"] = Instance.new("TextButton", G2L["1fa"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commadbar.Script
+G2L["273"] = Instance.new("Script", G2L["271"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commadbar.RemoteEvent
+G2L["274"] = Instance.new("RemoteEvent", G2L["271"]);
+
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.>
+G2L["275"] = Instance.new("TextLabel", G2L["1fd"]);
+G2L["275"]["BorderSizePixel"] = 0;
+G2L["275"]["TextSize"] = 20;
+G2L["275"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["275"]["FontFace"] = Font.new([[rbxasset://fonts/families/RobotoMono.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["275"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["275"]["BackgroundTransparency"] = 1;
+G2L["275"]["Size"] = UDim2.new(0, 13, 0, 17);
+G2L["275"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["275"]["Text"] = [[>]];
+G2L["275"]["Name"] = [[>]];
+G2L["275"]["Position"] = UDim2.new(0.03412, 0, 0.8797, 0);
+
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.settings
+G2L["276"] = Instance.new("TextButton", G2L["1fd"]);
 G2L["276"]["TextSize"] = 14;
 G2L["276"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["276"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
+G2L["276"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
 G2L["276"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["276"]["Size"] = UDim2.new(0, 68, 0, 20);
+G2L["276"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["276"]["Size"] = UDim2.new(0, 47, 0, 18);
 G2L["276"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
-G2L["276"]["Text"] = [[Admin Panel]];
-G2L["276"]["Name"] = [[admin]];
-G2L["276"]["Position"] = UDim2.new(0.10379, 0, -0.05344, 0);
+G2L["276"]["Text"] = [[Settings]];
+G2L["276"]["Name"] = [[settings]];
+G2L["276"]["Position"] = UDim2.new(0.20455, 0, -0.04831, 0);
 
 
--- StarterGui.AIDS.topbar.back.adminpanel..
-G2L["277"] = Instance.new("Frame", G2L["1fa"]);
-G2L["277"]["BorderSizePixel"] = 0;
-G2L["277"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
-G2L["277"]["Size"] = UDim2.new(0, 67, 0, -11);
-G2L["277"]["Position"] = UDim2.new(0.10379, 0, 0.02469, 0);
-G2L["277"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["277"]["Name"] = [[.]];
+-- StarterGui.ScreenGui.topbar.back.adminpanel.exe
+G2L["277"] = Instance.new("TextButton", G2L["1fd"]);
+G2L["277"]["TextSize"] = 14;
+G2L["277"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["277"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
+G2L["277"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["277"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["277"]["Size"] = UDim2.new(0, 70, 0, 17);
+G2L["277"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["277"]["Text"] = [[Executor]];
+G2L["277"]["Name"] = [[exe]];
+G2L["277"]["Position"] = UDim2.new(0, 0, -0.0458, 0);
 
 
--- StarterGui.AIDS.topbar.topbar2
-G2L["278"] = Instance.new("Frame", G2L["2"]);
-G2L["278"]["BorderSizePixel"] = 0;
-G2L["278"]["BackgroundColor3"] = Color3.fromRGB(244, 244, 244);
-G2L["278"]["Size"] = UDim2.new(0, 703, 0, 7);
-G2L["278"]["Position"] = UDim2.new(0, 0, 0.76667, 0);
-G2L["278"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["278"]["Name"] = [[topbar2]];
+-- StarterGui.ScreenGui.topbar.back.adminpanel.exe.LocalScript
+G2L["278"] = Instance.new("LocalScript", G2L["277"]);
 
 
--- StarterGui.AIDS.topbar.logo
-G2L["279"] = Instance.new("ImageLabel", G2L["2"]);
-G2L["279"]["BorderSizePixel"] = 0;
-G2L["279"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["279"]["Image"] = [[rbxassetid://78623805280283]];
-G2L["279"]["Size"] = UDim2.new(0, 20, 0, 20);
-G2L["279"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["279"]["BackgroundTransparency"] = 1;
-G2L["279"]["Name"] = [[logo]];
-G2L["279"]["Position"] = UDim2.new(0.01205, 0, 0.16667, 0);
+
+-- StarterGui.ScreenGui.topbar.back.adminpanel.admin
+G2L["279"] = Instance.new("TextButton", G2L["1fd"]);
+G2L["279"]["TextSize"] = 14;
+G2L["279"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["279"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
+G2L["279"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["279"]["Size"] = UDim2.new(0, 68, 0, 20);
+G2L["279"]["BorderColor3"] = Color3.fromRGB(233, 233, 233);
+G2L["279"]["Text"] = [[Admin Panel]];
+G2L["279"]["Name"] = [[admin]];
+G2L["279"]["Position"] = UDim2.new(0.10379, 0, -0.05344, 0);
 
 
--- StarterGui.AIDS.topbar.title
-G2L["27a"] = Instance.new("TextLabel", G2L["2"]);
+-- StarterGui.ScreenGui.topbar.back.adminpanel..
+G2L["27a"] = Instance.new("Frame", G2L["1fd"]);
 G2L["27a"]["BorderSizePixel"] = 0;
-G2L["27a"]["TextSize"] = 15;
-G2L["27a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["27a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["27a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27a"]["BackgroundTransparency"] = 1;
-G2L["27a"]["Size"] = UDim2.new(0, 92, 0, 28);
+G2L["27a"]["BackgroundColor3"] = Color3.fromRGB(248, 248, 248);
+G2L["27a"]["Size"] = UDim2.new(0, 67, 0, -11);
+G2L["27a"]["Position"] = UDim2.new(0.10379, 0, 0.02469, 0);
 G2L["27a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27a"]["Text"] = [[AIDS - Premium Roblox Solution]];
-G2L["27a"]["Name"] = [[title]];
-G2L["27a"]["Position"] = UDim2.new(0.10567, 0, 0, 0);
+G2L["27a"]["Name"] = [[.]];
 
 
--- StarterGui.AIDS.topbar.UICorner
-G2L["27b"] = Instance.new("UICorner", G2L["2"]);
+-- StarterGui.ScreenGui.topbar.topbar2
+G2L["27b"] = Instance.new("Frame", G2L["5"]);
+G2L["27b"]["BorderSizePixel"] = 0;
+G2L["27b"]["BackgroundColor3"] = Color3.fromRGB(244, 244, 244);
+G2L["27b"]["Size"] = UDim2.new(0, 703, 0, 7);
+G2L["27b"]["Position"] = UDim2.new(0, 0, 0.76667, 0);
+G2L["27b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27b"]["Name"] = [[topbar2]];
 
 
-
--- StarterGui.AIDS.topbar.ImageButton
-G2L["27c"] = Instance.new("ImageButton", G2L["2"]);
+-- StarterGui.ScreenGui.topbar.logo
+G2L["27c"] = Instance.new("ImageLabel", G2L["5"]);
 G2L["27c"]["BorderSizePixel"] = 0;
-G2L["27c"]["BackgroundTransparency"] = 1;
 G2L["27c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["27c"]["Image"] = [[rbxassetid://118084930426480]];
-G2L["27c"]["Size"] = UDim2.new(0, 11, 0, 10);
+G2L["27c"]["Image"] = [[rbxassetid://78623805280283]];
+G2L["27c"]["Size"] = UDim2.new(0, 20, 0, 20);
 G2L["27c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27c"]["Position"] = UDim2.new(0.83926, 0, 0.31034, 0);
+G2L["27c"]["BackgroundTransparency"] = 1;
+G2L["27c"]["Name"] = [[logo]];
+G2L["27c"]["Position"] = UDim2.new(0.01205, 0, 0.16667, 0);
 
 
--- StarterGui.AIDS.topbar.TextLabel
-G2L["27d"] = Instance.new("TextLabel", G2L["2"]);
+-- StarterGui.ScreenGui.topbar.title
+G2L["27d"] = Instance.new("TextLabel", G2L["5"]);
 G2L["27d"]["BorderSizePixel"] = 0;
-G2L["27d"]["TextSize"] = 17;
+G2L["27d"]["TextSize"] = 15;
 G2L["27d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["27d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["27d"]["TextColor3"] = Color3.fromRGB(172, 172, 172);
+G2L["27d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["27d"]["BackgroundTransparency"] = 1;
-G2L["27d"]["Size"] = UDim2.new(0, 15, 0, 10);
+G2L["27d"]["Size"] = UDim2.new(0, 92, 0, 28);
 G2L["27d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27d"]["Text"] = [[□]];
-G2L["27d"]["Position"] = UDim2.new(0.89474, 0, 0.28194, 0);
+G2L["27d"]["Text"] = [[AIDS - Premium Roblox Solution]];
+G2L["27d"]["Name"] = [[title]];
+G2L["27d"]["Position"] = UDim2.new(0.10567, 0, 0, 0);
 
 
--- StarterGui.AIDS.topbar.TextButton
-G2L["27e"] = Instance.new("TextButton", G2L["2"]);
-G2L["27e"]["BorderSizePixel"] = 0;
-G2L["27e"]["TextSize"] = 30;
-G2L["27e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["27e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["27e"]["BackgroundTransparency"] = 1;
-G2L["27e"]["Size"] = UDim2.new(0, 18, 0, 10);
-G2L["27e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27e"]["Text"] = [[×]];
-G2L["27e"]["Position"] = UDim2.new(0.94595, 0, 0.2639, 0);
+-- StarterGui.ScreenGui.topbar.UICorner
+G2L["27e"] = Instance.new("UICorner", G2L["5"]);
 
 
--- StarterGui.AIDS.outline
-G2L["27f"] = Instance.new("Frame", G2L["1"]);
-G2L["27f"]["Visible"] = false;
+
+-- StarterGui.ScreenGui.topbar.ImageButton
+G2L["27f"] = Instance.new("ImageButton", G2L["5"]);
 G2L["27f"]["BorderSizePixel"] = 0;
-G2L["27f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["27f"]["Size"] = UDim2.new(0, 703, 0, 479);
-G2L["27f"]["Position"] = UDim2.new(0.3693, 0, 0.19605, 0);
-G2L["27f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27f"]["Name"] = [[outline]];
 G2L["27f"]["BackgroundTransparency"] = 1;
+G2L["27f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27f"]["Image"] = [[rbxassetid://118084930426480]];
+G2L["27f"]["Size"] = UDim2.new(0, 11, 0, 10);
+G2L["27f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27f"]["Position"] = UDim2.new(0.83926, 0, 0.31034, 0);
 
 
--- StarterGui.AIDS.outline.LocalScript
-G2L["280"] = Instance.new("LocalScript", G2L["27f"]);
+-- StarterGui.ScreenGui.topbar.TextLabel
+G2L["280"] = Instance.new("TextLabel", G2L["5"]);
+G2L["280"]["BorderSizePixel"] = 0;
+G2L["280"]["TextSize"] = 17;
+G2L["280"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["280"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["280"]["TextColor3"] = Color3.fromRGB(172, 172, 172);
+G2L["280"]["BackgroundTransparency"] = 1;
+G2L["280"]["Size"] = UDim2.new(0, 15, 0, 10);
+G2L["280"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["280"]["Text"] = [[□]];
+G2L["280"]["Position"] = UDim2.new(0.89474, 0, 0.28194, 0);
 
 
-
--- StarterGui.AIDS.outline.UIStroke
-G2L["281"] = Instance.new("UIStroke", G2L["27f"]);
-G2L["281"]["Thickness"] = 3;
+-- StarterGui.ScreenGui.topbar.TextButton
+G2L["281"] = Instance.new("TextButton", G2L["5"]);
+G2L["281"]["BorderSizePixel"] = 0;
+G2L["281"]["TextSize"] = 30;
+G2L["281"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["281"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["281"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["281"]["BackgroundTransparency"] = 1;
+G2L["281"]["Size"] = UDim2.new(0, 18, 0, 10);
+G2L["281"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["281"]["Text"] = [[×]];
+G2L["281"]["Position"] = UDim2.new(0.94595, 0, 0.2639, 0);
 
 
 -- Require G2L wrapper
@@ -5651,9 +5649,9 @@ local function require(Module:ModuleScript)
     return G2L_REQUIRE(Module);
 end
 
-G2L_MODULES[G2L["14"]] = {
+G2L_MODULES[G2L["17"]] = {
 Closure = function()
-    local script = G2L["14"];--[[
+    local script = G2L["17"];--[[
 		vLua 5.1 - Lua written in Lua Virtual Machine
 		---------------
 		vLua is a virtual machine and compiler for dynamically compiling and executing Lua.
@@ -5708,9 +5706,9 @@ return function(source, env)
 end
 end;
 };
-G2L_MODULES[G2L["15"]] = {
+G2L_MODULES[G2L["18"]] = {
 Closure = function()
-    local script = G2L["15"];local bit = bit or bit32 or require('bit')
+    local script = G2L["18"];local bit = bit or bit32 or require('bit')
 local unpack = table.unpack or unpack
 
 local stm_lua_bytecode
@@ -6731,9 +6729,9 @@ return function(bCode, env)
 end
 end;
 };
-G2L_MODULES[G2L["16"]] = {
+G2L_MODULES[G2L["19"]] = {
 Closure = function()
-    local script = G2L["16"];-- Adapted from the amazing Yueliang project
+    local script = G2L["19"];-- Adapted from the amazing Yueliang project
 -- http://yueliang.luaforge.net/
 
 
@@ -11001,9 +10999,9 @@ end
 
 end;
 };
-G2L_MODULES[G2L["25"]] = {
+G2L_MODULES[G2L["28"]] = {
 Closure = function()
-    local script = G2L["25"];local R6Converter = {}
+    local script = G2L["28"];local R6Converter = {}
 function R6Converter.load(Plr)
 Plr = game.Players:WaitForChild(Plr)
 local FalseChar = script:WaitForChild(""):Clone()
@@ -11035,9 +11033,22 @@ return R6Converter
 
 end;
 };
--- StarterGui.AIDS.topbar.LocalScript
+-- StarterGui.ScreenGui.outline.LocalScript
 local function C_3()
 local script = G2L["3"];
+	local frameB = script.Parent
+	local frameA = frameB.Parent:WaitForChild("topbar")
+	
+	while true do
+		frameB.Position = frameA.Position
+		task.wait()
+	end
+	
+end;
+task.spawn(C_3);
+-- StarterGui.ScreenGui.topbar.LocalScript
+local function C_6()
+local script = G2L["6"];
 	local UIS = game:GetService("UserInputService")
 	local frame = script.Parent
 	local out = frame.Parent.outline
@@ -11076,10 +11087,10 @@ local script = G2L["3"];
 	end)
 	
 end;
-task.spawn(C_3);
--- StarterGui.AIDS.topbar.back.executor.admin.LocalScript
-local function C_a()
-local script = G2L["a"];
+task.spawn(C_6);
+-- StarterGui.ScreenGui.topbar.back.executor.admin.LocalScript
+local function C_d()
+local script = G2L["d"];
 	local admin = script.Parent.Parent.Parent.adminpanel
 	local button = script.Parent
 	
@@ -11088,10 +11099,10 @@ local script = G2L["a"];
 		admin.Parent.executor.Visible = false
 	end)
 end;
-task.spawn(C_a);
--- StarterGui.AIDS.topbar.back.executor.linenumber.LocalScript
-local function C_10()
-local script = G2L["10"];
+task.spawn(C_d);
+-- StarterGui.ScreenGui.topbar.back.executor.linenumber.LocalScript
+local function C_13()
+local script = G2L["13"];
 	local textBox = script.Parent.Parent.textboxback.textbox
 	local lineNumbers = script.Parent
 	local TextService = game:GetService("TextService")
@@ -11135,10 +11146,10 @@ local script = G2L["10"];
 	textBox:GetPropertyChangedSignal("AbsoluteSize"):Connect(updateLines)
 	
 end;
-task.spawn(C_10);
--- StarterGui.AIDS.topbar.back.executor.buttonsback.execute.LocalScript
-local function C_17()
-local script = G2L["17"];
+task.spawn(C_13);
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.execute.LocalScript
+local function C_1a()
+local script = G2L["1a"];
 	-- Fires RemoteEvent once button is pressed
 	
 	local RS = script.Parent.RemoteEvent
@@ -11166,10 +11177,10 @@ local script = G2L["17"];
 	end)
 	
 end;
-task.spawn(C_17);
--- StarterGui.AIDS.topbar.back.executor.buttonsback.execute.LocalScript
-local function C_18()
-local script = G2L["18"];
+task.spawn(C_1a);
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.execute.LocalScript
+local function C_1b()
+local script = G2L["1b"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -11186,10 +11197,10 @@ local script = G2L["18"];
 		button.BackgroundColor3 = Color3.fromRGB(227, 229, 228)
 	end)
 end;
-task.spawn(C_18);
--- StarterGui.AIDS.topbar.back.executor.buttonsback.clear.LocalScript
-local function C_1c()
-local script = G2L["1c"];
+task.spawn(C_1b);
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.clear.LocalScript
+local function C_1f()
+local script = G2L["1f"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -11206,10 +11217,10 @@ local script = G2L["1c"];
 		button.BackgroundColor3 = Color3.fromRGB(227, 229, 228)
 	end)
 end;
-task.spawn(C_1c);
--- StarterGui.AIDS.topbar.back.executor.buttonsback.clear.LocalScript
-local function C_1d()
-local script = G2L["1d"];
+task.spawn(C_1f);
+-- StarterGui.ScreenGui.topbar.back.executor.buttonsback.clear.LocalScript
+local function C_20()
+local script = G2L["20"];
 	local button = script.Parent
 	local box = button.Parent.Parent.textboxback.textbox
 	
@@ -11217,10 +11228,10 @@ local script = G2L["1d"];
 		box.Text = ""
 	end)
 end;
-task.spawn(C_1d);
--- StarterGui.AIDS.topbar.back.executor.inject.LocalScript
-local function C_1f()
-local script = G2L["1f"];
+task.spawn(C_20);
+-- StarterGui.ScreenGui.topbar.back.executor.inject.LocalScript
+local function C_22()
+local script = G2L["22"];
 	local button = script.Parent
 	local logs = button.Parent.logsback.logs
 	local loaded = false
@@ -11290,10 +11301,10 @@ local script = G2L["1f"];
 	end)
 	
 end;
-task.spawn(C_1f);
--- StarterGui.AIDS.topbar.back.executor.inject.LocalScript
-local function C_20()
-local script = G2L["20"];
+task.spawn(C_22);
+-- StarterGui.ScreenGui.topbar.back.executor.inject.LocalScript
+local function C_23()
+local script = G2L["23"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -11310,10 +11321,10 @@ local script = G2L["20"];
 		button.BackgroundColor3 = Color3.fromRGB(227, 229, 228)
 	end)
 end;
-task.spawn(C_20);
--- StarterGui.AIDS.topbar.back.executor.R6.LocalScript
-local function C_22()
-local script = G2L["22"];
+task.spawn(C_23);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.LocalScript
+local function C_25()
+local script = G2L["25"];
 	script.Parent.MouseButton1Click:Connect(function()
 		local player = game.Players.LocalPlayer
 		-- PlayerGui に LogoAnimationGui があるかチェック
@@ -11323,10 +11334,10 @@ local script = G2L["22"];
 	end)
 	
 end;
-task.spawn(C_22);
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Animate
-local function C_27()
-local script = G2L["27"];
+task.spawn(C_25);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Animate
+local function C_2a()
+local script = G2L["2a"];
 	local Figure = script.Parent
 	local Torso = Figure:WaitForChild("Torso")
 	local RightShoulder = Torso:WaitForChild("Right Shoulder")
@@ -11867,10 +11878,10 @@ local script = G2L["27"];
 	
 	
 end;
-task.spawn(C_27);
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Sound.LocalSound
-local function C_3e()
-local script = G2L["3e"];
+task.spawn(C_2a);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Sound.LocalSound
+local function C_41()
+local script = G2L["41"];
 	--[[
 		Author: @spotco
 		This script runs locally for the player of the given humanoid.
@@ -12300,10 +12311,10 @@ local script = G2L["3e"];
 	end
 	
 end;
-task.spawn(C_3e);
--- StarterGui.AIDS.topbar.back.executor.R6.R6..Humanoid.Jump
-local function C_40()
-local script = G2L["40"];
+task.spawn(C_41);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.R6..Humanoid.Jump
+local function C_43()
+local script = G2L["43"];
 	local Mouse = game.Players.LocalPlayer:GetMouse()
 	Mouse.KeyDown:connect(function(Key)
 	if Key == " " then
@@ -12322,50 +12333,50 @@ local script = G2L["40"];
 	end
 	end)
 end;
-task.spawn(C_40);
--- StarterGui.AIDS.topbar.back.executor.R6.LocalScript
-local function C_a3()
-local script = G2L["a3"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BorderColor3 = Color3.fromRGB(157, 157, 157)
-		button.BorderSizePixel = 2
-		button.BorderMode = Enum.BorderMode.Inset
-		button.BackgroundColor3 = Color3.fromRGB(177, 177, 177)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BorderColor3 = Color3.fromRGB(196, 194, 194)
-		button.BorderSizePixel = 1
-		button.BorderMode = Enum.BorderMode.Outline
-		button.BackgroundColor3 = Color3.fromRGB(227, 229, 228)
-	end)
-end;
-task.spawn(C_a3);
--- StarterGui.AIDS.topbar.back.executor.RE.LocalScript
-local function C_a5()
-local script = G2L["a5"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BorderColor3 = Color3.fromRGB(157, 157, 157)
-		button.BorderSizePixel = 2
-		button.BorderMode = Enum.BorderMode.Inset
-		button.BackgroundColor3 = Color3.fromRGB(177, 177, 177)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BorderColor3 = Color3.fromRGB(196, 194, 194)
-		button.BorderSizePixel = 1
-		button.BorderMode = Enum.BorderMode.Outline
-		button.BackgroundColor3 = Color3.fromRGB(227, 229, 228)
-	end)
-end;
-task.spawn(C_a5);
--- StarterGui.AIDS.topbar.back.executor.RE.LocalScript
+task.spawn(C_43);
+-- StarterGui.ScreenGui.topbar.back.executor.R6.LocalScript
 local function C_a6()
 local script = G2L["a6"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BorderColor3 = Color3.fromRGB(157, 157, 157)
+		button.BorderSizePixel = 2
+		button.BorderMode = Enum.BorderMode.Inset
+		button.BackgroundColor3 = Color3.fromRGB(177, 177, 177)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BorderColor3 = Color3.fromRGB(196, 194, 194)
+		button.BorderSizePixel = 1
+		button.BorderMode = Enum.BorderMode.Outline
+		button.BackgroundColor3 = Color3.fromRGB(227, 229, 228)
+	end)
+end;
+task.spawn(C_a6);
+-- StarterGui.ScreenGui.topbar.back.executor.RE.LocalScript
+local function C_a8()
+local script = G2L["a8"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BorderColor3 = Color3.fromRGB(157, 157, 157)
+		button.BorderSizePixel = 2
+		button.BorderMode = Enum.BorderMode.Inset
+		button.BackgroundColor3 = Color3.fromRGB(177, 177, 177)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BorderColor3 = Color3.fromRGB(196, 194, 194)
+		button.BorderSizePixel = 1
+		button.BorderMode = Enum.BorderMode.Outline
+		button.BackgroundColor3 = Color3.fromRGB(227, 229, 228)
+	end)
+end;
+task.spawn(C_a8);
+-- StarterGui.ScreenGui.topbar.back.executor.RE.LocalScript
+local function C_a9()
+local script = G2L["a9"];
 	local button = script.Parent 
 	local resetEvent = button:WaitForChild("RemoteEvent")
 	
@@ -12374,19 +12385,19 @@ local script = G2L["a6"];
 	end)
 	
 end;
-task.spawn(C_a6);
--- StarterGui.AIDS.topbar.back.executor.logsback.logs.LocalScript
-local function C_ab()
-local script = G2L["ab"];
+task.spawn(C_a9);
+-- StarterGui.ScreenGui.topbar.back.executor.logsback.logs.LocalScript
+local function C_ae()
+local script = G2L["ae"];
 	local p = game.Players.LocalPlayer
 	local label = script.Parent
 	
 	label.Text = "Welcome hackerman"
 end;
-task.spawn(C_ab);
--- StarterGui.AIDS.topbar.back.executor.scripts.LocalScript
-local function C_af()
-local script = G2L["af"];
+task.spawn(C_ae);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.LocalScript
+local function C_b2()
+local script = G2L["b2"];
 	local frame = script.Parent
 	
 	local grid = frame:FindFirstChildOfClass("UIGridLayout")
@@ -12453,10 +12464,10 @@ local script = G2L["af"];
 	end)
 	
 end;
-task.spawn(C_af);
--- StarterGui.AIDS.topbar.back.executor.scripts.LocalScript
-local function C_b0()
-local script = G2L["b0"];
+task.spawn(C_b2);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.LocalScript
+local function C_b3()
+local script = G2L["b3"];
 	local parent = script.Parent
 	
 	for _, v in ipairs(parent:GetDescendants()) do
@@ -12467,10 +12478,10 @@ local script = G2L["b0"];
 	end
 	
 end;
-task.spawn(C_b0);
--- StarterGui.AIDS.topbar.back.executor.scripts.rc7cloud.LocalScript
-local function C_b4()
-local script = G2L["b4"];
+task.spawn(C_b3);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.rc7cloud.LocalScript
+local function C_b7()
+local script = G2L["b7"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -12511,10 +12522,10 @@ local script = G2L["b4"];
 	end)
 	
 end;
-task.spawn(C_b4);
--- StarterGui.AIDS.topbar.back.executor.scripts.rc7cloud.LocalScript
-local function C_b5()
-local script = G2L["b5"];
+task.spawn(C_b7);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.rc7cloud.LocalScript
+local function C_b8()
+local script = G2L["b8"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -12525,10 +12536,10 @@ local script = G2L["b5"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_b5);
--- StarterGui.AIDS.topbar.back.executor.scripts.windows error.LocalScript
-local function C_b7()
-local script = G2L["b7"];
+task.spawn(C_b8);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.windows error.LocalScript
+local function C_ba()
+local script = G2L["ba"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -12575,35 +12586,8 @@ local script = G2L["b7"];
 	end)
 	
 end;
-task.spawn(C_b7);
--- StarterGui.AIDS.topbar.back.executor.scripts.windows error.LocalScript
-local function C_b8()
-local script = G2L["b8"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	end)
-end;
-task.spawn(C_b8);
--- StarterGui.AIDS.topbar.back.executor.scripts.atlas.LocalScript
-local function C_ba()
-local script = G2L["ba"];
-	local b = script.Parent
-	local t = b.Parent.Parent.textboxback.textbox
-	local p = game.Players.LocalPlayer
-	
-	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(6438361301).load("%s")', p.Name)
-	end)
-	
-end;
 task.spawn(C_ba);
--- StarterGui.AIDS.topbar.back.executor.scripts.atlas.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.windows error.LocalScript
 local function C_bb()
 local script = G2L["bb"];
 	local button = script.Parent
@@ -12617,7 +12601,7 @@ local script = G2L["bb"];
 	end)
 end;
 task.spawn(C_bb);
--- StarterGui.AIDS.topbar.back.executor.scripts.devoy.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.atlas.LocalScript
 local function C_bd()
 local script = G2L["bd"];
 	local b = script.Parent
@@ -12625,12 +12609,12 @@ local script = G2L["bd"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(17015453713)("%s")', p.Name)
+		t.Text = string.format('require(6438361301).load("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_bd);
--- StarterGui.AIDS.topbar.back.executor.scripts.devoy.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.atlas.LocalScript
 local function C_be()
 local script = G2L["be"];
 	local button = script.Parent
@@ -12644,7 +12628,7 @@ local script = G2L["be"];
 	end)
 end;
 task.spawn(C_be);
--- StarterGui.AIDS.topbar.back.executor.scripts.lua hammer.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.devoy.LocalScript
 local function C_c0()
 local script = G2L["c0"];
 	local b = script.Parent
@@ -12652,12 +12636,12 @@ local script = G2L["c0"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(11957419646):Fire("%s", "lua")', p.Name)
+		t.Text = string.format('require(17015453713)("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_c0);
--- StarterGui.AIDS.topbar.back.executor.scripts.lua hammer.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.devoy.LocalScript
 local function C_c1()
 local script = G2L["c1"];
 	local button = script.Parent
@@ -12671,9 +12655,22 @@ local script = G2L["c1"];
 	end)
 end;
 task.spawn(C_c1);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.lua hammer.LocalScript
 local function C_c3()
 local script = G2L["c3"];
+	local b = script.Parent
+	local t = b.Parent.Parent.textboxback.textbox
+	local p = game.Players.LocalPlayer
+	
+	b.MouseButton1Click:Connect(function()
+		t.Text = string.format('require(11957419646):Fire("%s", "lua")', p.Name)
+	end)
+	
+end;
+task.spawn(C_c3);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.lua hammer.LocalScript
+local function C_c4()
+local script = G2L["c4"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -12684,10 +12681,24 @@ local script = G2L["c3"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_c3);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
-local function C_c4()
-local script = G2L["c4"];
+task.spawn(C_c4);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
+local function C_c6()
+local script = G2L["c6"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+end;
+task.spawn(C_c6);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
+local function C_c7()
+local script = G2L["c7"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -12697,10 +12708,10 @@ local script = G2L["c4"];
 	end)
 	
 end;
-task.spawn(C_c4);
--- StarterGui.AIDS.topbar.back.executor.scripts.anonymousparticle.LocalScript
-local function C_c6()
-local script = G2L["c6"];
+task.spawn(C_c7);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.anonymousparticle.LocalScript
+local function C_c9()
+local script = G2L["c9"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -12713,10 +12724,10 @@ local script = G2L["c6"];
 	end)
 	
 end;
-task.spawn(C_c6);
--- StarterGui.AIDS.topbar.back.executor.scripts.anonymousparticle.LocalScript
-local function C_c7()
-local script = G2L["c7"];
+task.spawn(C_c9);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.anonymousparticle.LocalScript
+local function C_ca()
+local script = G2L["ca"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -12727,10 +12738,10 @@ local script = G2L["c7"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_c7);
--- StarterGui.AIDS.topbar.back.executor.scripts.hackermans.LocalScript
-local function C_c9()
-local script = G2L["c9"];
+task.spawn(C_ca);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.hackermans.LocalScript
+local function C_cc()
+local script = G2L["cc"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -12779,10 +12790,10 @@ local script = G2L["c9"];
 	end)
 	
 end;
-task.spawn(C_c9);
--- StarterGui.AIDS.topbar.back.executor.scripts.hackermans.LocalScript
-local function C_ca()
-local script = G2L["ca"];
+task.spawn(C_cc);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.hackermans.LocalScript
+local function C_cd()
+local script = G2L["cd"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -12793,10 +12804,10 @@ local script = G2L["ca"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_ca);
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkiddtheme.LocalScript
-local function C_cc()
-local script = G2L["cc"];
+task.spawn(C_cd);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkiddtheme.LocalScript
+local function C_cf()
+local script = G2L["cf"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -12819,10 +12830,10 @@ local script = G2L["cc"];
 	end)
 	
 end;
-task.spawn(C_cc);
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkiddtheme.LocalScript
-local function C_cd()
-local script = G2L["cd"];
+task.spawn(C_cf);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkiddtheme.LocalScript
+local function C_d0()
+local script = G2L["d0"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -12833,10 +12844,10 @@ local script = G2L["cd"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_cd);
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkidddecal.LocalScript
-local function C_cf()
-local script = G2L["cf"];
+task.spawn(C_d0);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkidddecal.LocalScript
+local function C_d2()
+local script = G2L["d2"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -12881,10 +12892,10 @@ local script = G2L["cf"];
 	end)
 	
 end;
-task.spawn(C_cf);
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkidddecal.LocalScript
-local function C_d0()
-local script = G2L["d0"];
+task.spawn(C_d2);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkidddecal.LocalScript
+local function C_d3()
+local script = G2L["d3"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -12895,10 +12906,10 @@ local script = G2L["d0"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_d0);
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkiddsky.LocalScript
-local function C_d2()
-local script = G2L["d2"];
+task.spawn(C_d3);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkiddsky.LocalScript
+local function C_d5()
+local script = G2L["d5"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -12917,10 +12928,10 @@ local script = G2L["d2"];
 	end)
 	
 end;
-task.spawn(C_d2);
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lkiddsky.LocalScript
-local function C_d3()
-local script = G2L["d3"];
+task.spawn(C_d5);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lkiddsky.LocalScript
+local function C_d6()
+local script = G2L["d6"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -12931,10 +12942,10 @@ local script = G2L["d3"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_d3);
--- StarterGui.AIDS.topbar.back.executor.scripts.g00bydecal.LocalScript
-local function C_d5()
-local script = G2L["d5"];
+task.spawn(C_d6);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.g00bydecal.LocalScript
+local function C_d8()
+local script = G2L["d8"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -12979,35 +12990,8 @@ local script = G2L["d5"];
 	end)
 	
 end;
-task.spawn(C_d5);
--- StarterGui.AIDS.topbar.back.executor.scripts.g00bydecal.LocalScript
-local function C_d6()
-local script = G2L["d6"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	end)
-end;
-task.spawn(C_d6);
--- StarterGui.AIDS.topbar.back.executor.scripts.grabknife.LocalScript
-local function C_d8()
-local script = G2L["d8"];
-	local b = script.Parent
-	local t = b.Parent.Parent.textboxback.textbox
-	local p = game.Players.LocalPlayer
-	
-	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(131520378074914)("%s")', p.Name)
-	end)
-	
-end;
 task.spawn(C_d8);
--- StarterGui.AIDS.topbar.back.executor.scripts.grabknife.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.g00bydecal.LocalScript
 local function C_d9()
 local script = G2L["d9"];
 	local button = script.Parent
@@ -13021,7 +13005,7 @@ local script = G2L["d9"];
 	end)
 end;
 task.spawn(C_d9);
--- StarterGui.AIDS.topbar.back.executor.scripts.mystic.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.grabknife.LocalScript
 local function C_db()
 local script = G2L["db"];
 	local b = script.Parent
@@ -13029,12 +13013,12 @@ local script = G2L["db"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(16571960080)("%s")', p.Name)
+		t.Text = string.format('require(131520378074914)("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_db);
--- StarterGui.AIDS.topbar.back.executor.scripts.mystic.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.grabknife.LocalScript
 local function C_dc()
 local script = G2L["dc"];
 	local button = script.Parent
@@ -13048,7 +13032,7 @@ local script = G2L["dc"];
 	end)
 end;
 task.spawn(C_dc);
--- StarterGui.AIDS.topbar.back.executor.scripts.grandosla.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.mystic.LocalScript
 local function C_de()
 local script = G2L["de"];
 	local b = script.Parent
@@ -13056,12 +13040,12 @@ local script = G2L["de"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(16492539574)("%s")', p.Name)
+		t.Text = string.format('require(16571960080)("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_de);
--- StarterGui.AIDS.topbar.back.executor.scripts.grandosla.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.mystic.LocalScript
 local function C_df()
 local script = G2L["df"];
 	local button = script.Parent
@@ -13075,7 +13059,7 @@ local script = G2L["df"];
 	end)
 end;
 task.spawn(C_df);
--- StarterGui.AIDS.topbar.back.executor.scripts.guns.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.grandosla.LocalScript
 local function C_e1()
 local script = G2L["e1"];
 	local b = script.Parent
@@ -13083,12 +13067,12 @@ local script = G2L["e1"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format("require(2823974237).giveGuns('%s')", p.Name)
+		t.Text = string.format('require(16492539574)("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_e1);
--- StarterGui.AIDS.topbar.back.executor.scripts.guns.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.grandosla.LocalScript
 local function C_e2()
 local script = G2L["e2"];
 	local button = script.Parent
@@ -13102,7 +13086,7 @@ local script = G2L["e2"];
 	end)
 end;
 task.spawn(C_e2);
--- StarterGui.AIDS.topbar.back.executor.scripts.devuzi.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.guns.LocalScript
 local function C_e4()
 local script = G2L["e4"];
 	local b = script.Parent
@@ -13110,12 +13094,12 @@ local script = G2L["e4"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(16662808456):Fire("%s","dev-uzi")', p.Name)
+		t.Text = string.format("require(2823974237).giveGuns('%s')", p.Name)
 	end)
 	
 end;
 task.spawn(C_e4);
--- StarterGui.AIDS.topbar.back.executor.scripts.devuzi.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.guns.LocalScript
 local function C_e5()
 local script = G2L["e5"];
 	local button = script.Parent
@@ -13129,7 +13113,7 @@ local script = G2L["e5"];
 	end)
 end;
 task.spawn(C_e5);
--- StarterGui.AIDS.topbar.back.executor.scripts.sledgehammer.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.devuzi.LocalScript
 local function C_e7()
 local script = G2L["e7"];
 	local b = script.Parent
@@ -13137,12 +13121,12 @@ local script = G2L["e7"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(8038037940).CLoad("%s")', p.Name)
+		t.Text = string.format('require(16662808456):Fire("%s","dev-uzi")', p.Name)
 	end)
 	
 end;
 task.spawn(C_e7);
--- StarterGui.AIDS.topbar.back.executor.scripts.sledgehammer.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.devuzi.LocalScript
 local function C_e8()
 local script = G2L["e8"];
 	local button = script.Parent
@@ -13156,7 +13140,7 @@ local script = G2L["e8"];
 	end)
 end;
 task.spawn(C_e8);
--- StarterGui.AIDS.topbar.back.executor.scripts.johndoe.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.sledgehammer.LocalScript
 local function C_ea()
 local script = G2L["ea"];
 	local b = script.Parent
@@ -13164,12 +13148,12 @@ local script = G2L["ea"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(2845929020).ooga("%s")', p.Name)
+		t.Text = string.format('require(8038037940).CLoad("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_ea);
--- StarterGui.AIDS.topbar.back.executor.scripts.johndoe.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.sledgehammer.LocalScript
 local function C_eb()
 local script = G2L["eb"];
 	local button = script.Parent
@@ -13183,7 +13167,7 @@ local script = G2L["eb"];
 	end)
 end;
 task.spawn(C_eb);
--- StarterGui.AIDS.topbar.back.executor.scripts.dualultima.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.johndoe.LocalScript
 local function C_ed()
 local script = G2L["ed"];
 	local b = script.Parent
@@ -13191,12 +13175,12 @@ local script = G2L["ed"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(2946060158):Fire("%s","hack")', p.Name)
+		t.Text = string.format('require(2845929020).ooga("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_ed);
--- StarterGui.AIDS.topbar.back.executor.scripts.dualultima.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.johndoe.LocalScript
 local function C_ee()
 local script = G2L["ee"];
 	local button = script.Parent
@@ -13210,7 +13194,7 @@ local script = G2L["ee"];
 	end)
 end;
 task.spawn(C_ee);
--- StarterGui.AIDS.topbar.back.executor.scripts.excavator .LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.dualultima.LocalScript
 local function C_f0()
 local script = G2L["f0"];
 	local b = script.Parent
@@ -13218,12 +13202,12 @@ local script = G2L["f0"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(16571914488)("%s")', p.Name)
+		t.Text = string.format('require(2946060158):Fire("%s","hack")', p.Name)
 	end)
 	
 end;
 task.spawn(C_f0);
--- StarterGui.AIDS.topbar.back.executor.scripts.excavator .LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.dualultima.LocalScript
 local function C_f1()
 local script = G2L["f1"];
 	local button = script.Parent
@@ -13237,7 +13221,7 @@ local script = G2L["f1"];
 	end)
 end;
 task.spawn(C_f1);
--- StarterGui.AIDS.topbar.back.executor.scripts.scythe.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.excavator .LocalScript
 local function C_f3()
 local script = G2L["f3"];
 	local b = script.Parent
@@ -13245,12 +13229,12 @@ local script = G2L["f3"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(5244718553).load("%s")', p.Name)
+		t.Text = string.format('require(16571914488)("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_f3);
--- StarterGui.AIDS.topbar.back.executor.scripts.scythe.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.excavator .LocalScript
 local function C_f4()
 local script = G2L["f4"];
 	local button = script.Parent
@@ -13264,7 +13248,7 @@ local script = G2L["f4"];
 	end)
 end;
 task.spawn(C_f4);
--- StarterGui.AIDS.topbar.back.executor.scripts.happyhub.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.scythe.LocalScript
 local function C_f6()
 local script = G2L["f6"];
 	local b = script.Parent
@@ -13272,12 +13256,12 @@ local script = G2L["f6"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(110047253067635):Hload("%s")', p.Name)
+		t.Text = string.format('require(5244718553).load("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_f6);
--- StarterGui.AIDS.topbar.back.executor.scripts.happyhub.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.scythe.LocalScript
 local function C_f7()
 local script = G2L["f7"];
 	local button = script.Parent
@@ -13291,7 +13275,7 @@ local script = G2L["f7"];
 	end)
 end;
 task.spawn(C_f7);
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lgui.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.happyhub.LocalScript
 local function C_f9()
 local script = G2L["f9"];
 	local b = script.Parent
@@ -13299,12 +13283,12 @@ local script = G2L["f9"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(14125553864):Fire("%s","c00lkidd")', p.Name)
+		t.Text = string.format('require(110047253067635):Hload("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_f9);
--- StarterGui.AIDS.topbar.back.executor.scripts.c00lgui.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.happyhub.LocalScript
 local function C_fa()
 local script = G2L["fa"];
 	local button = script.Parent
@@ -13318,7 +13302,7 @@ local script = G2L["fa"];
 	end)
 end;
 task.spawn(C_fa);
--- StarterGui.AIDS.topbar.back.executor.scripts.bipolaria.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lgui.LocalScript
 local function C_fc()
 local script = G2L["fc"];
 	local b = script.Parent
@@ -13326,12 +13310,12 @@ local script = G2L["fc"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(88477009909590):Pload("%s")', p.Name)
+		t.Text = string.format('require(14125553864):Fire("%s","c00lkidd")', p.Name)
 	end)
 	
 end;
 task.spawn(C_fc);
--- StarterGui.AIDS.topbar.back.executor.scripts.bipolaria.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c00lgui.LocalScript
 local function C_fd()
 local script = G2L["fd"];
 	local button = script.Parent
@@ -13345,7 +13329,7 @@ local script = G2L["fd"];
 	end)
 end;
 task.spawn(C_fd);
--- StarterGui.AIDS.topbar.back.executor.scripts.iy.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.bipolaria.LocalScript
 local function C_ff()
 local script = G2L["ff"];
 	local b = script.Parent
@@ -13353,12 +13337,12 @@ local script = G2L["ff"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(7634392335)("%s")', p.Name)
+		t.Text = string.format('require(88477009909590):Pload("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_ff);
--- StarterGui.AIDS.topbar.back.executor.scripts.iy.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.bipolaria.LocalScript
 local function C_100()
 local script = G2L["100"];
 	local button = script.Parent
@@ -13372,7 +13356,7 @@ local script = G2L["100"];
 	end)
 end;
 task.spawn(C_100);
--- StarterGui.AIDS.topbar.back.executor.scripts.dex.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.iy.LocalScript
 local function C_102()
 local script = G2L["102"];
 	local b = script.Parent
@@ -13380,12 +13364,12 @@ local script = G2L["102"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(14572394952)("%s")', p.Name)
+		t.Text = string.format('require(7634392335)("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_102);
--- StarterGui.AIDS.topbar.back.executor.scripts.dex.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.iy.LocalScript
 local function C_103()
 local script = G2L["103"];
 	local button = script.Parent
@@ -13399,7 +13383,7 @@ local script = G2L["103"];
 	end)
 end;
 task.spawn(C_103);
--- StarterGui.AIDS.topbar.back.executor.scripts.antiskidgun.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.dex.LocalScript
 local function C_105()
 local script = G2L["105"];
 	local b = script.Parent
@@ -13407,12 +13391,12 @@ local script = G2L["105"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(5369180823).eliza("%s")', p.Name)
+		t.Text = string.format('require(14572394952)("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_105);
--- StarterGui.AIDS.topbar.back.executor.scripts.antiskidgun.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.dex.LocalScript
 local function C_106()
 local script = G2L["106"];
 	local button = script.Parent
@@ -13426,9 +13410,36 @@ local script = G2L["106"];
 	end)
 end;
 task.spawn(C_106);
--- StarterGui.AIDS.topbar.back.executor.scripts.billboard.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.antiskidgun.LocalScript
 local function C_108()
 local script = G2L["108"];
+	local b = script.Parent
+	local t = b.Parent.Parent.textboxback.textbox
+	local p = game.Players.LocalPlayer
+	
+	b.MouseButton1Click:Connect(function()
+		t.Text = string.format('require(5369180823).eliza("%s")', p.Name)
+	end)
+	
+end;
+task.spawn(C_108);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.antiskidgun.LocalScript
+local function C_109()
+local script = G2L["109"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+end;
+task.spawn(C_109);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.billboard.LocalScript
+local function C_10b()
+local script = G2L["10b"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -13474,10 +13485,10 @@ local script = G2L["108"];
 	end)
 	
 end;
-task.spawn(C_108);
--- StarterGui.AIDS.topbar.back.executor.scripts.billboard.LocalScript
-local function C_109()
-local script = G2L["109"];
+task.spawn(C_10b);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.billboard.LocalScript
+local function C_10c()
+local script = G2L["10c"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -13488,10 +13499,10 @@ local script = G2L["109"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_109);
--- StarterGui.AIDS.topbar.back.executor.scripts.1x1x1x1.LocalScript
-local function C_10b()
-local script = G2L["10b"];
+task.spawn(C_10c);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.1x1x1x1.LocalScript
+local function C_10e()
+local script = G2L["10e"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -13528,10 +13539,10 @@ local script = G2L["10b"];
 	end)
 	
 end;
-task.spawn(C_10b);
--- StarterGui.AIDS.topbar.back.executor.scripts.1x1x1x1.LocalScript
-local function C_10c()
-local script = G2L["10c"];
+task.spawn(C_10e);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.1x1x1x1.LocalScript
+local function C_10f()
+local script = G2L["10f"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -13542,10 +13553,10 @@ local script = G2L["10c"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_10c);
--- StarterGui.AIDS.topbar.back.executor.scripts.baseplate.LocalScript
-local function C_10e()
-local script = G2L["10e"];
+task.spawn(C_10f);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.baseplate.LocalScript
+local function C_111()
+local script = G2L["111"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -13581,38 +13592,38 @@ local script = G2L["10e"];
 	end)
 	
 end;
-task.spawn(C_10e);
--- StarterGui.AIDS.topbar.back.executor.scripts.baseplate.LocalScript
-local function C_10f()
-local script = G2L["10f"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	end)
-end;
-task.spawn(C_10f);
--- StarterGui.AIDS.topbar.back.executor.scripts.jimcarreyface.LocalScript
-local function C_111()
-local script = G2L["111"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	end)
-end;
 task.spawn(C_111);
--- StarterGui.AIDS.topbar.back.executor.scripts.jimcarreyface.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.baseplate.LocalScript
 local function C_112()
 local script = G2L["112"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+end;
+task.spawn(C_112);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.jimcarreyface.LocalScript
+local function C_114()
+local script = G2L["114"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+end;
+task.spawn(C_114);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.jimcarreyface.LocalScript
+local function C_115()
+local script = G2L["115"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -13639,10 +13650,10 @@ local script = G2L["112"];
 	end)
 	
 end;
-task.spawn(C_112);
--- StarterGui.AIDS.topbar.back.executor.scripts.c4.LocalScript
-local function C_114()
-local script = G2L["114"];
+task.spawn(C_115);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c4.LocalScript
+local function C_117()
+local script = G2L["117"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -13652,35 +13663,8 @@ local script = G2L["114"];
 	end)
 	
 end;
-task.spawn(C_114);
--- StarterGui.AIDS.topbar.back.executor.scripts.c4.LocalScript
-local function C_115()
-local script = G2L["115"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	end)
-end;
-task.spawn(C_115);
--- StarterGui.AIDS.topbar.back.executor.scripts.mlg.LocalScript
-local function C_117()
-local script = G2L["117"];
-	local b = script.Parent
-	local t = b.Parent.Parent.textboxback.textbox
-	local p = game.Players.LocalPlayer
-	
-	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(6802356973).load("%s")', p.Name)
-	end)
-	
-end;
 task.spawn(C_117);
--- StarterGui.AIDS.topbar.back.executor.scripts.mlg.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.c4.LocalScript
 local function C_118()
 local script = G2L["118"];
 	local button = script.Parent
@@ -13694,7 +13678,7 @@ local script = G2L["118"];
 	end)
 end;
 task.spawn(C_118);
--- StarterGui.AIDS.topbar.back.executor.scripts.fencing.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.mlg.LocalScript
 local function C_11a()
 local script = G2L["11a"];
 	local b = script.Parent
@@ -13702,12 +13686,12 @@ local script = G2L["11a"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = 'require(13455730882).kfc()'
+		t.Text = string.format('require(6802356973).load("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_11a);
--- StarterGui.AIDS.topbar.back.executor.scripts.fencing.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.mlg.LocalScript
 local function C_11b()
 local script = G2L["11b"];
 	local button = script.Parent
@@ -13721,9 +13705,22 @@ local script = G2L["11b"];
 	end)
 end;
 task.spawn(C_11b);
--- StarterGui.AIDS.topbar.back.executor.scripts.skeletonsky.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.fencing.LocalScript
 local function C_11d()
 local script = G2L["11d"];
+	local b = script.Parent
+	local t = b.Parent.Parent.textboxback.textbox
+	local p = game.Players.LocalPlayer
+	
+	b.MouseButton1Click:Connect(function()
+		t.Text = 'require(13455730882).kfc()'
+	end)
+	
+end;
+task.spawn(C_11d);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.fencing.LocalScript
+local function C_11e()
+local script = G2L["11e"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -13734,10 +13731,24 @@ local script = G2L["11d"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_11d);
--- StarterGui.AIDS.topbar.back.executor.scripts.skeletonsky.LocalScript
-local function C_11e()
-local script = G2L["11e"];
+task.spawn(C_11e);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.skeletonsky.LocalScript
+local function C_120()
+local script = G2L["120"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+end;
+task.spawn(C_120);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.skeletonsky.LocalScript
+local function C_121()
+local script = G2L["121"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -13830,10 +13841,10 @@ local script = G2L["11e"];
 	end)
 	
 end;
-task.spawn(C_11e);
--- StarterGui.AIDS.topbar.back.executor.scripts.noopdog face.LocalScript
-local function C_120()
-local script = G2L["120"];
+task.spawn(C_121);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.noopdog face.LocalScript
+local function C_123()
+local script = G2L["123"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -13844,10 +13855,10 @@ local script = G2L["120"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_120);
--- StarterGui.AIDS.topbar.back.executor.scripts.noopdog face.LocalScript
-local function C_121()
-local script = G2L["121"];
+task.spawn(C_123);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.noopdog face.LocalScript
+local function C_124()
+local script = G2L["124"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -13874,10 +13885,10 @@ local script = G2L["121"];
 	end)
 	
 end;
-task.spawn(C_121);
--- StarterGui.AIDS.topbar.back.executor.scripts.shedletsky.LocalScript
-local function C_123()
-local script = G2L["123"];
+task.spawn(C_124);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.shedletsky.LocalScript
+local function C_126()
+local script = G2L["126"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -13888,10 +13899,10 @@ local script = G2L["123"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_123);
--- StarterGui.AIDS.topbar.back.executor.scripts.shedletsky.LocalScript
-local function C_124()
-local script = G2L["124"];
+task.spawn(C_126);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.shedletsky.LocalScript
+local function C_127()
+local script = G2L["127"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -13989,10 +14000,10 @@ local script = G2L["124"];
 	end)
 	
 end;
-task.spawn(C_124);
--- StarterGui.AIDS.topbar.back.executor.scripts.beanadmin.LocalScript
-local function C_126()
-local script = G2L["126"];
+task.spawn(C_127);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.beanadmin.LocalScript
+local function C_129()
+local script = G2L["129"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -14003,10 +14014,10 @@ local script = G2L["126"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_126);
--- StarterGui.AIDS.topbar.back.executor.scripts.beanadmin.LocalScript
-local function C_127()
-local script = G2L["127"];
+task.spawn(C_129);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.beanadmin.LocalScript
+local function C_12a()
+local script = G2L["12a"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -14016,10 +14027,10 @@ local script = G2L["127"];
 	end)
 	
 end;
-task.spawn(C_127);
--- StarterGui.AIDS.topbar.back.executor.scripts.2dscript.LocalScript
-local function C_129()
-local script = G2L["129"];
+task.spawn(C_12a);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.2dscript.LocalScript
+local function C_12c()
+local script = G2L["12c"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -14078,38 +14089,38 @@ local script = G2L["129"];
 	end)
 	
 end;
-task.spawn(C_129);
--- StarterGui.AIDS.topbar.back.executor.scripts.2dscript.LocalScript
-local function C_12a()
-local script = G2L["12a"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	end)
-end;
-task.spawn(C_12a);
--- StarterGui.AIDS.topbar.back.executor.scripts.2d.LocalScript
-local function C_12c()
-local script = G2L["12c"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	end)
-end;
 task.spawn(C_12c);
--- StarterGui.AIDS.topbar.back.executor.scripts.2d.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.2dscript.LocalScript
 local function C_12d()
 local script = G2L["12d"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+end;
+task.spawn(C_12d);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.2d.LocalScript
+local function C_12f()
+local script = G2L["12f"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+end;
+task.spawn(C_12f);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.2d.LocalScript
+local function C_130()
+local script = G2L["130"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -14148,10 +14159,10 @@ local script = G2L["12d"];
 	end)
 	
 end;
-task.spawn(C_12d);
--- StarterGui.AIDS.topbar.back.executor.scripts.3d.LocalScript
-local function C_12f()
-local script = G2L["12f"];
+task.spawn(C_130);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.3d.LocalScript
+local function C_132()
+local script = G2L["132"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -14162,10 +14173,10 @@ local script = G2L["12f"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_12f);
--- StarterGui.AIDS.topbar.back.executor.scripts.3d.LocalScript
-local function C_130()
-local script = G2L["130"];
+task.spawn(C_132);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.3d.LocalScript
+local function C_133()
+local script = G2L["133"];
 	local b = script.Parent
 	local t = b.Parent.Parent.textboxback.textbox
 	local p = game.Players.LocalPlayer
@@ -14204,37 +14215,8 @@ local script = G2L["130"];
 	end)
 	
 end;
-task.spawn(C_130);
--- StarterGui.AIDS.topbar.back.executor.scripts.obunga.LocalScript
-local function C_132()
-local script = G2L["132"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	end)
-end;
-task.spawn(C_132);
--- StarterGui.AIDS.topbar.back.executor.scripts.obunga.LocalScript
-local function C_133()
-local script = G2L["133"];
-	local b = script.Parent
-	local t = b.Parent.Parent.textboxback.textbox
-	local p = game.Players.LocalPlayer
-	
-	b.MouseButton1Click:Connect(function()
-		t.Text = [=[for i,v in pairs(game.Players:GetPlayers()) do
-	    require(100507604132909).Mertish(v.Name)
-	end]=]
-	end)
-	
-end;
 task.spawn(C_133);
--- StarterGui.AIDS.topbar.back.executor.scripts.ssp.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.obunga.LocalScript
 local function C_135()
 local script = G2L["135"];
 	local button = script.Parent
@@ -14248,7 +14230,7 @@ local script = G2L["135"];
 	end)
 end;
 task.spawn(C_135);
--- StarterGui.AIDS.topbar.back.executor.scripts.ssp.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.obunga.LocalScript
 local function C_136()
 local script = G2L["136"];
 	local b = script.Parent
@@ -14256,12 +14238,14 @@ local script = G2L["136"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(16920033857)("%s")', p.Name)
+		t.Text = [=[for i,v in pairs(game.Players:GetPlayers()) do
+	    require(100507604132909).Mertish(v.Name)
+	end]=]
 	end)
 	
 end;
 task.spawn(C_136);
--- StarterGui.AIDS.topbar.back.executor.scripts.creeper.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.ssp.LocalScript
 local function C_138()
 local script = G2L["138"];
 	local button = script.Parent
@@ -14275,7 +14259,7 @@ local script = G2L["138"];
 	end)
 end;
 task.spawn(C_138);
--- StarterGui.AIDS.topbar.back.executor.scripts.creeper.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.ssp.LocalScript
 local function C_139()
 local script = G2L["139"];
 	local b = script.Parent
@@ -14283,12 +14267,12 @@ local script = G2L["139"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(4708818072).Oaeh("%s")', p.Name)
+		t.Text = string.format('require(16920033857)("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_139);
--- StarterGui.AIDS.topbar.back.executor.scripts.enderman.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.creeper.LocalScript
 local function C_13b()
 local script = G2L["13b"];
 	local button = script.Parent
@@ -14302,7 +14286,7 @@ local script = G2L["13b"];
 	end)
 end;
 task.spawn(C_13b);
--- StarterGui.AIDS.topbar.back.executor.scripts.enderman.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.creeper.LocalScript
 local function C_13c()
 local script = G2L["13c"];
 	local b = script.Parent
@@ -14310,12 +14294,12 @@ local script = G2L["13c"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(2839581383).load("endermean", "%s")', p.Name)
+		t.Text = string.format('require(4708818072).Oaeh("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_13c);
--- StarterGui.AIDS.topbar.back.executor.scripts.steve.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.enderman.LocalScript
 local function C_13e()
 local script = G2L["13e"];
 	local button = script.Parent
@@ -14329,7 +14313,7 @@ local script = G2L["13e"];
 	end)
 end;
 task.spawn(C_13e);
--- StarterGui.AIDS.topbar.back.executor.scripts.steve.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.enderman.LocalScript
 local function C_13f()
 local script = G2L["13f"];
 	local b = script.Parent
@@ -14337,12 +14321,12 @@ local script = G2L["13f"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(15581949972).mc("%s")', p.Name)
+		t.Text = string.format('require(2839581383).load("endermean", "%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_13f);
--- StarterGui.AIDS.topbar.back.executor.scripts.remington.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.steve.LocalScript
 local function C_141()
 local script = G2L["141"];
 	local button = script.Parent
@@ -14356,7 +14340,7 @@ local script = G2L["141"];
 	end)
 end;
 task.spawn(C_141);
--- StarterGui.AIDS.topbar.back.executor.scripts.remington.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.steve.LocalScript
 local function C_142()
 local script = G2L["142"];
 	local b = script.Parent
@@ -14364,12 +14348,12 @@ local script = G2L["142"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(4879817593)("%s")', p.Name)
+		t.Text = string.format('require(15581949972).mc("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_142);
--- StarterGui.AIDS.topbar.back.executor.scripts.ar15.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.remington.LocalScript
 local function C_144()
 local script = G2L["144"];
 	local button = script.Parent
@@ -14383,7 +14367,7 @@ local script = G2L["144"];
 	end)
 end;
 task.spawn(C_144);
--- StarterGui.AIDS.topbar.back.executor.scripts.ar15.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.remington.LocalScript
 local function C_145()
 local script = G2L["145"];
 	local b = script.Parent
@@ -14391,12 +14375,12 @@ local script = G2L["145"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(16662828437).naenae("%s")', p.Name)
+		t.Text = string.format('require(4879817593)("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_145);
--- StarterGui.AIDS.topbar.back.executor.scripts.pee.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.ar15.LocalScript
 local function C_147()
 local script = G2L["147"];
 	local button = script.Parent
@@ -14410,7 +14394,7 @@ local script = G2L["147"];
 	end)
 end;
 task.spawn(C_147);
--- StarterGui.AIDS.topbar.back.executor.scripts.pee.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.ar15.LocalScript
 local function C_148()
 local script = G2L["148"];
 	local b = script.Parent
@@ -14418,12 +14402,12 @@ local script = G2L["148"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(4709753802).load("%s")', p.Name)
+		t.Text = string.format('require(16662828437).naenae("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_148);
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv1.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.pee.LocalScript
 local function C_14a()
 local script = G2L["14a"];
 	local button = script.Parent
@@ -14437,7 +14421,7 @@ local script = G2L["14a"];
 	end)
 end;
 task.spawn(C_14a);
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv1.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.pee.LocalScript
 local function C_14b()
 local script = G2L["14b"];
 	local b = script.Parent
@@ -14445,12 +14429,12 @@ local script = G2L["14b"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(16662794620):Fire("%s","knife")', p.Name)
+		t.Text = string.format('require(4709753802).load("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_14b);
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv2.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv1.LocalScript
 local function C_14d()
 local script = G2L["14d"];
 	local button = script.Parent
@@ -14464,7 +14448,7 @@ local script = G2L["14d"];
 	end)
 end;
 task.spawn(C_14d);
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv2.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv1.LocalScript
 local function C_14e()
 local script = G2L["14e"];
 	local b = script.Parent
@@ -14472,12 +14456,12 @@ local script = G2L["14e"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(16662799266):Fire("%s","knife")', p.Name)
+		t.Text = string.format('require(16662794620):Fire("%s","knife")', p.Name)
 	end)
 	
 end;
 task.spawn(C_14e);
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv3.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv2.LocalScript
 local function C_150()
 local script = G2L["150"];
 	local button = script.Parent
@@ -14491,7 +14475,7 @@ local script = G2L["150"];
 	end)
 end;
 task.spawn(C_150);
--- StarterGui.AIDS.topbar.back.executor.scripts.gkv3.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv2.LocalScript
 local function C_151()
 local script = G2L["151"];
 	local b = script.Parent
@@ -14499,12 +14483,12 @@ local script = G2L["151"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format("require(2829943043):Run('%s','i baked you a pie')", p.Name)
+		t.Text = string.format('require(16662799266):Fire("%s","knife")', p.Name)
 	end)
 	
 end;
 task.spawn(C_151);
--- StarterGui.AIDS.topbar.back.executor.scripts.doge.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv3.LocalScript
 local function C_153()
 local script = G2L["153"];
 	local button = script.Parent
@@ -14518,7 +14502,7 @@ local script = G2L["153"];
 	end)
 end;
 task.spawn(C_153);
--- StarterGui.AIDS.topbar.back.executor.scripts.doge.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.gkv3.LocalScript
 local function C_154()
 local script = G2L["154"];
 	local b = script.Parent
@@ -14526,12 +14510,12 @@ local script = G2L["154"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(5115249013).fehack("%s")', p.Name)
+		t.Text = string.format("require(2829943043):Run('%s','i baked you a pie')", p.Name)
 	end)
 	
 end;
 task.spawn(C_154);
--- StarterGui.AIDS.topbar.back.executor.scripts.virus.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.doge.LocalScript
 local function C_156()
 local script = G2L["156"];
 	local button = script.Parent
@@ -14545,7 +14529,7 @@ local script = G2L["156"];
 	end)
 end;
 task.spawn(C_156);
--- StarterGui.AIDS.topbar.back.executor.scripts.virus.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.doge.LocalScript
 local function C_157()
 local script = G2L["157"];
 	local b = script.Parent
@@ -14553,12 +14537,12 @@ local script = G2L["157"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = string.format('require(8317917339).Infection("%s")', p.Name)
+		t.Text = string.format('require(5115249013).fehack("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_157);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.virus.LocalScript
 local function C_159()
 local script = G2L["159"];
 	local button = script.Parent
@@ -14572,7 +14556,7 @@ local script = G2L["159"];
 	end)
 end;
 task.spawn(C_159);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.virus.LocalScript
 local function C_15a()
 local script = G2L["15a"];
 	local b = script.Parent
@@ -14580,12 +14564,12 @@ local script = G2L["15a"];
 	local p = game.Players.LocalPlayer
 	
 	b.MouseButton1Click:Connect(function()
-		t.Text = [=[]=]
+		t.Text = string.format('require(8317917339).Infection("%s")', p.Name)
 	end)
 	
 end;
 task.spawn(C_15a);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_15c()
 local script = G2L["15c"];
 	local button = script.Parent
@@ -14599,7 +14583,7 @@ local script = G2L["15c"];
 	end)
 end;
 task.spawn(C_15c);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_15d()
 local script = G2L["15d"];
 	local b = script.Parent
@@ -14612,7 +14596,7 @@ local script = G2L["15d"];
 	
 end;
 task.spawn(C_15d);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_15f()
 local script = G2L["15f"];
 	local button = script.Parent
@@ -14626,7 +14610,7 @@ local script = G2L["15f"];
 	end)
 end;
 task.spawn(C_15f);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_160()
 local script = G2L["160"];
 	local b = script.Parent
@@ -14639,7 +14623,7 @@ local script = G2L["160"];
 	
 end;
 task.spawn(C_160);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_162()
 local script = G2L["162"];
 	local button = script.Parent
@@ -14653,7 +14637,7 @@ local script = G2L["162"];
 	end)
 end;
 task.spawn(C_162);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_163()
 local script = G2L["163"];
 	local b = script.Parent
@@ -14666,7 +14650,7 @@ local script = G2L["163"];
 	
 end;
 task.spawn(C_163);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_165()
 local script = G2L["165"];
 	local button = script.Parent
@@ -14680,7 +14664,7 @@ local script = G2L["165"];
 	end)
 end;
 task.spawn(C_165);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_166()
 local script = G2L["166"];
 	local b = script.Parent
@@ -14693,7 +14677,7 @@ local script = G2L["166"];
 	
 end;
 task.spawn(C_166);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_168()
 local script = G2L["168"];
 	local button = script.Parent
@@ -14707,7 +14691,7 @@ local script = G2L["168"];
 	end)
 end;
 task.spawn(C_168);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_169()
 local script = G2L["169"];
 	local b = script.Parent
@@ -14720,7 +14704,7 @@ local script = G2L["169"];
 	
 end;
 task.spawn(C_169);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_16b()
 local script = G2L["16b"];
 	local button = script.Parent
@@ -14734,7 +14718,7 @@ local script = G2L["16b"];
 	end)
 end;
 task.spawn(C_16b);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_16c()
 local script = G2L["16c"];
 	local b = script.Parent
@@ -14747,7 +14731,7 @@ local script = G2L["16c"];
 	
 end;
 task.spawn(C_16c);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_16e()
 local script = G2L["16e"];
 	local button = script.Parent
@@ -14761,7 +14745,7 @@ local script = G2L["16e"];
 	end)
 end;
 task.spawn(C_16e);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_16f()
 local script = G2L["16f"];
 	local b = script.Parent
@@ -14774,7 +14758,7 @@ local script = G2L["16f"];
 	
 end;
 task.spawn(C_16f);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_171()
 local script = G2L["171"];
 	local button = script.Parent
@@ -14788,7 +14772,7 @@ local script = G2L["171"];
 	end)
 end;
 task.spawn(C_171);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_172()
 local script = G2L["172"];
 	local b = script.Parent
@@ -14801,7 +14785,7 @@ local script = G2L["172"];
 	
 end;
 task.spawn(C_172);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_174()
 local script = G2L["174"];
 	local button = script.Parent
@@ -14815,7 +14799,7 @@ local script = G2L["174"];
 	end)
 end;
 task.spawn(C_174);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_175()
 local script = G2L["175"];
 	local b = script.Parent
@@ -14828,7 +14812,7 @@ local script = G2L["175"];
 	
 end;
 task.spawn(C_175);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_177()
 local script = G2L["177"];
 	local button = script.Parent
@@ -14842,7 +14826,7 @@ local script = G2L["177"];
 	end)
 end;
 task.spawn(C_177);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_178()
 local script = G2L["178"];
 	local b = script.Parent
@@ -14855,7 +14839,7 @@ local script = G2L["178"];
 	
 end;
 task.spawn(C_178);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_17a()
 local script = G2L["17a"];
 	local button = script.Parent
@@ -14869,7 +14853,7 @@ local script = G2L["17a"];
 	end)
 end;
 task.spawn(C_17a);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_17b()
 local script = G2L["17b"];
 	local b = script.Parent
@@ -14882,7 +14866,7 @@ local script = G2L["17b"];
 	
 end;
 task.spawn(C_17b);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_17d()
 local script = G2L["17d"];
 	local button = script.Parent
@@ -14896,7 +14880,7 @@ local script = G2L["17d"];
 	end)
 end;
 task.spawn(C_17d);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_17e()
 local script = G2L["17e"];
 	local b = script.Parent
@@ -14909,7 +14893,7 @@ local script = G2L["17e"];
 	
 end;
 task.spawn(C_17e);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_180()
 local script = G2L["180"];
 	local button = script.Parent
@@ -14923,7 +14907,7 @@ local script = G2L["180"];
 	end)
 end;
 task.spawn(C_180);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_181()
 local script = G2L["181"];
 	local b = script.Parent
@@ -14936,7 +14920,7 @@ local script = G2L["181"];
 	
 end;
 task.spawn(C_181);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_183()
 local script = G2L["183"];
 	local button = script.Parent
@@ -14950,7 +14934,7 @@ local script = G2L["183"];
 	end)
 end;
 task.spawn(C_183);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_184()
 local script = G2L["184"];
 	local b = script.Parent
@@ -14963,7 +14947,7 @@ local script = G2L["184"];
 	
 end;
 task.spawn(C_184);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_186()
 local script = G2L["186"];
 	local button = script.Parent
@@ -14977,7 +14961,7 @@ local script = G2L["186"];
 	end)
 end;
 task.spawn(C_186);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_187()
 local script = G2L["187"];
 	local b = script.Parent
@@ -14990,7 +14974,7 @@ local script = G2L["187"];
 	
 end;
 task.spawn(C_187);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_189()
 local script = G2L["189"];
 	local button = script.Parent
@@ -15004,7 +14988,7 @@ local script = G2L["189"];
 	end)
 end;
 task.spawn(C_189);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_18a()
 local script = G2L["18a"];
 	local b = script.Parent
@@ -15017,7 +15001,7 @@ local script = G2L["18a"];
 	
 end;
 task.spawn(C_18a);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_18c()
 local script = G2L["18c"];
 	local button = script.Parent
@@ -15031,7 +15015,7 @@ local script = G2L["18c"];
 	end)
 end;
 task.spawn(C_18c);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_18d()
 local script = G2L["18d"];
 	local b = script.Parent
@@ -15044,7 +15028,7 @@ local script = G2L["18d"];
 	
 end;
 task.spawn(C_18d);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_18f()
 local script = G2L["18f"];
 	local button = script.Parent
@@ -15058,7 +15042,7 @@ local script = G2L["18f"];
 	end)
 end;
 task.spawn(C_18f);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_190()
 local script = G2L["190"];
 	local b = script.Parent
@@ -15071,7 +15055,7 @@ local script = G2L["190"];
 	
 end;
 task.spawn(C_190);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_192()
 local script = G2L["192"];
 	local button = script.Parent
@@ -15085,7 +15069,7 @@ local script = G2L["192"];
 	end)
 end;
 task.spawn(C_192);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_193()
 local script = G2L["193"];
 	local b = script.Parent
@@ -15098,7 +15082,7 @@ local script = G2L["193"];
 	
 end;
 task.spawn(C_193);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_195()
 local script = G2L["195"];
 	local button = script.Parent
@@ -15112,7 +15096,7 @@ local script = G2L["195"];
 	end)
 end;
 task.spawn(C_195);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_196()
 local script = G2L["196"];
 	local b = script.Parent
@@ -15125,7 +15109,7 @@ local script = G2L["196"];
 	
 end;
 task.spawn(C_196);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_198()
 local script = G2L["198"];
 	local button = script.Parent
@@ -15139,7 +15123,7 @@ local script = G2L["198"];
 	end)
 end;
 task.spawn(C_198);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_199()
 local script = G2L["199"];
 	local b = script.Parent
@@ -15152,7 +15136,7 @@ local script = G2L["199"];
 	
 end;
 task.spawn(C_199);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_19b()
 local script = G2L["19b"];
 	local button = script.Parent
@@ -15166,7 +15150,7 @@ local script = G2L["19b"];
 	end)
 end;
 task.spawn(C_19b);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_19c()
 local script = G2L["19c"];
 	local b = script.Parent
@@ -15179,7 +15163,7 @@ local script = G2L["19c"];
 	
 end;
 task.spawn(C_19c);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_19e()
 local script = G2L["19e"];
 	local button = script.Parent
@@ -15193,7 +15177,7 @@ local script = G2L["19e"];
 	end)
 end;
 task.spawn(C_19e);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_19f()
 local script = G2L["19f"];
 	local b = script.Parent
@@ -15206,7 +15190,7 @@ local script = G2L["19f"];
 	
 end;
 task.spawn(C_19f);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1a1()
 local script = G2L["1a1"];
 	local button = script.Parent
@@ -15220,7 +15204,7 @@ local script = G2L["1a1"];
 	end)
 end;
 task.spawn(C_1a1);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1a2()
 local script = G2L["1a2"];
 	local b = script.Parent
@@ -15233,7 +15217,7 @@ local script = G2L["1a2"];
 	
 end;
 task.spawn(C_1a2);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1a4()
 local script = G2L["1a4"];
 	local button = script.Parent
@@ -15247,7 +15231,7 @@ local script = G2L["1a4"];
 	end)
 end;
 task.spawn(C_1a4);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1a5()
 local script = G2L["1a5"];
 	local b = script.Parent
@@ -15260,7 +15244,7 @@ local script = G2L["1a5"];
 	
 end;
 task.spawn(C_1a5);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1a7()
 local script = G2L["1a7"];
 	local button = script.Parent
@@ -15274,7 +15258,7 @@ local script = G2L["1a7"];
 	end)
 end;
 task.spawn(C_1a7);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1a8()
 local script = G2L["1a8"];
 	local b = script.Parent
@@ -15287,7 +15271,7 @@ local script = G2L["1a8"];
 	
 end;
 task.spawn(C_1a8);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1aa()
 local script = G2L["1aa"];
 	local button = script.Parent
@@ -15301,7 +15285,7 @@ local script = G2L["1aa"];
 	end)
 end;
 task.spawn(C_1aa);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1ab()
 local script = G2L["1ab"];
 	local b = script.Parent
@@ -15314,7 +15298,7 @@ local script = G2L["1ab"];
 	
 end;
 task.spawn(C_1ab);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1ad()
 local script = G2L["1ad"];
 	local button = script.Parent
@@ -15328,7 +15312,7 @@ local script = G2L["1ad"];
 	end)
 end;
 task.spawn(C_1ad);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1ae()
 local script = G2L["1ae"];
 	local b = script.Parent
@@ -15341,7 +15325,7 @@ local script = G2L["1ae"];
 	
 end;
 task.spawn(C_1ae);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1b0()
 local script = G2L["1b0"];
 	local button = script.Parent
@@ -15355,7 +15339,7 @@ local script = G2L["1b0"];
 	end)
 end;
 task.spawn(C_1b0);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1b1()
 local script = G2L["1b1"];
 	local b = script.Parent
@@ -15368,7 +15352,7 @@ local script = G2L["1b1"];
 	
 end;
 task.spawn(C_1b1);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1b3()
 local script = G2L["1b3"];
 	local button = script.Parent
@@ -15382,7 +15366,7 @@ local script = G2L["1b3"];
 	end)
 end;
 task.spawn(C_1b3);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1b4()
 local script = G2L["1b4"];
 	local b = script.Parent
@@ -15395,7 +15379,7 @@ local script = G2L["1b4"];
 	
 end;
 task.spawn(C_1b4);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1b6()
 local script = G2L["1b6"];
 	local button = script.Parent
@@ -15409,7 +15393,7 @@ local script = G2L["1b6"];
 	end)
 end;
 task.spawn(C_1b6);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1b7()
 local script = G2L["1b7"];
 	local b = script.Parent
@@ -15422,7 +15406,7 @@ local script = G2L["1b7"];
 	
 end;
 task.spawn(C_1b7);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1b9()
 local script = G2L["1b9"];
 	local button = script.Parent
@@ -15436,7 +15420,7 @@ local script = G2L["1b9"];
 	end)
 end;
 task.spawn(C_1b9);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1ba()
 local script = G2L["1ba"];
 	local b = script.Parent
@@ -15449,7 +15433,7 @@ local script = G2L["1ba"];
 	
 end;
 task.spawn(C_1ba);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1bc()
 local script = G2L["1bc"];
 	local button = script.Parent
@@ -15463,7 +15447,7 @@ local script = G2L["1bc"];
 	end)
 end;
 task.spawn(C_1bc);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1bd()
 local script = G2L["1bd"];
 	local b = script.Parent
@@ -15476,7 +15460,7 @@ local script = G2L["1bd"];
 	
 end;
 task.spawn(C_1bd);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1bf()
 local script = G2L["1bf"];
 	local button = script.Parent
@@ -15490,7 +15474,7 @@ local script = G2L["1bf"];
 	end)
 end;
 task.spawn(C_1bf);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1c0()
 local script = G2L["1c0"];
 	local b = script.Parent
@@ -15503,7 +15487,7 @@ local script = G2L["1c0"];
 	
 end;
 task.spawn(C_1c0);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1c2()
 local script = G2L["1c2"];
 	local button = script.Parent
@@ -15517,7 +15501,7 @@ local script = G2L["1c2"];
 	end)
 end;
 task.spawn(C_1c2);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1c3()
 local script = G2L["1c3"];
 	local b = script.Parent
@@ -15530,7 +15514,7 @@ local script = G2L["1c3"];
 	
 end;
 task.spawn(C_1c3);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1c5()
 local script = G2L["1c5"];
 	local button = script.Parent
@@ -15544,7 +15528,7 @@ local script = G2L["1c5"];
 	end)
 end;
 task.spawn(C_1c5);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1c6()
 local script = G2L["1c6"];
 	local b = script.Parent
@@ -15557,7 +15541,7 @@ local script = G2L["1c6"];
 	
 end;
 task.spawn(C_1c6);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1c8()
 local script = G2L["1c8"];
 	local button = script.Parent
@@ -15571,7 +15555,7 @@ local script = G2L["1c8"];
 	end)
 end;
 task.spawn(C_1c8);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1c9()
 local script = G2L["1c9"];
 	local b = script.Parent
@@ -15584,7 +15568,7 @@ local script = G2L["1c9"];
 	
 end;
 task.spawn(C_1c9);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1cb()
 local script = G2L["1cb"];
 	local button = script.Parent
@@ -15598,7 +15582,7 @@ local script = G2L["1cb"];
 	end)
 end;
 task.spawn(C_1cb);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1cc()
 local script = G2L["1cc"];
 	local b = script.Parent
@@ -15611,7 +15595,7 @@ local script = G2L["1cc"];
 	
 end;
 task.spawn(C_1cc);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1ce()
 local script = G2L["1ce"];
 	local button = script.Parent
@@ -15625,7 +15609,7 @@ local script = G2L["1ce"];
 	end)
 end;
 task.spawn(C_1ce);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1cf()
 local script = G2L["1cf"];
 	local b = script.Parent
@@ -15638,7 +15622,7 @@ local script = G2L["1cf"];
 	
 end;
 task.spawn(C_1cf);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1d1()
 local script = G2L["1d1"];
 	local button = script.Parent
@@ -15652,7 +15636,7 @@ local script = G2L["1d1"];
 	end)
 end;
 task.spawn(C_1d1);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1d2()
 local script = G2L["1d2"];
 	local b = script.Parent
@@ -15665,7 +15649,7 @@ local script = G2L["1d2"];
 	
 end;
 task.spawn(C_1d2);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1d4()
 local script = G2L["1d4"];
 	local button = script.Parent
@@ -15679,7 +15663,7 @@ local script = G2L["1d4"];
 	end)
 end;
 task.spawn(C_1d4);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1d5()
 local script = G2L["1d5"];
 	local b = script.Parent
@@ -15692,7 +15676,7 @@ local script = G2L["1d5"];
 	
 end;
 task.spawn(C_1d5);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1d7()
 local script = G2L["1d7"];
 	local button = script.Parent
@@ -15706,7 +15690,7 @@ local script = G2L["1d7"];
 	end)
 end;
 task.spawn(C_1d7);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1d8()
 local script = G2L["1d8"];
 	local b = script.Parent
@@ -15719,7 +15703,7 @@ local script = G2L["1d8"];
 	
 end;
 task.spawn(C_1d8);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1da()
 local script = G2L["1da"];
 	local button = script.Parent
@@ -15733,7 +15717,7 @@ local script = G2L["1da"];
 	end)
 end;
 task.spawn(C_1da);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1db()
 local script = G2L["1db"];
 	local b = script.Parent
@@ -15746,7 +15730,7 @@ local script = G2L["1db"];
 	
 end;
 task.spawn(C_1db);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1dd()
 local script = G2L["1dd"];
 	local button = script.Parent
@@ -15760,7 +15744,7 @@ local script = G2L["1dd"];
 	end)
 end;
 task.spawn(C_1dd);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1de()
 local script = G2L["1de"];
 	local b = script.Parent
@@ -15773,7 +15757,7 @@ local script = G2L["1de"];
 	
 end;
 task.spawn(C_1de);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1e0()
 local script = G2L["1e0"];
 	local button = script.Parent
@@ -15787,7 +15771,7 @@ local script = G2L["1e0"];
 	end)
 end;
 task.spawn(C_1e0);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1e1()
 local script = G2L["1e1"];
 	local b = script.Parent
@@ -15800,7 +15784,7 @@ local script = G2L["1e1"];
 	
 end;
 task.spawn(C_1e1);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1e3()
 local script = G2L["1e3"];
 	local button = script.Parent
@@ -15814,7 +15798,7 @@ local script = G2L["1e3"];
 	end)
 end;
 task.spawn(C_1e3);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1e4()
 local script = G2L["1e4"];
 	local b = script.Parent
@@ -15827,7 +15811,7 @@ local script = G2L["1e4"];
 	
 end;
 task.spawn(C_1e4);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1e6()
 local script = G2L["1e6"];
 	local button = script.Parent
@@ -15841,7 +15825,7 @@ local script = G2L["1e6"];
 	end)
 end;
 task.spawn(C_1e6);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1e7()
 local script = G2L["1e7"];
 	local b = script.Parent
@@ -15854,7 +15838,7 @@ local script = G2L["1e7"];
 	
 end;
 task.spawn(C_1e7);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1e9()
 local script = G2L["1e9"];
 	local button = script.Parent
@@ -15868,7 +15852,7 @@ local script = G2L["1e9"];
 	end)
 end;
 task.spawn(C_1e9);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1ea()
 local script = G2L["1ea"];
 	local b = script.Parent
@@ -15881,7 +15865,7 @@ local script = G2L["1ea"];
 	
 end;
 task.spawn(C_1ea);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1ec()
 local script = G2L["1ec"];
 	local button = script.Parent
@@ -15895,7 +15879,7 @@ local script = G2L["1ec"];
 	end)
 end;
 task.spawn(C_1ec);
--- StarterGui.AIDS.topbar.back.executor.scripts.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1ed()
 local script = G2L["1ed"];
 	local b = script.Parent
@@ -15908,9 +15892,36 @@ local script = G2L["1ed"];
 	
 end;
 task.spawn(C_1ed);
--- StarterGui.AIDS.topbar.back.executor.bar2.localscript
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
+local function C_1ef()
+local script = G2L["1ef"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+end;
+task.spawn(C_1ef);
+-- StarterGui.ScreenGui.topbar.back.executor.scripts.TextButton.LocalScript
 local function C_1f0()
 local script = G2L["1f0"];
+	local b = script.Parent
+	local t = b.Parent.Parent.textboxback.textbox
+	local p = game.Players.LocalPlayer
+	
+	b.MouseButton1Click:Connect(function()
+		t.Text = [=[]=]
+	end)
+	
+end;
+task.spawn(C_1f0);
+-- StarterGui.ScreenGui.topbar.back.executor.bar2.localscript
+local function C_1f3()
+local script = G2L["1f3"];
 	local frame = script.Parent
 	local textBox = frame.Parent:WaitForChild("textboxback"):WaitForChild("textbox")
 	
@@ -15951,10 +15962,10 @@ local script = G2L["1f0"];
 	updateFrameSize()
 	
 end;
-task.spawn(C_1f0);
--- StarterGui.AIDS.topbar.back.executor.textboxback.LocalScript
-local function C_1f4()
-local script = G2L["1f4"];
+task.spawn(C_1f3);
+-- StarterGui.ScreenGui.topbar.back.executor.textboxback.LocalScript
+local function C_1f7()
+local script = G2L["1f7"];
 	local box = script.Parent.textbox
 	local label = script.Parent.syndex
 	
@@ -16103,10 +16114,10 @@ local script = G2L["1f4"];
 	end)
 	
 end;
-task.spawn(C_1f4);
--- StarterGui.AIDS.topbar.back.executor.textboxback.textbox.LocalScript
-local function C_1f6()
-local script = G2L["1f6"];
+task.spawn(C_1f7);
+-- StarterGui.ScreenGui.topbar.back.executor.textboxback.textbox.LocalScript
+local function C_1f9()
+local script = G2L["1f9"];
 	local textbox = script.Parent
 	
 	
@@ -16119,10 +16130,10 @@ local script = G2L["1f6"];
 	end)
 	
 end;
-task.spawn(C_1f6);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.LocalScript
-local function C_1fd()
-local script = G2L["1fd"];
+task.spawn(C_1f9);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.LocalScript
+local function C_200()
+local script = G2L["200"];
 	local frame = script.Parent
 	
 	local grid = frame:FindFirstChildOfClass("UIGridLayout")
@@ -16189,33 +16200,8 @@ local script = G2L["1fd"];
 	end)
 	
 end;
-task.spawn(C_1fd);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.anim.LocalScript
-local function C_201()
-local script = G2L["201"];
-	local button = script.Parent
-	
-	button.MouseEnter:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
-	end)
-	
-	button.MouseLeave:Connect(function()
-		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	end)
-end;
-task.spawn(C_201);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.anim.LocalScript
-local function C_202()
-local script = G2L["202"];
-	local b = script.Parent
-	local box = b.Parent.Parent.commadbar
-	
-	b.MouseButton1Click:Connect(function()
-		box.Text = "anim "
-	end)
-end;
-task.spawn(C_202);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+task.spawn(C_200);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.anim.LocalScript
 local function C_204()
 local script = G2L["204"];
 	local button = script.Parent
@@ -16229,18 +16215,18 @@ local script = G2L["204"];
 	end)
 end;
 task.spawn(C_204);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.anim.LocalScript
 local function C_205()
 local script = G2L["205"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "ban "
+		box.Text = "anim "
 	end)
 end;
 task.spawn(C_205);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_207()
 local script = G2L["207"];
 	local button = script.Parent
@@ -16254,18 +16240,18 @@ local script = G2L["207"];
 	end)
 end;
 task.spawn(C_207);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_208()
 local script = G2L["208"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "bring "
+		box.Text = "ban "
 	end)
 end;
 task.spawn(C_208);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_20a()
 local script = G2L["20a"];
 	local button = script.Parent
@@ -16279,18 +16265,18 @@ local script = G2L["20a"];
 	end)
 end;
 task.spawn(C_20a);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_20b()
 local script = G2L["20b"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "char "
+		box.Text = "bring "
 	end)
 end;
 task.spawn(C_20b);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_20d()
 local script = G2L["20d"];
 	local button = script.Parent
@@ -16304,18 +16290,18 @@ local script = G2L["20d"];
 	end)
 end;
 task.spawn(C_20d);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_20e()
 local script = G2L["20e"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "chat "
+		box.Text = "char "
 	end)
 end;
 task.spawn(C_20e);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_210()
 local script = G2L["210"];
 	local button = script.Parent
@@ -16329,18 +16315,18 @@ local script = G2L["210"];
 	end)
 end;
 task.spawn(C_210);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_211()
 local script = G2L["211"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "clearlighting "
+		box.Text = "chat "
 	end)
 end;
 task.spawn(C_211);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_213()
 local script = G2L["213"];
 	local button = script.Parent
@@ -16354,18 +16340,18 @@ local script = G2L["213"];
 	end)
 end;
 task.spawn(C_213);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_214()
 local script = G2L["214"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "creepscare "
+		box.Text = "clearlighting "
 	end)
 end;
 task.spawn(C_214);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_216()
 local script = G2L["216"];
 	local button = script.Parent
@@ -16379,18 +16365,18 @@ local script = G2L["216"];
 	end)
 end;
 task.spawn(C_216);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_217()
 local script = G2L["217"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "cripple "
+		box.Text = "creepscare "
 	end)
 end;
 task.spawn(C_217);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_219()
 local script = G2L["219"];
 	local button = script.Parent
@@ -16404,18 +16390,18 @@ local script = G2L["219"];
 	end)
 end;
 task.spawn(C_219);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_21a()
 local script = G2L["21a"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "decalspam "
+		box.Text = "cripple "
 	end)
 end;
 task.spawn(C_21a);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_21c()
 local script = G2L["21c"];
 	local button = script.Parent
@@ -16429,18 +16415,18 @@ local script = G2L["21c"];
 	end)
 end;
 task.spawn(C_21c);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_21d()
 local script = G2L["21d"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "explode "
+		box.Text = "decalspam "
 	end)
 end;
 task.spawn(C_21d);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_21f()
 local script = G2L["21f"];
 	local button = script.Parent
@@ -16454,18 +16440,18 @@ local script = G2L["21f"];
 	end)
 end;
 task.spawn(C_21f);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_220()
 local script = G2L["220"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "f3x "
+		box.Text = "explode "
 	end)
 end;
 task.spawn(C_220);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_222()
 local script = G2L["222"];
 	local button = script.Parent
@@ -16479,18 +16465,18 @@ local script = G2L["222"];
 	end)
 end;
 task.spawn(C_222);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_223()
 local script = G2L["223"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "ff "
+		box.Text = "f3x "
 	end)
 end;
 task.spawn(C_223);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_225()
 local script = G2L["225"];
 	local button = script.Parent
@@ -16504,18 +16490,18 @@ local script = G2L["225"];
 	end)
 end;
 task.spawn(C_225);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_226()
 local script = G2L["226"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "fire "
+		box.Text = "ff "
 	end)
 end;
 task.spawn(C_226);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_228()
 local script = G2L["228"];
 	local button = script.Parent
@@ -16529,18 +16515,18 @@ local script = G2L["228"];
 	end)
 end;
 task.spawn(C_228);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_229()
 local script = G2L["229"];
 	local b = script.Parent
 	local box = b.Parent.Parent.commadbar
 	
 	b.MouseButton1Click:Connect(function()
-		box.Text = "fling "
+		box.Text = "fire "
 	end)
 end;
 task.spawn(C_229);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
 local function C_22b()
 local script = G2L["22b"];
 	local button = script.Parent
@@ -16554,9 +16540,20 @@ local script = G2L["22b"];
 	end)
 end;
 task.spawn(C_22b);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_22d()
-local script = G2L["22d"];
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_22c()
+local script = G2L["22c"];
+	local b = script.Parent
+	local box = b.Parent.Parent.commadbar
+	
+	b.MouseButton1Click:Connect(function()
+		box.Text = "fling "
+	end)
+end;
+task.spawn(C_22c);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_22e()
+local script = G2L["22e"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16567,10 +16564,10 @@ local script = G2L["22d"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_22d);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_22f()
-local script = G2L["22f"];
+task.spawn(C_22e);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_230()
+local script = G2L["230"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16581,10 +16578,10 @@ local script = G2L["22f"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_22f);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_231()
-local script = G2L["231"];
+task.spawn(C_230);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_232()
+local script = G2L["232"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16595,10 +16592,10 @@ local script = G2L["231"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_231);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_233()
-local script = G2L["233"];
+task.spawn(C_232);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_234()
+local script = G2L["234"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16609,10 +16606,10 @@ local script = G2L["233"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_233);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_235()
-local script = G2L["235"];
+task.spawn(C_234);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_236()
+local script = G2L["236"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16623,10 +16620,10 @@ local script = G2L["235"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_235);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_237()
-local script = G2L["237"];
+task.spawn(C_236);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_238()
+local script = G2L["238"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16637,10 +16634,10 @@ local script = G2L["237"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_237);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_239()
-local script = G2L["239"];
+task.spawn(C_238);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_23a()
+local script = G2L["23a"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16651,10 +16648,10 @@ local script = G2L["239"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_239);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_23b()
-local script = G2L["23b"];
+task.spawn(C_23a);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_23c()
+local script = G2L["23c"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16665,10 +16662,10 @@ local script = G2L["23b"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_23b);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_23d()
-local script = G2L["23d"];
+task.spawn(C_23c);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_23e()
+local script = G2L["23e"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16679,10 +16676,10 @@ local script = G2L["23d"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_23d);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_23f()
-local script = G2L["23f"];
+task.spawn(C_23e);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_240()
+local script = G2L["240"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16693,10 +16690,10 @@ local script = G2L["23f"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_23f);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_241()
-local script = G2L["241"];
+task.spawn(C_240);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_242()
+local script = G2L["242"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16707,10 +16704,10 @@ local script = G2L["241"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_241);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_243()
-local script = G2L["243"];
+task.spawn(C_242);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_244()
+local script = G2L["244"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16721,10 +16718,10 @@ local script = G2L["243"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_243);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_245()
-local script = G2L["245"];
+task.spawn(C_244);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_246()
+local script = G2L["246"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16735,10 +16732,10 @@ local script = G2L["245"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_245);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_247()
-local script = G2L["247"];
+task.spawn(C_246);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_248()
+local script = G2L["248"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16749,10 +16746,10 @@ local script = G2L["247"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_247);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_249()
-local script = G2L["249"];
+task.spawn(C_248);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_24a()
+local script = G2L["24a"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16763,10 +16760,10 @@ local script = G2L["249"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_249);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_24b()
-local script = G2L["24b"];
+task.spawn(C_24a);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_24c()
+local script = G2L["24c"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16777,10 +16774,10 @@ local script = G2L["24b"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_24b);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_24d()
-local script = G2L["24d"];
+task.spawn(C_24c);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_24e()
+local script = G2L["24e"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16791,10 +16788,10 @@ local script = G2L["24d"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_24d);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_24f()
-local script = G2L["24f"];
+task.spawn(C_24e);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_250()
+local script = G2L["250"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16805,10 +16802,10 @@ local script = G2L["24f"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_24f);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_251()
-local script = G2L["251"];
+task.spawn(C_250);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_252()
+local script = G2L["252"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16819,10 +16816,10 @@ local script = G2L["251"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_251);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_253()
-local script = G2L["253"];
+task.spawn(C_252);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_254()
+local script = G2L["254"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16833,10 +16830,10 @@ local script = G2L["253"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_253);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_255()
-local script = G2L["255"];
+task.spawn(C_254);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_256()
+local script = G2L["256"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16847,10 +16844,10 @@ local script = G2L["255"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_255);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_257()
-local script = G2L["257"];
+task.spawn(C_256);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_258()
+local script = G2L["258"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16861,10 +16858,10 @@ local script = G2L["257"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_257);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_259()
-local script = G2L["259"];
+task.spawn(C_258);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_25a()
+local script = G2L["25a"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16875,10 +16872,10 @@ local script = G2L["259"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_259);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_25b()
-local script = G2L["25b"];
+task.spawn(C_25a);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_25c()
+local script = G2L["25c"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16889,10 +16886,10 @@ local script = G2L["25b"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_25b);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_25d()
-local script = G2L["25d"];
+task.spawn(C_25c);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_25e()
+local script = G2L["25e"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16903,10 +16900,10 @@ local script = G2L["25d"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_25d);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_25f()
-local script = G2L["25f"];
+task.spawn(C_25e);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_260()
+local script = G2L["260"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16917,10 +16914,10 @@ local script = G2L["25f"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_25f);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_261()
-local script = G2L["261"];
+task.spawn(C_260);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_262()
+local script = G2L["262"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16931,10 +16928,10 @@ local script = G2L["261"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_261);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_263()
-local script = G2L["263"];
+task.spawn(C_262);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_264()
+local script = G2L["264"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16945,10 +16942,10 @@ local script = G2L["263"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_263);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_265()
-local script = G2L["265"];
+task.spawn(C_264);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_266()
+local script = G2L["266"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16959,10 +16956,10 @@ local script = G2L["265"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_265);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_267()
-local script = G2L["267"];
+task.spawn(C_266);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_268()
+local script = G2L["268"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16973,10 +16970,10 @@ local script = G2L["267"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_267);
--- StarterGui.AIDS.topbar.back.adminpanel.commands.TextButton.LocalScript
-local function C_269()
-local script = G2L["269"];
+task.spawn(C_268);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_26a()
+local script = G2L["26a"];
 	local button = script.Parent
 	
 	button.MouseEnter:Connect(function()
@@ -16987,10 +16984,24 @@ local script = G2L["269"];
 		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	end)
 end;
-task.spawn(C_269);
--- StarterGui.AIDS.topbar.back.adminpanel.commadbar.LocalScript
-local function C_26f()
-local script = G2L["26f"];
+task.spawn(C_26a);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commands.TextButton.LocalScript
+local function C_26c()
+local script = G2L["26c"];
+	local button = script.Parent
+	
+	button.MouseEnter:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(0, 108, 220)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+end;
+task.spawn(C_26c);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.commadbar.LocalScript
+local function C_272()
+local script = G2L["272"];
 	local box = script.Parent
 	local logs = box.Parent.logsback.logs
 	local remote = box:WaitForChild("RemoteEvent")
@@ -17018,10 +17029,10 @@ local script = G2L["26f"];
 	end)
 	
 end;
-task.spawn(C_26f);
--- StarterGui.AIDS.topbar.back.adminpanel.exe.LocalScript
-local function C_275()
-local script = G2L["275"];
+task.spawn(C_272);
+-- StarterGui.ScreenGui.topbar.back.adminpanel.exe.LocalScript
+local function C_278()
+local script = G2L["278"];
 	local exe = script.Parent.Parent.Parent.executor
 	local button = script.Parent
 	
@@ -17030,19 +17041,6 @@ local script = G2L["275"];
 		exe.Parent.adminpanel.Visible = false
 	end)
 end;
-task.spawn(C_275);
--- StarterGui.AIDS.outline.LocalScript
-local function C_280()
-local script = G2L["280"];
-	local frameB = script.Parent
-	local frameA = frameB.Parent:WaitForChild("topbar")
-	
-	while true do
-		frameB.Position = frameA.Position
-		task.wait()
-	end
-	
-end;
-task.spawn(C_280);
+task.spawn(C_278);
 
 return G2L["1"], require;
