@@ -40,7 +40,7 @@ Title.TextScaled = true
 local ScanBtn = Instance.new("TextButton", Main)
 ScanBtn.Size = UDim2.new(0.8, 0, 0, 50)
 ScanBtn.Position = UDim2.new(0.1, 0, 0.4, 0)
-ScanBtn.Text = "SCAN FOR MY DICK"
+ScanBtn.Text = "SCAN FOR MY PLUTO"
 ScanBtn.Font = Enum.Font.RobotoMono
 ScanBtn.BackgroundColor3 = Color3.new(0,0,0)
 ScanBtn.BackgroundTransparency = 0.5
@@ -58,7 +58,7 @@ CodeBox.Size = UDim2.new(0.9, 0, 0.5, 0)
 CodeBox.Position = UDim2.new(0.05, 0, 0.2, 0)
 CodeBox.BackgroundColor3 = Color3.new(0,0,0)
 CodeBox.BackgroundTransparency = 0.5
-CodeBox.Text = "-- Loaded in corny executor o: (also lalol loves logging and cumming)"
+CodeBox.Text = "-- Loaded in corny executor o: (also lalol loves logging and uh erm)"
 CodeBox.Font = Enum.Font.RobotoMono
 CodeBox.TextColor3 = Color3.new(1,1,1)
 CodeBox.ClearTextOnFocus = false
@@ -79,9 +79,9 @@ local function cBtn(txt, pos, size)
     return b
 end
 
-local ClearBtn = cBtn("clear the cum from the floor", UDim2.new(0.05, 0, 0.75, 0), UDim2.new(0.25, 0, 0, 40))
-local FillBtn = cBtn("auto fill my dick", UDim2.new(0.35, 0, 0.75, 0), UDim2.new(0.25, 0, 0, 40))
-local ExecBtn = cBtn("execute dick", UDim2.new(0.65, 0, 0.75, 0), UDim2.new(0.3, 0, 0, 40))
+local ClearBtn = cBtn("clear", UDim2.new(0.05, 0, 0.75, 0), UDim2.new(0.25, 0, 0, 40))
+local FillBtn = cBtn("auto fill my what", UDim2.new(0.35, 0, 0.75, 0), UDim2.new(0.25, 0, 0, 40))
+local ExecBtn = cBtn("execute my what", UDim2.new(0.65, 0, 0.75, 0), UDim2.new(0.3, 0, 0, 40))
 
 local TargetRemote = nil
 local IsScanning = false
